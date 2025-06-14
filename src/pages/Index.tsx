@@ -12,6 +12,7 @@ import {
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
   const [cityCards, setCityCards] = useState([]);
+  const [ratgeberArticles, setRatgeberArticles] = useState([]);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -48,6 +49,69 @@ const Index = () => {
       }
     };
     loadCityCards();
+  }, []);
+
+  useEffect(() => {
+    const loadRatgeberArticles = async () => {
+      try {
+        // Load the available ratgeber articles
+        const articles = [
+          {
+            slug: 'badezimmer-trends-2024',
+            title: 'Badezimmer Trends 2024',
+            description: 'Entdecke die neuesten Trends für moderne Badezimmer und lass dich inspirieren.',
+            defaultImage: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+          },
+          {
+            slug: 'badumbau-kosten',
+            title: 'Badsanierung Kosten',
+            description: 'Was kostet eine Badsanierung wirklich? Alle Infos zu Preisen und Förderungen.',
+            defaultImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+          },
+          {
+            slug: 'badsanierung-dauer',
+            title: 'Dauer einer Badsanierung',
+            description: 'Wie lange dauert eine Badsanierung? Tipps für eine reibungslose Planung.',
+            defaultImage: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+          },
+          {
+            slug: 'wasserleitung-sanieren',
+            title: 'Wasserleitung sanieren',
+            description: 'Alles was Sie über die Sanierung von Wasserleitungen wissen müssen.',
+            defaultImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+          }
+        ];
+
+        // Load actual data for each article to get hero images
+        const articlesWithImages = await Promise.all(
+          articles.slice(0, 6).map(async (article) => {
+            try {
+              const response = await fetch(`/data/ratgeber/${article.slug}.json`);
+              const data = await response.json();
+              return {
+                ...article,
+                title: data.title || article.title,
+                description: data.metaDescription || article.description,
+                image: data.heroImage?.src || article.defaultImage,
+                link: `/ratgeber/${article.slug}`
+              };
+            } catch (error) {
+              console.error(`Error loading ratgeber data for ${article.slug}:`, error);
+              return {
+                ...article,
+                image: article.defaultImage,
+                link: `/ratgeber/${article.slug}`
+              };
+            }
+          })
+        );
+
+        setRatgeberArticles(articlesWithImages);
+      } catch (error) {
+        console.error('Error loading ratgeber articles:', error);
+      }
+    };
+    loadRatgeberArticles();
   }, []);
 
   const benefits = [
@@ -287,27 +351,12 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Badezimmer Trends 2024",
-                description: "Entdecke die neuesten Trends für moderne Badezimmer und lass dich inspirieren.",
-                image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-                link: "/ratgeber/badezimmer-trends-2024"
-              },
-              {
-                title: "Badsanierung Kosten",
-                description: "Was kostet eine Badsanierung wirklich? Alle Infos zu Preisen und Förderungen.",
-                image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-                link: "/ratgeber/badumbau-kosten"
-              },
-              {
-                title: "Dauer einer Badsanierung",
-                description: "Wie lange dauert eine Badsanierung? Tipps für eine reibungslose Planung.",
-                image: "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-                link: "/ratgeber/badsanierung-dauer"
-              }
-            ].map((article, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+            {ratgeberArticles.map((article, index) => (
+              <a 
+                key={index}
+                href={article.link}
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group block"
+              >
                 <div className="relative overflow-hidden">
                   <img 
                     src={article.image}
@@ -318,15 +367,12 @@ const Index = () => {
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{article.title}</h3>
                   <p className="text-gray-600 mb-4 leading-relaxed">{article.description}</p>
-                  <a 
-                    href={article.link}
-                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
-                  >
+                  <div className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors">
                     Weiterlesen
                     <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
+                  </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
 
