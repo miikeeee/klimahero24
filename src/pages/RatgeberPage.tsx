@@ -149,7 +149,7 @@ const RatgeberPage = () => {
             onClick={handleCTAClick}
           >
             <Phone className="w-4 h-4 mr-1 sm:mr-2" />
-            <span className="hidden sm:inline">Jetzt anfragen</span>
+            <span className="hidden sm:inline">Beratung anfragen</span>
             <span className="sm:hidden">Anfragen</span>
           </Button>
         </div>
@@ -210,7 +210,7 @@ const RatgeberPage = () => {
                   className="bg-green-500 hover:bg-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                   onClick={handleCTAClick}
                 >
-                  Kostenlose Beratung sichern
+                  Jetzt Beratung anfragen
                 </Button>
               </div>
             </div>
@@ -242,7 +242,7 @@ const RatgeberPage = () => {
                     className="w-full bg-green-500 hover:bg-green-600 text-white"
                     onClick={handleCTAClick}
                   >
-                    Kostenlos anfragen
+                    Jetzt Beratung anfragen
                   </Button>
                 </div>
               </div>

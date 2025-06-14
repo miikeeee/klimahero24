@@ -94,7 +94,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
             onClick={handleCTAClick}
           >
             <Phone className="w-4 h-4 mr-1 sm:mr-2" />
-            <span className="hidden sm:inline">Jetzt anfragen</span>
+            <span className="hidden sm:inline">Beratung anfragen</span>
             <span className="sm:hidden">Anfragen</span>
           </Button>
         </div>
@@ -137,7 +137,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
                   className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   onClick={handleCTAClick}
                 >
-                   Beratung für {data.location || 'Ihre Stadt'} anfragen
+                   Jetzt Beratung anfragen
                 </Button>
                 <Button 
                   variant="outline" 
@@ -345,7 +345,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
             className="bg-white text-blue-700 hover:bg-gray-100 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl w-full max-w-xs sm:max-w-sm mx-auto"
             onClick={handleCTAClick}
           >
-            {data.cta.text}
+            Jetzt Beratung anfragen
           </Button>
         </div>
       </section>

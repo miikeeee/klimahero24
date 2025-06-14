@@ -98,7 +98,7 @@ const Index = () => {
             onClick={handleCTAClick}
           >
             <Phone className="w-4 h-4 mr-2" />
-            Jetzt anfragen
+            Beratung anfragen
           </Button>
         </div>
       </header>
@@ -134,8 +134,7 @@ const Index = () => {
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   onClick={handleCTAClick}
                 >
-                  Kostenlose Beratung
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  Jetzt Beratung anfragen
                 </Button>
                 <Button 
                   variant="outline" 
@@ -283,7 +282,7 @@ const Index = () => {
             className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
             onClick={handleCTAClick}
           >
-            Jetzt kostenlose Beratung anfragen
+            Jetzt Beratung anfragen
           </Button>
         </div>
       </section>
