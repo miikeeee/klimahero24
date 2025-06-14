@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Phone, MapPin, Calendar, Shield, PhoneOutgoing, Home, FileText, Wrench, Sparkles, Users, DollarSign, Smile, ShieldCheck } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -85,17 +86,16 @@ const LandingPage = ({ data }: LandingPageProps) => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 overflow-x-hidden">
       {/* Header */}
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
-        <div className="container mx-auto px-4 py-3 sm:py-4 flex justify-between items-center">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="text-xl sm:text-2xl font-bold text-blue-600">
             badhelden24
           </div>
           <Button 
-            className="bg-orange-500 hover:bg-orange-600 text-white px-3 sm:px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
             onClick={handleCTAClick}
           >
-            <Phone className="w-4 h-4 mr-1 sm:mr-2" />
-            <span className="hidden sm:inline">Beratung anfragen</span>
-            <span className="sm:hidden">Anfragen</span>
+            <Phone className="w-4 h-4 mr-2" />
+            Beratung anfragen
           </Button>
         </div>
       </header>
