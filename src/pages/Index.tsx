@@ -131,7 +131,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-lg text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   onClick={handleCTAClick}
                 >
                   Jetzt Beratung anfragen
@@ -139,7 +139,7 @@ const Index = () => {
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-8 py-4 rounded-lg text-lg transition-all duration-300"
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
                   onClick={handleCTAClick}
                 >
                   Mehr erfahren
