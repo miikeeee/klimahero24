@@ -1,0 +1,86 @@
+
+{
+  "slug": "berlin",
+  "title": "Badsanierung Berlin | Professionell & Förderfähig | badhelden24",
+  "metaDescription": "Professionelle Badsanierung in Berlin ✓ Bis zu 20% Förderung ✓ Geprüfte Handwerker ✓ 3 Jahre Garantie ✓ Kostenlose Beratung anfragen!",
+  "h1": "Badsanierung Berlin",
+  "heroText": "Dein Traumbad in Berlin – Modern, Förderfähig & Stressfrei umgesetzt von geprüften Experten.",
+  "heroImage": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "location": "Berlin",
+  "sections": [
+    {
+      "heading": "Warum Badsanierung mit badhelden24 in Berlin?",
+      "text": "Wir begleiten dich von der ersten Planung bis zur Fertigstellung deines Traumbads. Unsere geprüften Handwerker aus Berlin kennen die lokalen Gegebenheiten und Vorschriften. Mit über 10 Jahren Erfahrung und mehr als 2.500 zufriedenen Kunden sind wir dein zuverlässiger Partner für die Badsanierung in der Hauptstadt.",
+      "image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "heading": "Staatliche Förderung für deine Badsanierung",
+      "text": "Nutze die Fördermöglichkeiten für barrierefreies Bauen! Bis zu 6.250 Euro Zuschuss von der KfW sind möglich. Wir prüfen deine Ansprüche und unterstützen dich bei der Beantragung. Zusätzlich gibt es in Berlin spezielle Landesförderprogramme für energetische Sanierungen.",
+      "image": "https://images.unsplash.com/photo-1560448204-e1a3ecb4d0bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "heading": "Ablauf deiner Badsanierung in Berlin",
+      "text": "1. Kostenlose Vor-Ort-Beratung und Aufmaß 2. Individuelle Planung und Kostenvoranschlag 3. Koordination aller Gewerke 4. Professionelle Umsetzung durch unsere Partnerbetriebe 5. Abnahme und Übergabe deines neuen Bads. Während der gesamten Bauzeit stehen wir dir als Ansprechpartner zur Verfügung.",
+      "image": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "heading": "Besonderheiten bei Berliner Altbauten",
+      "text": "Berlin ist geprägt von wunderschönen Altbauten mit besonderen Herausforderungen: Hohe Decken, alte Rohrleitungen und Denkmalschutz. Unsere Experten kennen sich bestens mit den Berliner Baubesonderheiten aus und finden für jede Situation die passende Lösung – von der Gründerzeit-Villa bis zum Plattenbau.",
+      "image": "https://images.unsplash.com/photo-1586105251261-72a756497a11?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "imageSections": [
+    {
+      "src": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "alt": "Modernes Badezimmer nach Sanierung in Berlin"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wie lange dauert eine Badsanierung in Berlin?",
+      "answer": "Die Dauer hängt vom Umfang ab. Ein komplettes Bad dauert in der Regel 2-3 Wochen. Bei Teilsanierungen oder einfachen Renovierungen kann es auch schneller gehen. Wir planen individuell und berücksichtigen dabei auch die Berliner Ruhezeiten."
+    },
+    {
+      "question": "Welche Fördermittel gibt es in Berlin?",
+      "answer": "Neben den bundesweiten KfW-Förderungen (bis zu 6.250€ Zuschuss) gibt es in Berlin zusätzliche Landesprogramme. Das IBB Wohnraummodernisierungsprogramm und Förderungen für energetische Sanierungen können zusätzlich beantragt werden."
+    },
+    {
+      "question": "Kann ich während der Sanierung im Bad bleiben?",
+      "answer": "Bei einer Komplettsanierung ist das Bad nicht nutzbar. Wir helfen bei der Planung von Übergangslösungen und koordinieren die Arbeiten so, dass die Beeinträchtigung minimal ist. Oft können wir auch etappenweise sanieren."
+    },
+    {
+      "question": "Was kostet eine Badsanierung in Berlin?",
+      "answer": "Die Kosten variieren je nach Ausstattung und Umfang. Eine Standardsanierung beginnt bei etwa 15.000€, während Luxusbäder 30.000€ und mehr kosten können. Wir erstellen dir gerne ein kostenloses und unverbindliches Angebot."
+    },
+    {
+      "question": "Arbeiten Sie auch in allen Berliner Bezirken?",
+      "answer": "Ja, wir sind in ganz Berlin tätig – von Mitte bis Spandau, von Charlottenburg bis Lichtenberg. Unsere Partnerbetriebe sind über die ganze Stadt verteilt, sodass wir immer einen Experten in deiner Nähe haben."
+    }
+  ],
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wie lange dauert eine Badsanierung in Berlin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Dauer hängt vom Umfang ab. Ein komplettes Bad dauert in der Regel 2-3 Wochen."
+        }
+      },
+      {
+        "@type": "Question", 
+        "name": "Welche Fördermittel gibt es in Berlin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Neben den bundesweiten KfW-Förderungen gibt es in Berlin zusätzliche Landesprogramme."
+        }
+      }
+    ]
+  },
+  "cta": {
+    "text": "Jetzt kostenlose Beratung anfragen",
+    "url": "https://app.neko24.de"
+  }
+}

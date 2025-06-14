@@ -1,0 +1,49 @@
+
+{
+  "slug": "muenchen", 
+  "title": "Badsanierung München | Professionell & Förderfähig | badhelden24",
+  "metaDescription": "Professionelle Badsanierung in München ✓ Bis zu 20% Förderung ✓ Geprüfte Handwerker ✓ 3 Jahre Garantie ✓ Kostenlose Beratung anfragen!",
+  "h1": "Badsanierung München",
+  "heroText": "Dein Traumbad in der bayerischen Hauptstadt – Hochwertig, förderfähig und von Münchener Experten umgesetzt.",
+  "heroImage": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "location": "München",
+  "sections": [
+    {
+      "heading": "Badsanierung in München – Ihr Experte vor Ort",
+      "text": "München stellt besondere Anforderungen an Handwerker: Hohe Qualitätsstandards, termingerechte Umsetzung und faire Preise trotz hoher Lebenshaltungskosten. Unsere Partnerbetriebe in München erfüllen genau diese Kriterien und bringen jahrelange Erfahrung mit Münchener Immobilien mit.",
+      "image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "heading": "KfW-Förderung und bayerische Zusatzprogramme",
+      "text": "Bayern bietet zusätzlich zur KfW-Förderung weitere Unterstützung für energetische Sanierungen. Das 10.000-Häuser-Programm und spezielle Münchener Fördertöpfe können deine Badsanierung deutlich günstiger machen. Wir kennen alle Programme und helfen bei der Beantragung.",
+      "image": "https://images.unsplash.com/photo-1560448204-e1a3ecb4d0bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "heading": "Von der Maxvorstadt bis nach Bogenhausen",
+      "text": "Jeder Münchener Stadtteil hat seine Besonderheiten: Altbauten in Schwabing, moderne Neubauten in der HafenCity oder charmante Reihenhäuser in Sendling. Unsere Experten kennen die lokalen Gegebenheiten und passen die Sanierung entsprechend an.",
+      "image": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wie hoch sind die Kosten für eine Badsanierung in München?",
+      "answer": "Die Kosten in München liegen etwa 10-15% über dem bundesweiten Durchschnitt. Eine Standardsanierung beginnt bei ca. 18.000€. Dafür profitieren Sie von höchster Qualität und pünktlicher Fertigstellung."
+    },
+    {
+      "question": "Welche Förderungen gibt es speziell in Bayern?",
+      "answer": "Bayern bietet das 10.000-Häuser-Programm mit bis zu 18.000€ Förderung plus die regulären KfW-Mittel. Zusätzlich gibt es kommunale Programme der Stadt München für energetische Sanierungen."
+    },
+    {
+      "question": "Arbeiten Sie auch in den Münchener Vororten?",
+      "answer": "Ja, wir sind im gesamten Großraum München tätig – von Freising bis Starnberg, von Dachau bis Ebersberg. Überall haben wir qualifizierte Partnerbetriebe."
+    },
+    {
+      "question": "Wie gehen Sie mit den hohen Münchener Qualitätsansprüchen um?",
+      "answer": "Unsere Partnerbetriebe sind speziell für den Münchener Markt ausgewählt und verfügen über entsprechende Referenzen und Qualifikationen. Wir arbeiten nur mit Meisterbetrieben zusammen."
+    }
+  ],
+  "cta": {
+    "text": "Kostenlose Beratung für München anfragen",
+    "url": "https://app.neko24.de"
+  }
+}
