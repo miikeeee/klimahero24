@@ -52,7 +52,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 overflow-x-hidden">
       {/* Header */}
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <div className="container mx-auto px-4 py-3 sm:py-4 flex justify-between items-center">
@@ -128,7 +128,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
               </div>
             </div>
 
-            <div className="relative mt-8 lg:mt-0">
+            <div className="relative mt-8 lg:mt-0 overflow-hidden rounded-3xl">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-3xl transform rotate-6 opacity-20"></div>
               <img 
                 src={data.heroImage || "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"}
@@ -164,7 +164,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
               </div>
               
               <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                <div className="relative">
+                <div className="relative overflow-hidden rounded-2xl">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-200 to-blue-300 rounded-2xl transform rotate-3 opacity-30"></div>
                   <img 
                     src={section.image || "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"}
