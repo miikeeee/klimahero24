@@ -22,7 +22,7 @@
     {
       "title": "Badsanierung Köln",
       "description": "Professionelle Badsanierung in Köln – Jetzt kostenloses Angebot anfragen.",
-      "image": "https://images.unsplash.com/photo-1560448204-e1a3ecb4d0bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "image": "https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/St%C3%A4dtebilder/K%C3%B6ln-Yydt2aOVicp6bb2cgghpA0Oj93tHK7.png",
       "slug": "koeln"
     },
     {
@@ -114,6 +114,66 @@
       "description": "Professionelle Badsanierung in Karlsruhe – Jetzt kostenloses Angebot anfragen.",
       "image": "https://images.unsplash.com/photo-1576765776194-a5223f6cd46a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "slug": "karlsruhe"
+    },
+    {
+      "title": "Badsanierung Mannheim",
+      "description": "Professionelle Badsanierung in Mannheim – Jetzt kostenloses Angebot anfragen.",
+      "image": "https://images.unsplash.com/photo-1573155993874-d5d48af862ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "slug": "mannheim"
+    },
+    {
+      "title": "Badsanierung Augsburg",
+      "description": "Professionelle Badsanierung in Augsburg – Jetzt kostenloses Angebot anfragen.",
+      "image": "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "slug": "augsburg"
+    },
+    {
+      "title": "Badsanierung Wiesbaden",
+      "description": "Professionelle Badsanierung in Wiesbaden – Jetzt kostenloses Angebot anfragen.",
+      "image": "https://images.unsplash.com/photo-1562679265-18b703b0cd91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "slug": "wiesbaden"
+    },
+    {
+      "title": "Badsanierung Gelsenkirchen",
+      "description": "Professionelle Badsanierung in Gelsenkirchen – Jetzt kostenloses Angebot anfragen.",
+      "image": "https://images.unsplash.com/photo-1567556899151-e20f48da7ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "slug": "gelsenkirchen"
+    },
+    {
+      "title": "Badsanierung Mönchengladbach",
+      "description": "Professionelle Badsanierung in Mönchengladbach – Jetzt kostenloses Angebot anfragen.",
+      "image": "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "slug": "moenchengladbach"
+    },
+    {
+      "title": "Badsanierung Braunschweig",
+      "description": "Professionelle Badsanierung in Braunschweig – Jetzt kostenloses Angebot anfragen.",
+      "image": "https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "slug": "braunschweig"
+    },
+    {
+      "title": "Badsanierung Chemnitz",
+      "description": "Professionelle Badsanierung in Chemnitz – Jetzt kostenloses Angebot anfragen.",
+      "image": "https://images.unsplash.com/photo-1588282015020-3a48e6b42d00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "slug": "chemnitz"
+    },
+    {
+      "title": "Badsanierung Kiel",
+      "description": "Professionelle Badsanierung in Kiel – Jetzt kostenloses Angebot anfragen.",
+      "image": "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "slug": "kiel"
+    },
+    {
+      "title": "Badsanierung Aachen",
+      "description": "Professionelle Badsanierung in Aachen – Jetzt kostenloses Angebot anfragen.",
+      "image": "https://images.unsplash.com/photo-1571823352623-82b69471c096?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "slug": "aachen"
+    },
+    {
+      "title": "Badsanierung Halle",
+      "description": "Professionelle Badsanierung in Halle – Jetzt kostenloses Angebot anfragen.",
+      "image": "https://images.unsplash.com/photo-1571018648462-2b9c18b99c73?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "slug": "halle"
     }
   ]
 }
