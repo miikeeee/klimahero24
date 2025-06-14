@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Phone, ShieldCheck, Wind, User, Package } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -25,7 +24,25 @@ const Index = () => {
       try {
         const response = await fetch('/data/cities.json');
         const data = await response.json();
-        setCityCards(data.cityCards);
+        
+        // Load header images for each city
+        const citiesWithImages = await Promise.all(
+          data.cityCards.slice(0, 6).map(async (city) => {
+            try {
+              const cityResponse = await fetch(`/data/badsanierung/${city.slug}.json`);
+              const cityData = await cityResponse.json();
+              return {
+                ...city,
+                image: cityData.heroImage || city.image
+              };
+            } catch (error) {
+              console.error(`Error loading data for ${city.slug}:`, error);
+              return city;
+            }
+          })
+        );
+        
+        setCityCards(citiesWithImages);
       } catch (error) {
         console.error('Error loading city cards:', error);
       }
@@ -255,7 +272,7 @@ const Index = () => {
       </section>
 
       {/* City Cards Section */}
-      {cityCards.length > 0 && <CityCards cities={cityCards} />}
+      {cityCards.length > 0 && <CityCards cities={cityCards} showAllButton={true} />}
 
       {/* Ratgeber Section */}
       <section className="py-16 bg-gray-50">

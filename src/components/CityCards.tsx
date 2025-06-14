@@ -12,9 +12,10 @@ interface CityCard {
 
 interface CityCardsProps {
   cities: CityCard[];
+  showAllButton?: boolean;
 }
 
-const CityCards = ({ cities }: CityCardsProps) => {
+const CityCards = ({ cities, showAllButton = false }: CityCardsProps) => {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -56,6 +57,20 @@ const CityCards = ({ cities }: CityCardsProps) => {
             </Card>
           ))}
         </div>
+
+        {showAllButton && (
+          <div className="text-center mt-12">
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
+              onClick={() => window.location.href = '/badsanierung'}
+            >
+              Alle anzeigen
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
