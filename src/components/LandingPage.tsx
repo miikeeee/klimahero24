@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Phone, MapPin, Calendar, Shield } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -24,7 +23,7 @@ interface LandingPageData {
     answer: string;
   }>;
   cta: {
-    text: string;
+    text: string; // This will no longer be used for the primary hero button
     url: string;
   };
   location?: string;
@@ -105,17 +104,14 @@ const LandingPage = ({ data }: LandingPageProps) => {
 
               <div className="space-y-3 sm:space-y-4">
                 <Button 
-                  size="lg" 
-                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   onClick={handleCTAClick}
                 >
-                  {data.cta.text}
-                  <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2" />
+                  Schnelle Beratung für {data.location || 'Ihre Stadt'} anfrage
                 </Button>
                 <Button 
                   variant="outline" 
-                  size="lg" 
-                  className="w-full sm:w-auto border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300"
+                  className="w-full sm:w-auto border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg transition-all duration-300"
                   onClick={handleCTAClick}
                 >
                   Kostenlos anrufen
