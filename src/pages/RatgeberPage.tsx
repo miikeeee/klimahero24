@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
+import { Phone, Calendar, User, Clock } from "lucide-react";
 import ContentRenderer from '@/components/ContentRenderer';
 import RatgeberSidebar from '@/components/RatgeberSidebar';
 
@@ -148,21 +148,108 @@ const RatgeberPage = () => {
         </div>
       </header>
 
+      {/* Hero Section */}
+      <section className="pt-20 sm:pt-24 pb-8 sm:pb-12 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
+            {/* Hero Content */}
+            <div className="lg:col-span-2">
+              <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-12 relative overflow-hidden">
+                {/* Background decoration */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full -translate-y-16 translate-x-16 opacity-50"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-green-100 to-green-200 rounded-full translate-y-12 -translate-x-12 opacity-50"></div>
+                
+                <div className="relative z-10">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
+                    {data.content.find(item => item.type === 'h1')?.text || data.title}
+                  </h1>
+                  
+                  <div className="flex flex-wrap items-center gap-4 sm:gap-6 mb-6 sm:mb-8 text-sm sm:text-base text-gray-600">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4 text-blue-600" />
+                      <span>14. Juni 2025</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-4 h-4 text-blue-600" />
+                      <span>8 Minuten</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <User className="w-4 h-4 text-blue-600" />
+                      <span>Experte bei badhelden24</span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8">
+                    {data.metaDescription}
+                  </p>
+                  
+                  <Button 
+                    className="bg-green-500 hover:bg-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105"
+                    onClick={handleCTAClick}
+                  >
+                    Kostenlose Beratung sichern
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Hero Sidebar */}
+            <div className="lg:col-span-1">
+              <RatgeberSidebar config={data.sidebar} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Alert Banner */}
+      <div className="bg-red-50 border-l-4 border-red-400 py-3 sm:py-4">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="flex items-center">
+            <div className="flex-shrink-0">
+              <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+            </div>
+            <div className="ml-3 flex-1">
+              <p className="text-sm sm:text-base text-red-800">
+                <span className="font-medium">Förderkürzung unter Schwarz-Rot?</span> Lieber jetzt Förderungen sichern, bevor Sie es später bereuen! 
+                <button 
+                  onClick={handleCTAClick}
+                  className="font-semibold underline hover:no-underline ml-2"
+                >
+                  Jetzt kostenlos beraten lassen
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Main Content */}
-      <div className="pt-20 sm:pt-24 pb-12 sm:pb-16">
+      <div className="pb-12 sm:pb-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Main Content Column */}
             <div className="lg:col-span-2">
-              <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 lg:p-8">
-                <ContentRenderer content={data.content} />
+              <div className="bg-white p-4 sm:p-6 lg:p-8">
+                {/* Skip the h1 since it's already in hero */}
+                <ContentRenderer content={data.content.filter(item => item.type !== 'h1')} />
               </div>
             </div>
 
-            {/* Sidebar */}
+            {/* Sticky Sidebar */}
             <div className="lg:col-span-1">
-              <div className="lg:sticky lg:top-28">
+              <div className="lg:sticky lg:top-28 space-y-6">
                 <RatgeberSidebar config={data.sidebar} />
+                
+                {/* Additional info box */}
+                <div className="bg-gray-50 rounded-lg p-4 sm:p-6">
+                  <h3 className="font-semibold text-gray-900 mb-3">Kostenlose Fördermittelberatung und Angebote von Fachfirmen sichern</h3>
+                  <Button 
+                    className="w-full bg-green-500 hover:bg-green-600 text-white"
+                    onClick={handleCTAClick}
+                  >
+                    Kostenlos anfragen
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
