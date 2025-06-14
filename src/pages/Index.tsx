@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Phone, ShieldCheck, Wind, User, Package } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -92,7 +91,7 @@ const Index = () => {
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <img 
-            src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Logo%20500%20x%20120%20Oragnener%20Hintergrund-75zNSqn4vqR66Wur7A04NJzROeiEEU"
+            src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500-eRgXYlImsjtChEye6HoXtgh7hK4vup.svg"
             alt="badhelden24 Logo"
             className="h-8 sm:h-10"
           />
@@ -366,7 +365,7 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <img 
-                src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Logo%20500%20x%20120%20Oragnener%20Hintergrund-75zNSqn4vqR66Wur7A04NJzROeiEEU"
+                src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500-eRgXYlImsjtChEye6HoXtgh7hK4vup.svg"
                 alt="badhelden24 Logo"
                 className="h-8 mb-4"
               />

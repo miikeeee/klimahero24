@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Phone, MapPin, Calendar, Shield, PhoneOutgoing, Home, FileText, Wrench, Sparkles, Users, DollarSign, Smile, ShieldCheck } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -88,7 +87,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <img 
-            src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Logo%20500%20x%20120%20Oragnener%20Hintergrund-75zNSqn4vqR66Wur7A04NJzROeiEEU"
+            src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500-eRgXYlImsjtChEye6HoXtgh7hK4vup.svg"
             alt="badhelden24 Logo"
             className="h-8 sm:h-10"
           />
@@ -360,7 +359,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
             <div className="sm:col-span-2 lg:col-span-1">
               <img 
-                src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Logo%20500%20x%20120%20Oragnener%20Hintergrund-75zNSqn4vqR66Wur7A04NJzROeiEEU"
+                src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500-eRgXYlImsjtChEye6HoXtgh7hK4vup.svg"
                 alt="badhelden24 Logo"
                 className="h-8 mb-3 sm:mb-4"
               />
