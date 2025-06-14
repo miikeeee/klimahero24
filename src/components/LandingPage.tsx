@@ -132,16 +132,18 @@ const LandingPage = ({ data }: LandingPageProps) => {
                 ))}
               </div>
 
-              <div className="space-y-3 sm:space-y-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
-                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  size="lg" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   onClick={handleCTAClick}
                 >
                    Jetzt Beratung anfragen
                 </Button>
                 <Button 
                   variant="outline" 
-                  className="w-full sm:w-auto border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg transition-all duration-300"
+                  size="lg" 
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
                   onClick={handleCTAClick}
                 >
                   Kostenlos anrufen
