@@ -1,0 +1,81 @@
+
+{
+  "slug": "hamburg",
+  "title": "Badsanierung Hamburg | Günstig & Professionell | badhelden24",
+  "metaDescription": "Badsanierung Hamburg ✓ Kosten ab 12.000€ ✓ Erfahrene Handwerker in der Nähe ✓ KfW-Förderung ✓ Kostenlose Beratung anfragen!",
+  "h1": "Badsanierung Hamburg",
+  "heroText": "Ihr Traumbad in der Hansestadt – Professionell, günstig und von erfahrenen Hamburger Experten umgesetzt.",
+  "heroImage": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "location": "Hamburg",
+  "sections": [
+    {
+      "heading": "Badsanierung Hamburg Kosten – Transparente Preise",
+      "text": "Die Kosten für eine Badsanierung in Hamburg variieren je nach Umfang und Ausstattung. Eine Standard-Badsanierung beginnt bei etwa 12.000€, während Premium-Bäder bis zu 35.000€ kosten können. Wir bieten Ihnen transparente Festpreise ohne versteckte Kosten. Nutzen Sie zusätzlich KfW-Förderungen bis zu 6.250€ für barrierefreie Umbauten.",
+      "image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "heading": "Erfahrene Handwerker in Hamburg und Umgebung",
+      "text": "Unsere Partnerbetriebe in Hamburg bringen über 15 Jahre Erfahrung mit. Von Altona bis Bergedorf, von Eimsbüttel bis Harburg – überall haben wir qualifizierte Meisterbetriebe in Ihrer Nähe. Alle Handwerker sind geprüft, versichert und kennen die Hamburger Bauvorschriften genau.",
+      "image": "https://images.unsplash.com/photo-1560448204-e1a3ecb4d0bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "heading": "Günstige Badsanierung ohne Qualitätsverlust",
+      "text": "Günstig bedeutet bei uns nicht billig. Durch optimierte Prozesse, direkte Herstellerkontakte und effiziente Projektabwicklung bieten wir Ihnen die besten Preise in Hamburg. Sparen Sie bis zu 30% gegenüber einzelnen Handwerkern durch unsere Komplettlösung aus einer Hand.",
+      "image": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "heading": "Badsanierung in der Nähe – Schnelle Anfahrt",
+      "text": "Kurze Wege, schnelle Hilfe: Unsere Partnerbetriebe sind strategisch in ganz Hamburg verteilt. Ob Eilbek, Winterhude oder Blankenese – ein Experte ist immer in Ihrer Nähe. Dadurch sparen wir Anfahrtskosten und können flexibel auf Ihre Terminwünsche eingehen.",
+      "image": "https://images.unsplash.com/photo-1586105251261-72a756497a11?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "heading": "Referenzen und Kundenbewertungen Hamburg",
+      "text": "Über 500 zufriedene Kunden in Hamburg sprechen für unsere Qualität. Durchschnittlich 4,8 von 5 Sternen bei Google-Bewertungen. Schauen Sie sich unsere Referenzobjekte in Ihrer Nachbarschaft an und überzeugen Sie sich von unserer Arbeit.",
+      "image": "https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Was kostet eine Badsanierung in Hamburg?",
+      "answer": "Eine Standard-Badsanierung in Hamburg kostet zwischen 12.000€ und 25.000€. Premium-Ausstattungen können bis zu 35.000€ kosten. Der Preis hängt von Größe, Ausstattung und baulichen Gegebenheiten ab."
+    },
+    {
+      "question": "Wie finde ich günstige Handwerker für die Badsanierung in Hamburg?",
+      "answer": "Wir vermitteln Ihnen geprüfte Handwerker in Hamburg zu fairen Preisen. Durch unsere Einkaufsvorteile und optimierte Prozesse bieten wir bis zu 30% Ersparnis gegenüber Einzelbeauftragung."
+    },
+    {
+      "question": "Gibt es Handwerker in meiner Nähe in Hamburg?",
+      "answer": "Ja, wir haben Partnerbetriebe in allen Hamburger Stadtteilen. Von der Innenstadt bis zu den Außenbezirken – ein qualifizierter Handwerker ist immer in Ihrer Nähe."
+    },
+    {
+      "question": "Welche Erfahrungen haben andere Kunden in Hamburg gemacht?",
+      "answer": "Unsere Kunden in Hamburg bewerten uns durchschnittlich mit 4,8 von 5 Sternen. Besonders gelobt werden Pünktlichkeit, Sauberkeit und die transparente Kommunikation während der Bauphase."
+    }
+  ],
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://badhelden24.de/badsanierung/hamburg",
+    "name": "Badsanierung Hamburg - badhelden24",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hamburg",
+      "addressCountry": "DE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 53.5511,
+      "longitude": 9.9937
+    },
+    "priceRange": "€€",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "500"
+    }
+  },
+  "cta": {
+    "text": "Kostenlose Beratung für Hamburg anfragen",
+    "url": "https://app.neko24.de"
+  }
+}

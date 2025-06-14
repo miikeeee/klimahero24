@@ -1,0 +1,79 @@
+
+{
+  "slug": "frankfurt",
+  "title": "Badsanierung Frankfurt | Schnell & Günstig | badhelden24",
+  "metaDescription": "Badsanierung Frankfurt ✓ Schnelle Terminvergabe ✓ Günstige Festpreise ✓ Erfahrene Handwerker ✓ Kostenlose Beratung anfragen!",
+  "h1": "Badsanierung Frankfurt am Main",
+  "heroText": "Ihr neues Bad in der Finanzmetropole – Schnell, günstig und professionell von Frankfurter Experten umgesetzt.",
+  "heroImage": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "location": "Frankfurt am Main",
+  "sections": [
+    {
+      "heading": "Schnelle Badsanierung Frankfurt – Kurze Bauzeiten",
+      "text": "Zeit ist Geld – das gilt besonders in Frankfurt. Deshalb bieten wir Ihnen besonders schnelle Badsanierungen mit optimierten Arbeitsabläufen. Eine Standard-Badsanierung schaffen wir in nur 8-12 Werktagen. Durch perfekte Koordination aller Gewerke minimieren wir Ausfallzeiten und Störungen.",
+      "image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "heading": "Günstige Badsanierung trotz Frankfurter Preisniveau",
+      "text": "Auch in Frankfurt muss eine hochwertige Badsanierung nicht unbezahlbar sein. Durch intelligente Beschaffung und effiziente Prozesse bieten wir Komplettbäder bereits ab 13.500€. Unsere Festpreise schützen Sie vor bösen Überraschungen und Nachkalkulationen.",
+      "image": "https://images.unsplash.com/photo-1560448204-e1a3ecb4d0bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "heading": "Frankfurt-weite Abdeckung – Alle Stadtteile",
+      "text": "Von Sachsenhausen bis Nordend, vom Westend bis nach Fechenheim – wir sind in ganz Frankfurt tätig. Unsere Partnerbetriebe sind strategisch verteilt, sodass wir schnell bei Ihnen sind. Auch die umliegenden Gemeinden wie Eschborn, Dreieich oder Neu-Isenburg gehören zu unserem Einzugsgebiet.",
+      "image": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "heading": "Hochhaus-Expertise und City-Logistik",
+      "text": "Frankfurt hat viele Hochhäuser mit besonderen logistischen Herausforderungen. Unsere Teams sind erfahren im Umgang mit Aufzugtransporten, Parkplatzknappheit und Hausordnungen. Wir planen Material-Anlieferungen optimal und koordinieren uns mit Hausverwaltungen.",
+      "image": "https://images.unsplash.com/photo-1586105251261-72a756497a11?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wie schnell kann eine Badsanierung in Frankfurt umgesetzt werden?",
+      "answer": "Eine Standard-Badsanierung schaffen wir in Frankfurt in 8-12 Werktagen. Bei kleineren Umbauten sogar noch schneller. Schnelle Terminvergabe meist innerhalb von 2-3 Wochen möglich."
+    },
+    {
+      "question": "Ist eine günstige Badsanierung in Frankfurt möglich?",
+      "answer": "Ja, trotz des höheren Preisniveaus in Frankfurt bieten wir günstige Komplettbäder ab 13.500€. Durch optimierte Prozesse und Einkaufsvorteile halten wir die Preise niedrig."
+    },
+    {
+      "question": "Arbeiten Sie auch in Frankfurter Hochhäusern?",
+      "answer": "Ja, wir haben spezielle Erfahrung mit Hochhaus-Sanierungen. Von der Logistik bis zu besonderen Hausordnungen – wir kennen die Herausforderungen und lösen sie professionell."
+    },
+    {
+      "question": "Welche Stadtteile in Frankfurt bedienen Sie?",
+      "answer": "Wir arbeiten in ganz Frankfurt und Umgebung: Innenstadt, Sachsenhausen, Westend, Nordend, Bornheim, Bockenheim, Höchst und alle anderen Stadtteile."
+    }
+  ],
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://badhelden24.de/badsanierung/frankfurt",
+    "name": "Badsanierung Frankfurt - badhelden24",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Frankfurt am Main",
+      "addressCountry": "DE"
+    },
+    "priceRange": "€€",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Badsanierung Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Schnelle Badsanierung"
+          }
+        }
+      ]
+    }
+  },
+  "cta": {
+    "text": "Schnelle Beratung für Frankfurt anfragen",
+    "url": "https://app.neko24.de"
+  }
+}
