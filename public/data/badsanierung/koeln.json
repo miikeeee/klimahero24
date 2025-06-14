@@ -39,6 +39,62 @@
       "image": "https://images.unsplash.com/photo-1466721591366-2d5fba72006d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
+  "processSection": {
+    "heading": "Ihr Sanierungsablauf in Köln – Alaaf das neue Bad!",
+    "subheading": "Mit uns wird Ihre Badsanierung in Köln zum stressfreien Erlebnis. Folgen Sie einfach diesen Schritten:",
+    "steps": [
+      {
+        "icon": "PhoneOutgoing",
+        "title": "Kostenloses Erstgespräch",
+        "description": "Rufen Sie uns an oder schreiben Sie uns – wir besprechen Ihre Ideen für Ihr neues Bad in Köln."
+      },
+      {
+        "icon": "Home",
+        "title": "Vor-Ort-Planung im Veedel",
+        "description": "Unser Kölner Experte kommt zu Ihnen, nimmt Maß und plant mit Ihnen Ihr individuelles Traumbad."
+      },
+      {
+        "icon": "FileText",
+        "title": "Klares Angebot ohne Haken",
+        "description": "Sie erhalten ein faires Festpreisangebot für Ihre Badsanierung in Köln, auf das Sie sich verlassen können."
+      },
+      {
+        "icon": "Wrench",
+        "title": "Umsetzung durch Kölner Profis",
+        "description": "Unsere qualifizierten Handwerker aus Köln setzen Ihr Projekt fachmännisch und pünktlich um."
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Übergabe & kölsche Freude",
+        "description": "Gemeinsame Abnahme Ihres neuen Badezimmers in Köln und Start Ihrer 3-Jahres-Garantie."
+      }
+    ]
+  },
+  "keyBenefitsSection": {
+    "heading": "Ihre Vorteile mit Badhelden24 in Köln",
+    "benefits": [
+      {
+        "icon": "Users",
+        "title": "Echte Kölner Handwerker",
+        "description": "Wir arbeiten mit geprüften Meisterbetrieben aus Köln zusammen, die sich mit den Eigenheiten der Domstadt auskennen."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Qualität mit Siegel",
+        "description": "Hochwertige Materialien und professionelle Arbeit garantieren ein langlebiges und schönes Bad in Köln."
+      },
+      {
+        "icon": "DollarSign",
+        "title": "Faire Preise, auch in Kölle",
+        "description": "Transparente Kosten und ein optimales Preis-Leistungs-Verhältnis für Ihre Badsanierung in Köln."
+      },
+      {
+        "icon": "Smile",
+        "title": "Sorgenfrei sanieren",
+        "description": "Wir kümmern uns um alles – von der Planung bis zur Fertigstellung Ihres neuen Bads in Köln."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "Haben Sie erfahrene Handwerker für Badsanierung in Köln?",

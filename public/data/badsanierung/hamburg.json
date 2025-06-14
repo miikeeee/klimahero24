@@ -39,6 +39,62 @@
       "image": "https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
+  "processSection": {
+    "heading": "Ihr Badsanierungs-Prozess in Hamburg",
+    "subheading": "Von der Idee bis zum fertigen Bad in Hamburg – wir begleiten Sie Schritt für Schritt.",
+    "steps": [
+      {
+        "icon": "PhoneOutgoing",
+        "title": "Erstkontakt & Beratung",
+        "description": "Melden Sie sich bei uns für eine kostenlose Erstberatung zu Ihrer Badsanierung in Hamburg."
+      },
+      {
+        "icon": "Home",
+        "title": "Vor-Ort-Check in Hamburg",
+        "description": "Ein Fachmann besucht Sie in Hamburg, analysiert die Gegebenheiten und bespricht Ihre Designwünsche."
+      },
+      {
+        "icon": "FileText",
+        "title": "Maßgeschneidertes Angebot",
+        "description": "Sie bekommen ein detailliertes Angebot mit Festpreisgarantie für Ihr Badprojekt in Hamburg."
+      },
+      {
+        "icon": "Wrench",
+        "title": "Professionelle Umsetzung",
+        "description": "Unsere Hamburger Handwerksprofis setzen die Planung termingerecht und in Top-Qualität um."
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Fertigstellung & Garantie",
+        "description": "Wir übergeben Ihr neues Traumbad in Hamburg und Sie profitieren von 3 Jahren Garantie."
+      }
+    ]
+  },
+  "keyBenefitsSection": {
+    "heading": "Profitieren Sie von unserer Expertise in Hamburg",
+    "benefits": [
+      {
+        "icon": "Users",
+        "title": "Lokale Hamburger Profis",
+        "description": "Unsere Partner sind erfahrene Handwerksbetriebe direkt aus Hamburg, die den lokalen Markt kennen."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Garantierte Wertarbeit",
+        "description": "Wir verwenden nur hochwertige Produkte und garantieren eine fachmännische Ausführung für Ihr Bad in Hamburg."
+      },
+      {
+        "icon": "DollarSign",
+        "title": "Bestes Preis-Leistungs-Verhältnis",
+        "description": "Auch in Hamburg bieten wir faire und transparente Preise für Ihre Badsanierung ohne Kompromisse bei der Qualität."
+      },
+      {
+        "icon": "Smile",
+        "title": "Alles aus einer Hand",
+        "description": "Ein Ansprechpartner koordiniert alle Gewerke für eine reibungslose Sanierung Ihres Bades in Hamburg."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "Was kostet eine durchschnittliche Badsanierung in Hamburg?",

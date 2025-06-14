@@ -1,6 +1,27 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Star, Phone, MapPin, Calendar, Shield } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Phone, MapPin, Calendar, Shield, PhoneOutgoing, Home, FileText, Wrench, Sparkles, Users, DollarSign, Smile } from "lucide-react";
 import { useEffect, useState } from "react";
+
+interface ProcessStep {
+  icon: keyof typeof import("lucide-react").icons;
+  title: string;
+  description: string;
+}
+interface ProcessSectionData {
+  heading: string;
+  subheading?: string;
+  steps: ProcessStep[];
+}
+
+interface KeyBenefit {
+  icon: keyof typeof import("lucide-react").icons;
+  title: string;
+  description: string;
+}
+interface KeyBenefitsSectionData {
+  heading: string;
+  benefits: KeyBenefit[];
+}
 
 interface LandingPageData {
   slug: string;
@@ -27,6 +48,9 @@ interface LandingPageData {
     url: string;
   };
   location?: string;
+  processSection?: ProcessSectionData;
+  keyBenefitsSection?: KeyBenefitsSectionData;
+  structuredData?: any;
 }
 
 interface LandingPageProps {
@@ -49,6 +73,12 @@ const LandingPage = ({ data }: LandingPageProps) => {
 
   const handleCTAClick = () => {
     window.open('https://app.neko24.de', '_blank');
+  };
+
+  const IconComponent = ({ name, ...props }: { name: keyof typeof import("lucide-react").icons } & React.ComponentProps<typeof ArrowRight>) => {
+    const LucideIcon = { PhoneOutgoing, Home, FileText, Wrench, Sparkles, Users, ShieldCheck, DollarSign, Smile, CheckCircle, Star, Phone, MapPin, Calendar, Shield, ArrowRight }[name];
+    if (!LucideIcon) return <ArrowRight {...props} />; // Fallback icon
+    return <LucideIcon {...props} />;
   };
 
   return (
@@ -107,7 +137,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
                   className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   onClick={handleCTAClick}
                 >
-                  Schnelle Beratung für {data.location || 'Ihre Stadt'} anfrage
+                   Beratung für {data.location || 'Ihre Stadt'} anfragen
                 </Button>
                 <Button 
                   variant="outline" 
@@ -178,6 +208,39 @@ const LandingPage = ({ data }: LandingPageProps) => {
         </section>
       ))}
 
+      {/* Process Section */}
+      {data.processSection && (
+        <section className="py-12 sm:py-16 bg-gray-50">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
+                {data.processSection.heading}
+              </h2>
+              {data.processSection.subheading && (
+                <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+                  {data.processSection.subheading}
+                </p>
+              )}
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              {data.processSection.steps.map((step, index) => (
+                <div 
+                  key={index} 
+                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fade-in"
+                  style={{animationDelay: `${index * 150}ms`}}
+                >
+                  <div className="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full mb-4">
+                    <IconComponent name={step.icon} className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Trust Indicators */}
       <section className="py-12 sm:py-16 bg-blue-600">
         <div className="container mx-auto px-4 text-center">
@@ -200,6 +263,36 @@ const LandingPage = ({ data }: LandingPageProps) => {
           </div>
         </div>
       </section>
+
+      {/* Key Benefits Section */}
+      {data.keyBenefitsSection && (
+        <section className="py-12 sm:py-16 bg-white">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+                {data.keyBenefitsSection.heading}
+              </h2>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
+              {data.keyBenefitsSection.benefits.map((benefit, index) => (
+                <div 
+                  key={index} 
+                  className="flex items-start space-x-4 p-4 animate-scale-in"
+                  style={{animationDelay: `${index * 100}ms`}}
+                >
+                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                    <IconComponent name={benefit.icon} className="w-5 h-5 sm:w-6 sm:h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-1">{benefit.title}</h3>
+                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{benefit.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* FAQ Section */}
       <section className="py-12 sm:py-16 bg-white">
@@ -249,7 +342,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
           </p>
           <Button 
             size="lg" 
-            className="bg-white text-orange-600 hover:bg-gray-100 px-8 sm:px-12 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="bg-white text-orange-600 hover:bg-gray-100 px-8 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl max-w-xs sm:max-w-sm md:max-w-md mx-auto"
             onClick={handleCTAClick}
           >
             {data.cta.text}

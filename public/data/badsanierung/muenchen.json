@@ -44,6 +44,62 @@
       "image": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
+  "processSection": {
+    "heading": "So einfach geht Badsanierung in München",
+    "subheading": "Ihr Weg zum neuen Wohlfühlbad in München – klar strukturiert und professionell begleitet.",
+    "steps": [
+      {
+        "icon": "PhoneOutgoing",
+        "title": "Unverbindliche Anfrage",
+        "description": "Schildern Sie uns Ihre Wünsche für Ihr Bad in München. Wir beraten Sie kostenfrei und individuell."
+      },
+      {
+        "icon": "Home",
+        "title": "Planung vor Ort in München",
+        "description": "Unser Experte besucht Sie in München, nimmt Maß und entwickelt mit Ihnen ein maßgeschneidertes Konzept."
+      },
+      {
+        "icon": "FileText",
+        "title": "Transparentes Angebot",
+        "description": "Sie erhalten ein klares Festpreisangebot für Ihre Münchner Badsanierung, detailliert und fair kalkuliert."
+      },
+      {
+        "icon": "Wrench",
+        "title": "Fachgerechte Umsetzung",
+        "description": "Erfahrene Handwerker aus München realisieren Ihr Badprojekt pünktlich und in höchster Qualität."
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Übergabe & Wohlfühlen",
+        "description": "Freuen Sie sich auf Ihr neues Bad in München! Inklusive gemeinsamer Abnahme und 3 Jahre Garantie."
+      }
+    ]
+  },
+  "keyBenefitsSection": {
+    "heading": "Warum Badhelden24 für Ihre Badsanierung in München?",
+    "benefits": [
+      {
+        "icon": "Users",
+        "title": "Münchner Meisterbetriebe",
+        "description": "Wir vermitteln Ihnen geprüfte Fachbetriebe aus München, die mit den lokalen Gegebenheiten bestens vertraut sind."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Höchste Qualität",
+        "description": "Wir setzen auf Markenprodukte und präzise Handwerksarbeit für ein langlebiges und schönes Bad in München."
+      },
+      {
+        "icon": "DollarSign",
+        "title": "Faire Preise für München",
+        "description": "Trotz des Preisniveaus in München bieten wir Ihnen transparente und wettbewerbsfähige Konditionen."
+      },
+      {
+        "icon": "Smile",
+        "title": "Stressfreie Sanierung",
+        "description": "Ein Ansprechpartner für alle Gewerke – wir managen Ihr Projekt in München von A bis Z."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "Wie hoch sind die durchschnittlichen Kosten für eine Badsanierung in München?",

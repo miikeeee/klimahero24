@@ -39,6 +39,62 @@
       "image": "https://images.unsplash.com/photo-1586105251261-72a756497a11?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
+  "processSection": {
+    "heading": "Ihr Badsanierungsprozess in Frankfurt – Effizient und klar",
+    "subheading": "So gestalten wir Ihre Badsanierung in der Mainmetropole – von der ersten Idee bis zum fertigen Traumbad.",
+    "steps": [
+      {
+        "icon": "PhoneOutgoing",
+        "title": "Kostenfreie Erstberatung",
+        "description": "Teilen Sie uns Ihre Vision für Ihr Bad in Frankfurt mit. Wir beraten Sie unverbindlich und kompetent."
+      },
+      {
+        "icon": "Home",
+        "title": "Vor-Ort-Analyse in Frankfurt",
+        "description": "Ein Experte kommt zu Ihnen nach Frankfurt, prüft die Gegebenheiten und plant mit Ihnen die Details."
+      },
+      {
+        "icon": "FileText",
+        "title": "Transparentes Festpreisangebot",
+        "description": "Sie erhalten ein klares und faires Angebot für Ihre Frankfurter Badsanierung, ohne versteckte Kosten."
+      },
+      {
+        "icon": "Wrench",
+        "title": "Professionelle Umsetzung",
+        "description": "Erfahrene Frankfurter Handwerker realisieren Ihr Badprojekt termingerecht und in höchster Qualität."
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Übergabe & Zufriedenheit",
+        "description": "Wir übergeben Ihr neues Bad in Frankfurt. Ihre Zufriedenheit und 3 Jahre Garantie sind unser Ziel."
+      }
+    ]
+  },
+  "keyBenefitsSection": {
+    "heading": "Ihre Vorteile bei der Badsanierung in Frankfurt",
+    "benefits": [
+      {
+        "icon": "Users",
+        "title": "Frankfurter Fachbetriebe",
+        "description": "Wir arbeiten mit ausgewählten Meisterbetrieben aus Frankfurt zusammen, die sich in der Stadt bestens auskennen."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Qualität, die überzeugt",
+        "description": "Einsatz von Markenprodukten und präzise Handwerksarbeit für ein langlebiges Ergebnis in Ihrem Frankfurter Bad."
+      },
+      {
+        "icon": "DollarSign",
+        "title": "Faire Konditionen für Frankfurt",
+        "description": "Auch in der Finanzmetropole Frankfurt bieten wir Ihnen transparente und wettbewerbsfähige Preise."
+      },
+      {
+        "icon": "Smile",
+        "title": "Entspannte Sanierung",
+        "description": "Ein fester Ansprechpartner koordiniert alle Gewerke – für eine stressfreie Badsanierung in Frankfurt."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "Wie schnell kann eine Badsanierung in Frankfurt umgesetzt werden?",
