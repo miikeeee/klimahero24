@@ -150,52 +150,54 @@ const RatgeberPage = () => {
 
       {/* Hero Section */}
       <section className="pt-20 sm:pt-24 pb-8 sm:pb-12 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
-            {/* Hero Content */}
-            <div className="lg:col-span-2">
-              <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-12 relative overflow-hidden">
-                {/* Background decoration */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full -translate-y-16 translate-x-16 opacity-50"></div>
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-green-100 to-green-200 rounded-full translate-y-12 -translate-x-12 opacity-50"></div>
-                
-                <div className="relative z-10">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-                    {data.content.find(item => item.type === 'h1')?.text || data.title}
-                  </h1>
-                  
-                  <div className="flex flex-wrap items-center gap-4 sm:gap-6 mb-6 sm:mb-8 text-sm sm:text-base text-gray-600">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4 text-blue-600" />
-                      <span>14. Juni 2025</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4 text-blue-600" />
-                      <span>8 Minuten</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <User className="w-4 h-4 text-blue-600" />
-                      <span>Experte bei badhelden24</span>
-                    </div>
-                  </div>
-                  
-                  <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8">
-                    {data.metaDescription}
-                  </p>
-                  
-                  <Button 
-                    className="bg-green-500 hover:bg-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105"
-                    onClick={handleCTAClick}
-                  >
-                    Kostenlose Beratung sichern
-                  </Button>
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-12 relative overflow-hidden">
+            {/* Background decoration */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full -translate-y-16 translate-x-16 opacity-50"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-green-100 to-green-200 rounded-full translate-y-12 -translate-x-12 opacity-50"></div>
+            
+            <div className="relative z-10">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
+                {data.content.find(item => item.type === 'h1')?.text || data.title}
+              </h1>
+              
+              <div className="flex flex-wrap items-center gap-4 sm:gap-6 mb-6 sm:mb-8 text-sm sm:text-base text-gray-600">
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4 text-blue-600" />
+                  <span>14. Juni 2025</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-blue-600" />
+                  <span>8 Minuten</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <User className="w-4 h-4 text-blue-600" />
+                  <span>Experte bei badhelden24</span>
                 </div>
               </div>
-            </div>
-
-            {/* Hero Sidebar */}
-            <div className="lg:col-span-1">
-              <RatgeberSidebar config={data.sidebar} />
+              
+              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8">
+                {data.metaDescription}
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+                <Button 
+                  className="bg-green-500 hover:bg-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105"
+                  onClick={handleCTAClick}
+                >
+                  Kostenlose Beratung sichern
+                </Button>
+                
+                {/* Centered info box */}
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 max-w-sm">
+                  <p className="text-blue-800 text-sm font-medium text-center">
+                    {data.sidebar.newsletter?.headline || 'Jetzt Förderung sichern'}
+                  </p>
+                  <p className="text-blue-600 text-xs text-center mt-1">
+                    {data.sidebar.newsletter?.text || 'Schnell & kostenlos prüfen lassen'}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -235,7 +237,7 @@ const RatgeberPage = () => {
               </div>
             </div>
 
-            {/* Sticky Sidebar */}
+            {/* Sticky Sidebar - only appears in main content section */}
             <div className="lg:col-span-1">
               <div className="lg:sticky lg:top-28 space-y-6">
                 <RatgeberSidebar config={data.sidebar} />
@@ -292,7 +294,7 @@ const RatgeberPage = () => {
             <p>&copy; 2024 badhelden24. Alle Rechte vorbehalten.</p>
           </div>
         </div>
-      </footer>
+      </div>
     </div>
   );
 };
