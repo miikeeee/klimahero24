@@ -3,6 +3,13 @@
   "slug": "wasserleitung-sanieren",
   "title": "Wasserleitung sanieren: Worauf achten? | badhelden24",
   "metaDescription": "Wasserleitung sanieren: Kosten, Ablauf & Tipps für die Rohrsanierung. Jetzt kostenlos beraten lassen!",
+  "heroImage": {
+    "src": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "alt": "Moderne Wasserleitung nach der Sanierung"
+  },
+  "publishDate": "14. Juni 2025",
+  "readTime": "8 Minuten",
+  "author": "Experte bei badhelden24",
   "content": [
     {
       "type": "h1",
@@ -50,7 +57,7 @@
   ],
   "sidebar": {
     "newsletter": {
-      "headline": "Jetzt Förderung sichern",
+      "headline": "Kostenlose Beratung",
       "text": "Schnell & kostenlos prüfen lassen",
       "button": "Kostenlos anfragen"
     },

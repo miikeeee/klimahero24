@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,13 @@ interface RatgeberData {
   slug: string;
   title: string;
   metaDescription: string;
+  heroImage?: {
+    src: string;
+    alt: string;
+  };
+  publishDate?: string;
+  readTime?: string;
+  author?: string;
   content: Array<{
     type: 'h1' | 'h2' | 'text' | 'image' | 'table' | 'cta';
     text?: string;
@@ -155,47 +163,55 @@ const RatgeberPage = () => {
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full -translate-y-16 translate-x-16 opacity-50"></div>
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-green-100 to-green-200 rounded-full translate-y-12 -translate-x-12 opacity-50"></div>
             
-            <div className="relative z-10">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-                {data.content.find(item => item.type === 'h1')?.text || data.title}
-              </h1>
-              
-              <div className="flex flex-wrap items-center gap-4 sm:gap-6 mb-6 sm:mb-8 text-sm sm:text-base text-gray-600">
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4 text-blue-600" />
-                  <span>14. Juni 2025</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-blue-600" />
-                  <span>8 Minuten</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <User className="w-4 h-4 text-blue-600" />
-                  <span>Experte bei badhelden24</span>
-                </div>
+            <div className="relative z-10 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Image Column */}
+              <div className="order-2 lg:order-1">
+                {data.heroImage && (
+                  <img 
+                    src={data.heroImage.src}
+                    alt={data.heroImage.alt}
+                    className="w-full rounded-lg shadow-lg"
+                  />
+                )}
               </div>
-              
-              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8">
-                {data.metaDescription}
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+
+              {/* Text Column */}
+              <div className="order-1 lg:order-2">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
+                  {data.content.find(item => item.type === 'h1')?.text || data.title}
+                </h1>
+                
+                <div className="flex flex-wrap items-center gap-4 sm:gap-6 mb-6 sm:mb-8 text-sm sm:text-base text-gray-600">
+                  {data.publishDate && (
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4 text-blue-600" />
+                      <span>{data.publishDate}</span>
+                    </div>
+                  )}
+                  {data.readTime && (
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-4 h-4 text-blue-600" />
+                      <span>{data.readTime}</span>
+                    </div>
+                  )}
+                  {data.author && (
+                    <div className="flex items-center gap-2">
+                      <User className="w-4 h-4 text-blue-600" />
+                      <span>{data.author}</span>
+                    </div>
+                  )}
+                </div>
+                
+                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8">
+                  {data.metaDescription}
+                </p>
+                
                 <Button 
-                  className="bg-green-500 hover:bg-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105"
+                  className="bg-green-500 hover:bg-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                   onClick={handleCTAClick}
                 >
                   Kostenlose Beratung sichern
                 </Button>
-                
-                {/* Centered info box */}
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 max-w-sm">
-                  <p className="text-blue-800 text-sm font-medium text-center">
-                    {data.sidebar.newsletter?.headline || 'Jetzt Förderung sichern'}
-                  </p>
-                  <p className="text-blue-600 text-xs text-center mt-1">
-                    {data.sidebar.newsletter?.text || 'Schnell & kostenlos prüfen lassen'}
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -214,9 +230,9 @@ const RatgeberPage = () => {
               </div>
             </div>
 
-            {/* Sticky Sidebar - positioned to align with content start */}
+            {/* Sticky Sidebar - positioned lower to align with content start */}
             <div className="lg:col-span-1">
-              <div className="lg:sticky lg:top-40 space-y-6">
+              <div className="lg:sticky lg:top-60 space-y-6">
                 <RatgeberSidebar config={data.sidebar} />
                 
                 {/* Additional info box */}
