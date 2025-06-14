@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Phone, MapPin, Calendar, Shield, PhoneOutgoing, Home, FileText, Wrench, Sparkles, Users, DollarSign, Smile, ShieldCheck } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -122,7 +123,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
                   "Geprüfte Handwerker aus deiner Region",
                   "Bis zu 20% staatliche Förderung",
                   "Kostenlose Vor-Ort-Beratung",
-                  "3 Jahre Garantie auf alle Arbeiten"
+                  "5 Jahre Garantie auf alle Arbeiten"
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3 animate-fade-in" style={{animationDelay: `${index * 100}ms`}}>
                     <CheckCircle className="w-4 sm:w-5 h-4 sm:h-5 text-green-500 flex-shrink-0" />
@@ -254,7 +255,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
             <div className="space-y-3 sm:space-y-4">
               <Shield className="w-10 sm:w-12 h-10 sm:h-12 mx-auto text-blue-200" />
               <h3 className="text-xl sm:text-2xl font-bold">100% Garantie</h3>
-              <p className="text-blue-100 text-sm sm:text-base">3 Jahre Gewährleistung auf alle Arbeiten</p>
+              <p className="text-blue-100 text-sm sm:text-base">5 Jahre Gewährleistung auf alle Arbeiten</p>
             </div>
             <div className="space-y-3 sm:space-y-4">
               <CheckCircle className="w-10 sm:w-12 h-10 sm:h-12 mx-auto text-blue-200" />

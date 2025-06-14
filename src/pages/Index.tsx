@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Phone, ShieldCheck, Wind, User, Package } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -37,7 +36,7 @@ const Index = () => {
     "Geprüfte Handwerker aus deiner Region",
     "Bis zu 20% staatliche Förderung",
     "Kostenlose Beratung & Planung",
-    "3 Jahre Garantie auf alle Arbeiten"
+    "5 Jahre Garantie auf alle Arbeiten"
   ];
 
   const keyBenefits = [
@@ -116,7 +115,7 @@ const Index = () => {
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
                   Professionelle Badsanierung von A bis Z – mit geprüften Handwerkern, 
-                  staatlicher Förderung und 3 Jahren Garantie.
+                  staatlicher Förderung und 5 Jahren Garantie.
                 </p>
               </div>
 
@@ -244,6 +243,76 @@ const Index = () => {
 
       {/* City Cards Section */}
       {cityCards.length > 0 && <CityCards cities={cityCards} />}
+
+      {/* Ratgeber Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Ratgeber & Tipps für dein Bad
+            </h2>
+            <p className="text-xl text-gray-600">
+              Erfahre alles Wichtige rund um Badsanierung, Kosten und Trends
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Badezimmer Trends 2024",
+                description: "Entdecke die neuesten Trends für moderne Badezimmer und lass dich inspirieren.",
+                image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                link: "/ratgeber/badezimmer-trends-2024"
+              },
+              {
+                title: "Badsanierung Kosten",
+                description: "Was kostet eine Badsanierung wirklich? Alle Infos zu Preisen und Förderungen.",
+                image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                link: "/ratgeber/badumbau-kosten"
+              },
+              {
+                title: "Dauer einer Badsanierung",
+                description: "Wie lange dauert eine Badsanierung? Tipps für eine reibungslose Planung.",
+                image: "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                link: "/ratgeber/badsanierung-dauer"
+              }
+            ].map((article, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{article.title}</h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed">{article.description}</p>
+                  <a 
+                    href={article.link}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
+                  >
+                    Weiterlesen
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
+              onClick={() => window.location.href = '/ratgeber'}
+            >
+              Alle Ratgeber-Artikel
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
