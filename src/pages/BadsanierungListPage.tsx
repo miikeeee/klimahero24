@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import { MapPin, ArrowRight } from 'lucide-react';
+import { MapPin, ArrowRight, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface City {
@@ -16,7 +16,7 @@ const BadsanierungListPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const loadCities = () => {
+    const loadCities = async () => {
       const cityList = [
         {
           name: "Berlin",
@@ -70,7 +70,7 @@ const BadsanierungListPage = () => {
         {
           name: "Dortmund",
           slug: "dortmund",
-          image: "https://images.unsplash.com/photo-1471919743851-c4df8b6ee fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          image: "https://images.unsplash.com/photo-1471919743851-c4df8b6eefb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
           description: "Zuverlässige Badsanierung im Herzen des Ruhrgebiets.",
           population: "590.000 Einwohner"
         },
@@ -82,7 +82,30 @@ const BadsanierungListPage = () => {
           population: "580.000 Einwohner"
         }
       ];
-      setCities(cityList);
+
+      // Load hero images from city data files
+      try {
+        const citiesWithImages = await Promise.all(
+          cityList.map(async (city) => {
+            try {
+              const response = await fetch(`/data/badsanierung/${city.slug}.json`);
+              const cityData = await response.json();
+              return {
+                ...city,
+                image: cityData.heroImage || city.image
+              };
+            } catch (error) {
+              console.error(`Error loading data for ${city.slug}:`, error);
+              return city;
+            }
+          })
+        );
+        setCities(citiesWithImages);
+      } catch (error) {
+        console.error('Error loading city images:', error);
+        setCities(cityList);
+      }
+      
       setLoading(false);
     };
 
@@ -117,13 +140,18 @@ const BadsanierungListPage = () => {
       {/* Header */}
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-blue-600">
-            <a href="/">badhelden24</a>
-          </div>
+          <a href="/" className="hover:opacity-80 transition-opacity">
+            <img 
+              src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500-0BoxfiLkXw4D2e41W20ELwwpufi7NW.svg"
+              alt="badhelden24 Logo"
+              className="h-8 sm:h-10"
+            />
+          </a>
           <Button 
-            className="hidden sm:flex bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
             onClick={handleCTAClick}
           >
+            <Phone className="w-4 h-4 mr-2" />
             Beratung anfragen
           </Button>
         </div>
@@ -196,7 +224,11 @@ const BadsanierungListPage = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="text-2xl font-bold text-blue-400 mb-4">badhelden24</div>
+              <img 
+                src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500%20%281%29-VYpwjV6yIfD1z9XEUUqmlnOVoD2NDo.svg"
+                alt="badhelden24 Logo"
+                className="h-8 mb-4"
+              />
               <p className="text-gray-400">Dein Partner für professionelle Badsanierung in ganz Deutschland.</p>
             </div>
             <div>

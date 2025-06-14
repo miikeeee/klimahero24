@@ -5,7 +5,11 @@ const RatgeberFooter = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="text-xl sm:text-2xl font-bold text-blue-400 mb-3 sm:mb-4">badhelden24</div>
+            <img 
+              src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500%20%281%29-VYpwjV6yIfD1z9XEUUqmlnOVoD2NDo.svg"
+              alt="badhelden24 Logo"
+              className="h-8 mb-4"
+            />
             <p className="text-gray-400 text-sm sm:text-base">Dein Partner für professionelle Badsanierung in ganz Deutschland.</p>
           </div>
           <div>

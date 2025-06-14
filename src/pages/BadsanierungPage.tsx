@@ -1,6 +1,9 @@
+
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import LandingPage from '@/components/LandingPage';
+import { Button } from "@/components/ui/button";
+import { Phone } from "lucide-react";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -183,6 +186,10 @@ const BadsanierungPage = () => {
     { name: data.location || data.h1, url: `/badsanierung/${data.slug}` }
   ];
 
+  const handleCTAClick = () => {
+    window.open('https://app.badhelden24.de', '_blank');
+  };
+
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
@@ -190,16 +197,21 @@ const BadsanierungPage = () => {
         {/* Header */}
         <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div className="text-xl sm:text-2xl font-bold text-blue-600">
-              <a href="/">badhelden24</a>
-            </div>
+            <a href="/" className="hover:opacity-80 transition-opacity">
+              <img 
+                src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500-0BoxfiLkXw4D2e41W20ELwwpufi7NW.svg"
+                alt="badhelden24 Logo"
+                className="h-8 sm:h-10"
+              />
+            </a>
             <div className="flex items-center space-x-2">
-              <a 
-                href="tel:08001234567"
-                className="text-gray-600 hover:text-blue-600 transition-colors hidden sm:block"
+              <Button 
+                className="hidden sm:flex bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
+                onClick={handleCTAClick}
               >
-                📞 0800 123 456 789
-              </a>
+                <Phone className="w-4 h-4 mr-2" />
+                Beratung anfragen
+              </Button>
             </div>
           </div>
         </header>
