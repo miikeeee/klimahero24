@@ -284,7 +284,6 @@ const Index = () => {
             onClick={handleCTAClick}
           >
             Jetzt kostenlose Beratung anfragen
-            <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
         </div>
       </section>

@@ -342,11 +342,10 @@ const LandingPage = ({ data }: LandingPageProps) => {
           </p>
           <Button 
             size="lg" 
-            className="bg-white text-orange-600 hover:bg-gray-100 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl w-full max-w-xs sm:max-w-sm mx-auto"
+            className="bg-white text-blue-700 hover:bg-gray-100 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl w-full max-w-xs sm:max-w-sm mx-auto"
             onClick={handleCTAClick}
           >
             {data.cta.text}
-            <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2" />
           </Button>
         </div>
       </section>
