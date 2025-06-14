@@ -249,7 +249,7 @@ const RatgeberPage = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </div>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 sm:py-12">
