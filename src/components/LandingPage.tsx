@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Phone, MapPin, Calendar, Shield } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -55,39 +56,40 @@ const LandingPage = ({ data }: LandingPageProps) => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-blue-600">
+        <div className="container mx-auto px-4 py-3 sm:py-4 flex justify-between items-center">
+          <div className="text-xl sm:text-2xl font-bold text-blue-600">
             badhelden24
           </div>
           <Button 
-            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-3 sm:px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base"
             onClick={handleCTAClick}
           >
-            <Phone className="w-4 h-4 mr-2" />
-            Jetzt anfragen
+            <Phone className="w-4 h-4 mr-1 sm:mr-2" />
+            <span className="hidden sm:inline">Jetzt anfragen</span>
+            <span className="sm:hidden">Anfragen</span>
           </Button>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
+      <section className="pt-20 sm:pt-24 pb-12 sm:pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-fade-in">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-2 text-blue-600 mb-4">
-                  <MapPin className="w-5 h-5" />
-                  <span className="font-medium">{data.location || 'Deutschlandweit'}</span>
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div className="space-y-6 sm:space-y-8 animate-fade-in">
+              <div className="space-y-3 sm:space-y-4">
+                <div className="flex items-center space-x-2 text-blue-600 mb-3 sm:mb-4">
+                  <MapPin className="w-4 sm:w-5 h-4 sm:h-5" />
+                  <span className="font-medium text-sm sm:text-base">{data.location || 'Deutschlandweit'}</span>
                 </div>
-                <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   {data.h1}
                 </h1>
-                <p className="text-xl text-gray-600 leading-relaxed">
+                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
                   {data.heroText}
                 </p>
               </div>
 
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 {[
                   "Geprüfte Handwerker aus deiner Region",
                   "Bis zu 20% staatliche Förderung",
@@ -95,47 +97,47 @@ const LandingPage = ({ data }: LandingPageProps) => {
                   "3 Jahre Garantie auf alle Arbeiten"
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3 animate-fade-in" style={{animationDelay: `${index * 100}ms`}}>
-                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700">{benefit}</span>
+                    <CheckCircle className="w-4 sm:w-5 h-4 sm:h-5 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm sm:text-base">{benefit}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 <Button 
                   size="lg" 
-                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   onClick={handleCTAClick}
                 >
                   {data.cta.text}
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2" />
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="w-full sm:w-auto border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
+                  className="w-full sm:w-auto border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300"
                   onClick={handleCTAClick}
                 >
                   Kostenlos anrufen
                 </Button>
               </div>
 
-              <div className="flex items-center space-x-4 pt-4">
-                <div className="flex">
+              <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 pt-4">
+                <div className="flex justify-center sm:justify-start">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 sm:w-5 h-4 sm:h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <span className="text-gray-600">4.9/5 • Über 2.500 zufriedene Kunden</span>
+                <span className="text-gray-600 text-center sm:text-left text-sm sm:text-base">4.9/5 • Über 2.500 zufriedene Kunden</span>
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative mt-8 lg:mt-0">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-3xl transform rotate-6 opacity-20"></div>
               <img 
                 src={data.heroImage || "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"}
                 alt={`Badsanierung ${data.location || ''}`}
-                className="relative z-10 w-full h-96 lg:h-[500px] object-cover rounded-3xl shadow-2xl transition-transform duration-500 hover:scale-105"
+                className="relative z-10 w-full h-64 sm:h-80 lg:h-96 xl:h-[500px] object-cover rounded-3xl shadow-2xl transition-transform duration-500 hover:scale-105"
               />
             </div>
           </div>
@@ -144,19 +146,19 @@ const LandingPage = ({ data }: LandingPageProps) => {
 
       {/* Content Sections */}
       {data.sections.map((section, index) => (
-        <section key={index} className={`py-16 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+        <section key={index} className={`py-12 sm:py-16 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
           <div className="container mx-auto px-4 max-w-6xl">
-            <div className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-              <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+            <div className={`grid lg:grid-cols-2 gap-8 sm:gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+              <div className={`space-y-4 sm:space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
                   {section.heading}
                 </h2>
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
                   {section.text}
                 </p>
                 <div className="flex space-x-4">
                   <Button 
-                    className="bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 hover:scale-105"
+                    className="bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 hover:scale-105 text-sm sm:text-base"
                     onClick={handleCTAClick}
                   >
                     Mehr erfahren
@@ -171,7 +173,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
                   <img 
                     src={section.image || "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"}
                     alt={section.heading}
-                    className="relative z-10 w-full h-80 object-cover rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
+                    className="relative z-10 w-full h-60 sm:h-80 object-cover rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
                   />
                 </div>
               </div>
@@ -181,57 +183,57 @@ const LandingPage = ({ data }: LandingPageProps) => {
       ))}
 
       {/* Trust Indicators */}
-      <section className="py-16 bg-blue-600">
+      <section className="py-12 sm:py-16 bg-blue-600">
         <div className="container mx-auto px-4 text-center">
-          <div className="grid md:grid-cols-3 gap-8 text-white">
-            <div className="space-y-4">
-              <Calendar className="w-12 h-12 mx-auto text-blue-200" />
-              <h3 className="text-2xl font-bold">Über 10 Jahre</h3>
-              <p className="text-blue-100">Erfahrung in der Badsanierung</p>
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 text-white">
+            <div className="space-y-3 sm:space-y-4">
+              <Calendar className="w-10 sm:w-12 h-10 sm:h-12 mx-auto text-blue-200" />
+              <h3 className="text-xl sm:text-2xl font-bold">Über 10 Jahre</h3>
+              <p className="text-blue-100 text-sm sm:text-base">Erfahrung in der Badsanierung</p>
             </div>
-            <div className="space-y-4">
-              <Shield className="w-12 h-12 mx-auto text-blue-200" />
-              <h3 className="text-2xl font-bold">100% Garantie</h3>
-              <p className="text-blue-100">3 Jahre Gewährleistung auf alle Arbeiten</p>
+            <div className="space-y-3 sm:space-y-4">
+              <Shield className="w-10 sm:w-12 h-10 sm:h-12 mx-auto text-blue-200" />
+              <h3 className="text-xl sm:text-2xl font-bold">100% Garantie</h3>
+              <p className="text-blue-100 text-sm sm:text-base">3 Jahre Gewährleistung auf alle Arbeiten</p>
             </div>
-            <div className="space-y-4">
-              <CheckCircle className="w-12 h-12 mx-auto text-blue-200" />
-              <h3 className="text-2xl font-bold">2.500+ Kunden</h3>
-              <p className="text-blue-100">Zufriedene Kunden deutschlandweit</p>
+            <div className="space-y-3 sm:space-y-4">
+              <CheckCircle className="w-10 sm:w-12 h-10 sm:h-12 mx-auto text-blue-200" />
+              <h3 className="text-xl sm:text-2xl font-bold">2.500+ Kunden</h3>
+              <p className="text-blue-100 text-sm sm:text-base">Zufriedene Kunden deutschlandweit</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Häufig gestellte Fragen
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg sm:text-xl text-gray-600">
               Alles was du über deine Badsanierung wissen musst
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {data.faq.map((item, index) => (
               <div key={index} className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-300">
                 <button
-                  className="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-200 flex justify-between items-center"
+                  className="w-full px-4 sm:px-6 py-3 sm:py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-200 flex justify-between items-center"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <span className="font-semibold text-gray-900">{item.question}</span>
+                  <span className="font-semibold text-gray-900 text-sm sm:text-base pr-4">{item.question}</span>
                   <ArrowRight 
-                    className={`w-5 h-5 text-gray-500 transition-transform duration-200 ${
+                    className={`w-4 sm:w-5 h-4 sm:h-5 text-gray-500 transition-transform duration-200 flex-shrink-0 ${
                       openFAQ === index ? 'rotate-90' : ''
                     }`} 
                   />
                 </button>
                 {openFAQ === index && (
-                  <div className="px-6 py-4 bg-white animate-fade-in">
-                    <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                  <div className="px-4 sm:px-6 py-3 sm:py-4 bg-white animate-fade-in">
+                    <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{item.answer}</p>
                   </div>
                 )}
               </div>
@@ -241,58 +243,58 @@ const LandingPage = ({ data }: LandingPageProps) => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-gradient-to-r from-orange-500 to-orange-600">
+      <section className="py-12 sm:py-16 bg-gradient-to-r from-orange-500 to-orange-600">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6">
             Bereit für dein neues Traumbad?
           </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-orange-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
             Lass dich kostenlos beraten und erfahre, wie viel Förderung du erhalten kannst.
           </p>
           <Button 
             size="lg" 
-            className="bg-white text-orange-600 hover:bg-gray-100 px-12 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="bg-white text-orange-600 hover:bg-gray-100 px-8 sm:px-12 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
             onClick={handleCTAClick}
           >
             {data.cta.text}
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2" />
           </Button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="text-2xl font-bold text-blue-400 mb-4">badhelden24</div>
-              <p className="text-gray-400">Dein Partner für professionelle Badsanierung in ganz Deutschland.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
+            <div className="sm:col-span-2 lg:col-span-1">
+              <div className="text-xl sm:text-2xl font-bold text-blue-400 mb-3 sm:mb-4">badhelden24</div>
+              <p className="text-gray-400 text-sm sm:text-base">Dein Partner für professionelle Badsanierung in ganz Deutschland.</p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-400">
+              <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Services</h4>
+              <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
                 <li><a href="/badsanierung" className="hover:text-white transition-colors">Badsanierung</a></li>
                 <li><a href="/badumbau" className="hover:text-white transition-colors">Badumbau</a></li>
                 <li><a href="/ratgeber" className="hover:text-white transition-colors">Ratgeber</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Rechtliches</h4>
-              <ul className="space-y-2 text-gray-400">
+              <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Rechtliches</h4>
+              <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
                 <li><a href="/impressum" className="hover:text-white transition-colors">Impressum</a></li>
                 <li><a href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</a></li>
                 <li><a href="/agb" className="hover:text-white transition-colors">AGB</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Kontakt</h4>
-              <p className="text-gray-400">
+              <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Kontakt</h4>
+              <p className="text-gray-400 text-sm sm:text-base">
                 <span className="block">📞 0800 123 456 789</span>
                 <span className="block">✉️ info@badhelden24.de</span>
               </p>
             </div>
           </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
+          <div className="border-t border-gray-800 pt-6 sm:pt-8 text-center text-gray-400 text-sm sm:text-base">
             <p>&copy; 2024 badhelden24. Alle Rechte vorbehalten.</p>
           </div>
         </div>
