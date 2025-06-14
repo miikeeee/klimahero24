@@ -1,10 +1,11 @@
+
 {
   "slug": "berlin",
   "title": "Badsanierung Berlin | Kosten, Erfahrung & Günstig | badhelden24",
   "metaDescription": "Professionelle Badsanierung in Berlin ✓ Kosten-Übersicht ✓ Erfahrene Handwerker ✓ Günstige Angebote ✓ Bis zu 20% Förderung ✓ Beratung!",
   "h1": "Badsanierung Berlin",
   "heroText": "Dein Traumbad in Berlin – Modern, Förderfähig & Stressfrei umgesetzt von geprüften Experten. Erfahre mehr über Kosten, Erfahrungen und günstige Optionen.",
-  "heroImage": "https://images.unsplash.com/photo-1560448204-e1a3ecb4d0bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "heroImage": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   "location": "Berlin",
   "sections": [
     {
@@ -138,10 +139,34 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Wie lange dauert eine Badsanierung in Berlin?",
+        "name": "Was kostet eine Badsanierung in Berlin?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Die Dauer hängt vom Umfang ab. Ein komplettes Bad dauert in der Regel 2-3 Wochen. Bei Teilsanierungen oder einfachen Renovierungen kann es auch schneller gehen."
+          "text": "Eine Standard-Badsanierung in Berlin beginnt bei etwa 15.000€. Die Kosten hängen von Größe, Ausstattung und baulichen Gegebenheiten ab."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche Erfahrungen haben Kunden mit Badsanierungen in Berlin gemacht?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kunden schätzen Zuverlässigkeit und Expertise im Umgang mit Berliner Altbauten. Positive Erfahrungen werden oft mit transparenter Kommunikation und Einhaltung von Zeitplänen gemacht."
+        }
+      },
+      {
+        "@type": "Question", 
+        "name": "Gibt es günstige Optionen für Badsanierung in Berlin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, durch clevere Materialwahl, Teilsanierungen und Nutzung von Fördermitteln lässt sich eine Badsanierung in Berlin auch günstiger gestalten."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie finde ich Handwerker für Badsanierung in meiner Nähe in Berlin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "badhelden24 verfügt über ein Netzwerk von Partnerbetrieben in allen Berliner Bezirken, wodurch kurze Anfahrtswege gewährleistet sind."
         }
       }
     ]
