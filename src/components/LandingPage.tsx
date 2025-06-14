@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Phone, MapPin, Calendar, Shield } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -102,10 +101,10 @@ const LandingPage = ({ data }: LandingPageProps) => {
                 ))}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 w-full">
+              <div className="space-y-4">
                 <Button 
                   size="lg" 
-                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg flex-shrink-0"
+                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   onClick={handleCTAClick}
                 >
                   {data.cta.text}
@@ -114,7 +113,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="w-full sm:w-auto border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300 flex-shrink-0"
+                  className="w-full sm:w-auto border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
                   onClick={handleCTAClick}
                 >
                   Kostenlos anrufen
