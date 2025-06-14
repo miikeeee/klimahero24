@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Phone, MapPin, Calendar, Shield, PhoneOutgoing, Home, FileText, Wrench, Sparkles, Users, DollarSign, Smile, ShieldCheck } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -91,13 +92,22 @@ const LandingPage = ({ data }: LandingPageProps) => {
             alt="badhelden24 Logo"
             className="h-8 sm:h-10"
           />
-          <Button 
-            className="hidden sm:flex bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
-            onClick={handleCTAClick}
-          >
-            <Phone className="w-4 h-4 mr-2" />
-            Beratung anfragen
-          </Button>
+          <div className="flex items-center space-x-2">
+            <Button 
+              className="sm:hidden bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-full transition-all duration-300 hover:scale-105"
+              onClick={handleCTAClick}
+            >
+              <Phone className="w-4 h-4 mr-2" />
+              Beratung
+            </Button>
+            <Button 
+              className="hidden sm:flex bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
+              onClick={handleCTAClick}
+            >
+              <Phone className="w-4 h-4 mr-2" />
+              Beratung anfragen
+            </Button>
+          </div>
         </div>
       </header>
 
