@@ -31,7 +31,7 @@ const CityCards = ({ cities, showAllButton = false }: CityCardsProps) => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {cities.map((city, index) => (
             <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="relative overflow-hidden rounded-t-lg">
+              <div className="relative overflow-hidden rounded-t-lg cursor-pointer" onClick={() => window.location.href = `/badsanierung/${city.slug}`}>
                 <img 
                   src={city.image}
                   alt={city.title}
