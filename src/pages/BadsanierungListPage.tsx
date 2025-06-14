@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import { MapPin, ArrowRight, Phone } from 'lucide-react';
+import { MapPin, ArrowRight, Phone, Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface City {
@@ -14,6 +14,8 @@ interface City {
 const BadsanierungListPage = () => {
   const [cities, setCities] = useState<City[]>([]);
   const [loading, setLoading] = useState(true);
+  const [visibleCities, setVisibleCities] = useState(9);
+  const [showingMore, setShowingMore] = useState(false);
 
   useEffect(() => {
     const loadCities = async () => {
@@ -80,6 +82,48 @@ const BadsanierungListPage = () => {
           image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
           description: "Qualitätsvolle Badsanierung in der Kulturhauptstadt 2010.",
           population: "580.000 Einwohner"
+        },
+        {
+          name: "Leipzig",
+          slug: "leipzig",
+          image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Moderne Badsanierung in der sächsischen Metropole.",
+          population: "600.000 Einwohner"
+        },
+        {
+          name: "Dresden",
+          slug: "dresden",
+          image: "https://images.unsplash.com/photo-1564760290292-23341e4df6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Erstklassige Badsanierung in der Kulturstadt an der Elbe.",
+          population: "560.000 Einwohner"
+        },
+        {
+          name: "Hannover",
+          slug: "hannover",
+          image: "https://images.unsplash.com/photo-1551975074-52ec8ac997ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Professionelle Badsanierung in der niedersächsischen Landeshauptstadt.",
+          population: "540.000 Einwohner"
+        },
+        {
+          name: "Nürnberg",
+          slug: "nuernberg",
+          image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Traditionelle Badsanierung in der fränkischen Metropole.",
+          population: "520.000 Einwohner"
+        },
+        {
+          name: "Bremen",
+          slug: "bremen",
+          image: "https://images.unsplash.com/photo-1539650116574-75c0c6d14d14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Maritime Badsanierung in der Hansestadt Bremen.",
+          population: "570.000 Einwohner"
+        },
+        {
+          name: "Mannheim",
+          slug: "mannheim",
+          image: "https://images.unsplash.com/photo-1595655931695-059d14e2447d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Innovative Badsanierung in der Quadratestadt.",
+          population: "310.000 Einwohner"
         }
       ];
 
@@ -122,6 +166,18 @@ const BadsanierungListPage = () => {
 
   const handleCTAClick = () => {
     window.open('https://app.badhelden24.de', '_blank');
+  };
+
+  const handleShowMore = () => {
+    setVisibleCities(cities.length);
+    setShowingMore(true);
+  };
+
+  const handleShowLess = () => {
+    setVisibleCities(9);
+    setShowingMore(false);
+    // Scroll to top of cities section
+    document.getElementById('cities-section')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   if (loading) {
@@ -171,33 +227,61 @@ const BadsanierungListPage = () => {
           </div>
 
           {/* Cities Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {cities.map((city, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={city.image}
-                    alt={`Badsanierung ${city.name}`}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm flex items-center">
-                    <MapPin className="w-3 h-3 mr-1" />
-                    {city.population}
+          <div id="cities-section">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {cities.slice(0, visibleCities).map((city, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                  <div className="relative overflow-hidden">
+                    <img 
+                      src={city.image}
+                      alt={`Badsanierung ${city.name}`}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm flex items-center">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      {city.population}
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{city.name}</h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed">{city.description}</p>
+                    <a 
+                      href={`/badsanierung/${city.slug}`}
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
+                    >
+                      Mehr erfahren
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </a>
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{city.name}</h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">{city.description}</p>
-                  <a 
-                    href={`/badsanierung/${city.slug}`}
-                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
+              ))}
+            </div>
+
+            {/* Show More/Less Button */}
+            {cities.length > 9 && (
+              <div className="text-center mt-12">
+                {!showingMore ? (
+                  <Button 
+                    onClick={handleShowMore}
+                    variant="outline"
+                    size="lg"
+                    className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
                   >
-                    Mehr erfahren
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
-                </div>
+                    <Plus className="w-5 h-5 mr-2" />
+                    Mehr Städte anzeigen ({cities.length - visibleCities} weitere)
+                  </Button>
+                ) : (
+                  <Button 
+                    onClick={handleShowLess}
+                    variant="outline"
+                    size="lg"
+                    className="border-2 border-gray-400 text-gray-600 hover:bg-gray-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
+                  >
+                    Weniger anzeigen
+                  </Button>
+                )}
               </div>
-            ))}
+            )}
           </div>
 
           {/* CTA Section */}
