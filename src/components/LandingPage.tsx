@@ -87,9 +87,11 @@ const LandingPage = ({ data }: LandingPageProps) => {
       {/* Header */}
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-xl sm:text-2xl font-bold text-blue-600">
-            badhelden24
-          </div>
+          <img 
+            src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Logo%20500%20x%20120%20Oragnener%20Hintergrund-75zNSqn4vqR66Wur7A04NJzROeiEEU"
+            alt="badhelden24 Logo"
+            className="h-8 sm:h-10"
+          />
           <Button 
             className="hidden sm:flex bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
             onClick={handleCTAClick}
@@ -357,7 +359,11 @@ const LandingPage = ({ data }: LandingPageProps) => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
             <div className="sm:col-span-2 lg:col-span-1">
-              <div className="text-xl sm:text-2xl font-bold text-blue-400 mb-3 sm:mb-4">badhelden24</div>
+              <img 
+                src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Logo%20500%20x%20120%20Oragnener%20Hintergrund-75zNSqn4vqR66Wur7A04NJzROeiEEU"
+                alt="badhelden24 Logo"
+                className="h-8 mb-3 sm:mb-4"
+              />
               <p className="text-gray-400 text-sm sm:text-base">Dein Partner für professionelle Badsanierung in ganz Deutschland.</p>
             </div>
             <div>

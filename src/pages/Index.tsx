@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Phone, ShieldCheck, Wind, User, Package } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -90,9 +91,11 @@ const Index = () => {
       {/* Header */}
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-blue-600">
-            badhelden24
-          </div>
+          <img 
+            src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Logo%20500%20x%20120%20Oragnener%20Hintergrund-75zNSqn4vqR66Wur7A04NJzROeiEEU"
+            alt="badhelden24 Logo"
+            className="h-8 sm:h-10"
+          />
           <Button 
             className="hidden sm:flex bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
             onClick={handleCTAClick}
@@ -362,7 +365,11 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="text-2xl font-bold text-blue-400 mb-4">badhelden24</div>
+              <img 
+                src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Logo%20500%20x%20120%20Oragnener%20Hintergrund-75zNSqn4vqR66Wur7A04NJzROeiEEU"
+                alt="badhelden24 Logo"
+                className="h-8 mb-4"
+              />
               <p className="text-gray-400">Dein Partner für professionelle Badsanierung in ganz Deutschland.</p>
             </div>
             <div>
