@@ -1,7 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Phone, MapPin, Calendar, Shield, PhoneOutgoing, Home, FileText, Wrench, Sparkles, Users, DollarSign, Smile, ShieldCheck } from "lucide-react";
 import { useEffect, useState } from "react";
+import KlickstreckeIframe from "./KlickstreckeIframe";
 
 interface ProcessStep {
   icon: keyof typeof import("lucide-react").icons;
@@ -87,11 +87,13 @@ const LandingPage = ({ data }: LandingPageProps) => {
       {/* Header */}
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <img 
-            src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500-0BoxfiLkXw4D2e41W20ELwwpufi7NW.svg"
-            alt="badhelden24 Logo"
-            className="h-8 sm:h-10"
-          />
+          <a href="/" className="hover:opacity-80 transition-opacity">
+            <img 
+              src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500-0BoxfiLkXw4D2e41W20ELwwpufi7NW.svg"
+              alt="badhelden24 Logo"
+              className="h-8 sm:h-10"
+            />
+          </a>
           <div className="flex items-center space-x-2">
             <Button 
               className="sm:hidden bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-full transition-all duration-300 hover:scale-105"
@@ -182,42 +184,53 @@ const LandingPage = ({ data }: LandingPageProps) => {
         </div>
       </section>
 
-      {/* Content Sections */}
+      {/* Content Sections with iframe after 3rd section */}
       {data.sections.map((section, index) => (
-        <section key={index} className={`py-12 sm:py-16 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
-          <div className="container mx-auto px-4 max-w-6xl">
-            <div className={`grid lg:grid-cols-2 gap-8 sm:gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-              <div className={`space-y-4 sm:space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-                  {section.heading}
-                </h2>
-                <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                  {section.text}
-                </p>
-                <div className="flex space-x-4">
-                  <Button 
-                    className="bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 hover:scale-105 text-sm sm:text-base"
-                    onClick={handleCTAClick}
-                  >
-                    Mehr erfahren
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
+        <>
+          <section key={index} className={`py-12 sm:py-16 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+            <div className="container mx-auto px-4 max-w-6xl">
+              <div className={`grid lg:grid-cols-2 gap-8 sm:gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+                <div className={`space-y-4 sm:space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
+                    {section.heading}
+                  </h2>
+                  <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+                    {section.text}
+                  </p>
+                  <div className="flex space-x-4">
+                    <Button 
+                      className="bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 hover:scale-105 text-sm sm:text-base"
+                      onClick={handleCTAClick}
+                    >
+                      Mehr erfahren
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </div>
                 </div>
-              </div>
-              
-              <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                <div className="relative overflow-hidden rounded-2xl">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-200 to-blue-300 rounded-2xl transform rotate-3 opacity-30"></div>
-                  <img 
-                    src={section.image || "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"}
-                    alt={section.heading}
-                    className="relative z-10 w-full h-60 sm:h-80 object-cover rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
-                  />
+                
+                <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-200 to-blue-300 rounded-2xl transform rotate-3 opacity-30"></div>
+                    <img 
+                      src={section.image || "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"}
+                      alt={section.heading}
+                      className="relative z-10 w-full h-60 sm:h-80 object-cover rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+          
+          {/* Insert iframe after the 3rd section (index 2) */}
+          {index === 2 && (
+            <section className="py-12 sm:py-16 bg-gray-50">
+              <div className="container mx-auto px-4">
+                <KlickstreckeIframe />
+              </div>
+            </section>
+          )}
+        </>
       ))}
 
       {/* Process Section */}

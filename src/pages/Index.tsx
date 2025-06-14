@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Phone, ShieldCheck, Wind, User, Package } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -90,11 +91,13 @@ const Index = () => {
       {/* Header */}
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <img 
-            src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500-0BoxfiLkXw4D2e41W20ELwwpufi7NW.svg"
-            alt="badhelden24 Logo"
-            className="h-8 sm:h-10"
-          />
+          <a href="/" className="hover:opacity-80 transition-opacity">
+            <img 
+              src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500-0BoxfiLkXw4D2e41W20ELwwpufi7NW.svg"
+              alt="badhelden24 Logo"
+              className="h-8 sm:h-10"
+            />
+          </a>
           <div className="flex items-center space-x-2">
             <Button 
               className="sm:hidden bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-full transition-all duration-300 hover:scale-105"
