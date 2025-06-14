@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { MapPin, ArrowRight, Phone, Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -124,6 +123,76 @@ const BadsanierungListPage = () => {
           image: "https://images.unsplash.com/photo-1595655931695-059d14e2447d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
           description: "Innovative Badsanierung in der Quadratestadt.",
           population: "310.000 Einwohner"
+        },
+        {
+          name: "Freiburg",
+          slug: "freiburg",
+          image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Umweltfreundliche Badsanierung in der Schwarzwaldmetropole.",
+          population: "230.000 Einwohner"
+        },
+        {
+          name: "Mainz",
+          slug: "mainz",
+          image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Qualitätsvolle Badsanierung in der rheinland-pfälzischen Landeshauptstadt.",
+          population: "220.000 Einwohner"
+        },
+        {
+          name: "Lübeck",
+          slug: "luebeck",
+          image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Hanseatische Badsanierung in der UNESCO-Welterbestadt.",
+          population: "217.000 Einwohner"
+        },
+        {
+          name: "Erfurt",
+          slug: "erfurt",
+          image: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Traditionelle Badsanierung in der thüringischen Landeshauptstadt.",
+          population: "214.000 Einwohner"
+        },
+        {
+          name: "Rostock",
+          slug: "rostock",
+          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Maritime Badsanierung an der Ostseeküste.",
+          population: "209.000 Einwohner"
+        },
+        {
+          name: "Kassel",
+          slug: "kassel",
+          image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Moderne Badsanierung in der documenta-Stadt.",
+          population: "202.000 Einwohner"
+        },
+        {
+          name: "Hagen",
+          slug: "hagen",
+          image: "https://images.unsplash.com/photo-1539650116574-75c0c6d14d14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Zuverlässige Badsanierung im südlichen Ruhrgebiet.",
+          population: "188.000 Einwohner"
+        },
+        {
+          name: "Hamm",
+          slug: "hamm",
+          image: "https://images.unsplash.com/photo-1595655931695-059d14e2447d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Professionelle Badsanierung in der westfälischen Stadt.",
+          population: "179.000 Einwohner"
+        },
+        {
+          name: "Saarbrücken",
+          slug: "saarbruecken",
+          image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Grenznahe Badsanierung in der saarländischen Landeshauptstadt.",
+          population: "180.000 Einwohner"
+        },
+        {
+          name: "Mülheim an der Ruhr",
+          slug: "muelheim",
+          image: "https://images.unsplash.com/photo-1564760290292-23341e4df6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Hochwertige Badsanierung an der Ruhr.",
+          population: "170.000 Einwohner"
         }
       ];
 
