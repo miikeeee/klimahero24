@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Star, Phone, MapPin, Calendar, Shield, PhoneOutgoing, Home, FileText, Wrench, Sparkles, Users, DollarSign, Smile } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Phone, MapPin, Calendar, Shield, PhoneOutgoing, Home, FileText, Wrench, Sparkles, Users, DollarSign, Smile, ShieldCheck } from "lucide-react";
 import { useEffect, useState } from "react";
 
 interface ProcessStep {
@@ -332,7 +332,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-12 sm:py-16 bg-gradient-to-r from-orange-500 to-orange-600">
+      <section className="py-12 sm:py-16 bg-gradient-to-r from-orange-500 to-orange-600 overflow-hidden">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6">
             Bereit für dein neues Traumbad?
@@ -342,7 +342,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
           </p>
           <Button 
             size="lg" 
-            className="bg-white text-orange-600 hover:bg-gray-100 px-8 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl max-w-xs sm:max-w-sm md:max-w-md mx-auto"
+            className="bg-white text-orange-600 hover:bg-gray-100 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl w-full max-w-xs sm:max-w-sm mx-auto"
             onClick={handleCTAClick}
           >
             {data.cta.text}
