@@ -1,8 +1,13 @@
-
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Star, Phone } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Phone, ShieldCheck, Wind, User, Package } from "lucide-react";
 import { useEffect, useState } from "react";
 import CityCards from "@/components/CityCards";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -32,6 +37,48 @@ const Index = () => {
     "Bis zu 20% staatliche Förderung",
     "Kostenlose Beratung & Planung",
     "3 Jahre Garantie auf alle Arbeiten"
+  ];
+
+  const keyBenefits = [
+    {
+      icon: ShieldCheck,
+      title: "Festpreisgarantie",
+      description: "Keine versteckten Kosten. Sie zahlen den vereinbarten Preis."
+    },
+    {
+      icon: Wind,
+      title: "Staubfreie Sanierung",
+      description: "Wir nutzen moderne Techniken, um Schmutz und Staub zu minimieren."
+    },
+    {
+      icon: User,
+      title: "Persönlicher Ansprechpartner",
+      description: "Ein fester Ansprechpartner begleitet Sie durch das gesamte Projekt."
+    },
+    {
+      icon: Package,
+      title: "Alles aus einer Hand",
+      description: "Von der Planung bis zur Umsetzung koordinieren wir alle Gewerke für Sie."
+    }
+  ];
+
+  const faqs = [
+    {
+      question: "Wie lange dauert eine komplette Badsanierung?",
+      answer: "Eine komplette Badsanierung dauert in der Regel zwischen 2 und 4 Wochen, abhängig vom Umfang der Arbeiten und der Größe des Badezimmers."
+    },
+    {
+      question: "Was kostet eine Badsanierung?",
+      answer: "Die Kosten variieren stark je nach Größe, Ausstattung und Aufwand. Eine erste Kostenschätzung erhalten Sie in unserem kostenlosen Beratungsgespräch. Im Durchschnitt liegen die Kosten zwischen 15.000 € und 30.000 €."
+    },
+    {
+      question: "Bieten Sie eine Garantie auf die Arbeiten?",
+      answer: "Ja, wir bieten eine 3-jährige Garantie auf alle von uns durchgeführten Arbeiten. Ihre Zufriedenheit und die Qualität unserer Arbeit haben für uns oberste Priorität."
+    },
+    {
+      question: "Wie läuft die Planung für mein neues Bad ab?",
+      answer: "Nach Ihrer Anfrage führen wir eine kostenlose Erstberatung durch (auf Wunsch auch vor Ort). Anschließend erstellen unsere Experten eine detaillierte 3D-Planung und ein transparentes Angebot. Sie können alles in Ruhe prüfen, bevor es losgeht."
+    }
   ];
 
   const handleCTAClick = () => {
@@ -96,7 +143,7 @@ const Index = () => {
                   className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
                   onClick={handleCTAClick}
                 >
-                  Beispiele ansehen
+                  Mehr erfahren
                 </Button>
               </div>
 
@@ -170,8 +217,57 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Benefits Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Ihre Vorteile mit badhelden24
+            </h2>
+            <p className="text-xl text-gray-600">
+              Wir machen Ihre Badsanierung einfach, sicher und transparent.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {keyBenefits.map((benefit, index) => (
+              <div key={index} className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow duration-300">
+                <div className="flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-full mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                <p className="text-gray-600">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* City Cards Section */}
       {cityCards.length > 0 && <CityCards cities={cityCards} />}
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Häufig gestellte Fragen
+            </h2>
+            <p className="text-xl text-gray-600">
+              Antworten auf die wichtigsten Fragen rund um Ihre Badsanierung.
+            </p>
+          </div>
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`}>
+                <AccordionTrigger className="text-lg font-semibold text-left">{faq.question}</AccordionTrigger>
+                <AccordionContent className="text-base text-gray-600 leading-relaxed">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800">
