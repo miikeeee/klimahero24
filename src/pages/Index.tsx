@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Phone, ShieldCheck, Wind, User, Package } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -82,7 +83,7 @@ const Index = () => {
   ];
 
   const handleCTAClick = () => {
-    window.open('https://app.neko24.de', '_blank');
+    window.open('https://app.badhelden24.de', '_blank');
   };
 
   return (

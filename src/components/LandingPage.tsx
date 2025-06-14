@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Phone, MapPin, Calendar, Shield, PhoneOutgoing, Home, FileText, Wrench, Sparkles, Users, DollarSign, Smile, ShieldCheck } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -73,7 +72,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
   };
 
   const handleCTAClick = () => {
-    window.open('https://app.neko24.de', '_blank');
+    window.open('https://app.badhelden24.de', '_blank');
   };
 
   const IconComponent = ({ name, ...props }: { name: keyof typeof import("lucide-react").icons } & React.ComponentProps<typeof ArrowRight>) => {
