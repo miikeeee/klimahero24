@@ -150,7 +150,7 @@ const RatgeberPage = () => {
 
       {/* Hero Section */}
       <section className="pt-20 sm:pt-24 pb-8 sm:pb-12 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-7xl">
           <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-12 relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full -translate-y-16 translate-x-16 opacity-50"></div>
