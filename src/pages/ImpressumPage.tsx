@@ -30,9 +30,9 @@ const ImpressumPage = () => {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">Angaben gemäß § 5 TMG</h2>
               <div className="text-gray-700 leading-relaxed">
-                <p className="mb-2">Geschenkfabrik24.de</p>
-                <p className="mb-2">Mike Mildenberger</p>
-                <p className="mb-2">Rosenweg 21</p>
+                <p>Badhelden24.de</p>
+                <p>Mike Mildenberger</p>
+                <p>Rosenweg 21</p>
                 <p className="mb-4">53604 Bad Honnef, Deutschland</p>
               </div>
             </section>
