@@ -1,42 +1,41 @@
-
 {
   "slug": "stuttgart",
   "title": "Badsanierung Stuttgart | Kosten, Erfahrung & Günstig | badhelden24",
   "metaDescription": "Badsanierung Stuttgart ✓ Kosten ab 14.500€ ✓ Erfahrene Handwerker ✓ Günstige Festpreise ✓ Schwäbische Qualität ✓ Kostenlose Beratung!",
   "h1": "Badsanierung Stuttgart",
   "heroText": "Ihr neues Bad in der schwäbischen Metropole – Qualitativ hochwertig, günstig und von Stuttgarter Experten umgesetzt. Erfahren Sie mehr zu Kosten, Erfahrungen und lokalen Anbietern.",
-  "heroImage": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "heroImage": "https://source.unsplash.com/800x600/?stuttgart,mercedes",
   "location": "Stuttgart",
   "sections": [
     {
       "heading": "Schwäbische Qualität bei der Badsanierung Stuttgart",
       "text": "In Stuttgart wird Wert auf solide Handwerksarbeit und faire Preise gelegt. Unsere Partnerbetriebe verkörpern diese schwäbischen Tugenden und bringen jahrelange Erfahrung mit Stuttgarter Immobilien mit – von klassischen Villen in Bad Cannstatt bis zu modernen Wohnungen in der Mitte. Vertrauen Sie auf bewährte Qualität und zuverlässige Umsetzung.",
-      "image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
     },
     {
       "heading": "Badsanierung Stuttgart Kosten – Schwäbisch sparsam kalkuliert",
       "text": "Die Kosten für eine Badsanierung in Stuttgart beginnen bei etwa 14.500€ für eine solide Grundausstattung. Je nach Materialwahl und Umfang können Premium-Sanierungen bis zu 32.000€ kosten. Durch effiziente Planung und gute Lieferantenbeziehungen in der Region bieten wir faire Preise ohne versteckte Kosten. Ein detailliertes Angebot erhalten Sie nach kostenloser Besichtigung in Stuttgart.",
-      "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "image": "https://images.unsplash.com/photo-1722858810036-e917b4dd3f3f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
     },
     {
       "heading": "Erfahrungen Badsanierung Stuttgart – Vertrauen Sie auf Bewährtes",
       "text": "Stuttgarter Kunden schätzen Pünktlichkeit, Ordnung und handwerkliche Präzision. Unsere Handwerkspartner erfüllen genau diese Erwartungen und bringen über 12 Jahre Erfahrung in der Region mit. Von traditionellen Häusern im Westen bis zu modernen Projekten in Vaihingen – positive Erfahrungen und Mundpropaganda sprechen für unsere Arbeit.",
-      "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "image": "https://images.unsplash.com/photo-1744869524920-f0efc925b82f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
     },
     {
       "heading": "Günstige Badsanierung Stuttgart – Qualität zum fairen Preis",
       "text": "Auch in Stuttgart muss eine hochwertige Badsanierung nicht überteuert sein. Durch regionale Vernetzung, optimierte Abläufe und schwäbische Sparsamkeit bieten wir Komplettbäder bereits ab 14.500€. Nutzen Sie unsere Expertise bei Materialauswahl und Fördermittelberatung für Ihre günstige Badsanierung in Stuttgart.",
-      "image": "https://images.unsplash.com/photo-1560448204-e1a3ecb4d0bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "image": "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
     },
     {
       "heading": "Badsanierung in der Nähe Stuttgart – Handwerker aus der Region",
       "text": "Von der Innenstadt bis nach Degerloch, von Feuerbach bis Möhringen – wir haben qualifizierte Handwerker für Badsanierung in Ihrer Nähe in Stuttgart. Auch die umliegenden Gemeinden wie Esslingen, Sindelfingen oder Ludwigsburg gehören zu unserem Einzugsgebiet. Kurze Wege bedeuten niedrigere Kosten und flexible Terminplanung.",
-      "image": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "image": ""
     },
     {
       "heading": "Besonderheiten bei Stuttgarter Badsanierungen",
       "text": "Stuttgart liegt in einem Talkessel mit spezifischen baulichen Herausforderungen wie Hanglagen und besonderen Grundwasserverhältnissen. Unsere erfahrenen Handwerker kennen diese regionalen Eigenarten und planen entsprechend. Von der Hanglage in Degerloch bis zu Erdgeschosswohnungen in Stuttgart-Ost – wir haben die richtige Lösung.",
-      "image": "https://images.unsplash.com/photo-1586105251261-72a756497a11?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "image": ""
     }
   ],
   "processSection": {
@@ -66,7 +65,7 @@
       {
         "icon": "Sparkles",
         "title": "Zufriedene Übergabe",
-        "description": "Gemeinsame Abnahme Ihres neuen Badezimmers in Stuttgart mit 3 Jahren Garantie."
+        "description": "Gemeinsame Abnahme Ihres neuen Badezimmers in Stuttgart mit 5 Jahren Garantie."
       }
     ]
   },
@@ -158,5 +157,11 @@
   "cta": {
     "text": "Kostenlose Beratung für Stuttgart anfragen",
     "url": "https://app.neko24.de"
-  }
+  },
+  "imageSections": [
+    {
+      "src": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "alt": "Modernes Badezimmer nach Sanierung in Berlin"
+    }
+  ]
 }
