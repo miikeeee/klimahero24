@@ -1,13 +1,12 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Star, Phone, ShieldCheck as BenefitIcon, Users, Wrench, ThumbsUp } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 import CityCards from "@/components/CityCards";
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
   const [cityCards, setCityCards] = useState([]);
-  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -28,42 +27,12 @@ const Index = () => {
     loadCityCards();
   }, []);
 
-  const heroBenefits = [
+  const benefits = [
     "Geprüfte Handwerker aus deiner Region",
     "Bis zu 20% staatliche Förderung",
     "Kostenlose Beratung & Planung",
     "3 Jahre Garantie auf alle Arbeiten"
   ];
-
-  const pageBenefits = [
-    { icon: BenefitIcon, title: "Transparente Festpreise", description: "Keine versteckten Kosten, volle Kostenkontrolle von Anfang an." },
-    { icon: Users, title: "Persönliche Fachberatung", description: "Experten planen mit Ihnen Ihr Traumbad, individuell und bedarfsgerecht." },
-    { icon: Wrench, title: "Alles aus einer Hand", description: "Von der Planung bis zur finalen Übergabe – ein Ansprechpartner für alles." },
-    { icon: ThumbsUp, title: "Hochwertige Materialien", description: "Wir verwenden nur geprüfte Qualitätsprodukte namhafter Hersteller." }
-  ];
-
-  const faqs = [
-    {
-      question: "Wie lange dauert eine typische Badsanierung?",
-      answer: "Je nach Umfang dauert eine komplette Badsanierung in der Regel 2-4 Wochen."
-    },
-    {
-      question: "Was kostet eine Badsanierung im Durchschnitt?",
-      answer: "Die Kosten variieren stark, beginnen aber oft bei ca. 13.000€ für ein Standardbad. Wir erstellen Ihnen ein individuelles Angebot."
-    },
-    {
-      question: "Bieten Sie auch barrierefreie Badumbauten an?",
-      answer: "Ja, wir sind spezialisiert auf altersgerechte und barrierefreie Badlösungen, inklusive KfW-Förderberatung."
-    },
-    {
-      question: "Kann ich während der Sanierung zu Hause wohnen bleiben?",
-      answer: "Das ist oft möglich, hängt aber vom Umfang der Arbeiten ab. Wir minimieren Staub und Lärm und sprechen die Details mit Ihnen ab."
-    }
-  ];
-
-  const toggleFAQ = (index: number) => {
-    setOpenFAQ(openFAQ === index ? null : index);
-  };
 
   const handleCTAClick = () => {
     window.open('https://app.neko24.de', '_blank');
@@ -73,8 +42,18 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
-        { // ... keep existing code (header content)
-        }
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <div className="text-2xl font-bold text-blue-600">
+            badhelden24
+          </div>
+          <Button 
+            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
+            onClick={handleCTAClick}
+          >
+            <Phone className="w-4 h-4 mr-2" />
+            Jetzt anfragen
+          </Button>
+        </div>
       </header>
 
       {/* Hero Section */}
@@ -94,7 +73,7 @@ const Index = () => {
               </div>
 
               <div className="space-y-3">
-                {heroBenefits.map((benefit, index) => (
+                {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3 animate-fade-in" style={{animationDelay: `${index * 100}ms`}}>
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                     <span className="text-gray-700">{benefit}</span>
@@ -117,19 +96,27 @@ const Index = () => {
                   className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
                   onClick={handleCTAClick}
                 >
-                  Mehr erfahren {/* Changed text here */}
+                  Beispiele ansehen
                 </Button>
               </div>
 
               <div className="flex items-center space-x-4 pt-4">
-                { // ... keep existing code (star rating)
-                }
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <span className="text-gray-600">4.9/5 • Über 2.500 zufriedene Kunden</span>
               </div>
             </div>
 
             <div className="relative">
-              { // ... keep existing code (hero image)
-              }
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-3xl transform rotate-6 opacity-20"></div>
+              <img 
+                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Modernes Badezimmer nach Sanierung"
+                className="relative z-10 w-full h-96 lg:h-[500px] object-cover rounded-3xl shadow-2xl transition-transform duration-500 hover:scale-105"
+              />
             </div>
           </div>
         </div>
@@ -137,104 +124,111 @@ const Index = () => {
 
       {/* Process Section */}
       <section className="py-16 bg-white">
-        { // ... keep existing code (process section content)
-        }
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              So einfach geht's zu deinem neuen Bad
+            </h2>
+            <p className="text-xl text-gray-600">
+              In nur 3 Schritten von der Idee zum fertigen Traumbad
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                step: "1",
+                title: "Anfrage stellen",
+                description: "Beschreibe deine Wünsche und erhalte eine kostenlose Erstberatung",
+                icon: "📝"
+              },
+              {
+                step: "2", 
+                title: "Planung & Angebot",
+                description: "Unsere Experten planen dein Bad und prüfen Fördermöglichkeiten",
+                icon: "📐"
+              },
+              {
+                step: "3",
+                title: "Umsetzung",
+                description: "Professionelle Umsetzung durch geprüfte Handwerker aus deiner Region",
+                icon: "🔨"
+              }
+            ].map((item, index) => (
+              <div key={index} className="text-center group hover:transform hover:scale-105 transition-all duration-300">
+                <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl group-hover:bg-blue-200 transition-colors">
+                  {item.icon}
+                </div>
+                <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
+                  {item.step}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* City Cards Section */}
       {cityCards.length > 0 && <CityCards cities={cityCards} />}
 
-      {/* Benefits Section */}
-      <section className="py-12 sm:py-16 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-              Ihre Vorteile mit Badhelden24
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 mt-2">
-              Wir machen Ihre Badsanierung einfach und sorgenfrei.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
-            {pageBenefits.map((benefit, index) => (
-              <div 
-                key={index} 
-                className="flex items-start space-x-4 p-4 animate-scale-in"
-                style={{animationDelay: `${index * 100}ms`}}
-              >
-                <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
-                  <benefit.icon className="w-5 h-5 sm:w-6 sm:h-6" />
-                </div>
-                <div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-1">{benefit.title}</h3>
-                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{benefit.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      
-      {/* FAQ Section */}
-      <section className="py-12 sm:py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Häufig gestellte Fragen
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600">
-              Antworten auf Ihre wichtigsten Fragen zur Badsanierung.
-            </p>
-          </div>
-          <div className="space-y-3 sm:space-y-4">
-            {faqs.map((item, index) => (
-              <div key={index} className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-300">
-                <button
-                  className="w-full px-4 sm:px-6 py-3 sm:py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-200 flex justify-between items-center"
-                  onClick={() => toggleFAQ(index)}
-                >
-                  <span className="font-semibold text-gray-900 text-sm sm:text-base pr-4">{item.question}</span>
-                  <ArrowRight 
-                    className={`w-4 sm:w-5 h-4 sm:h-5 text-gray-500 transition-transform duration-200 flex-shrink-0 ${
-                      openFAQ === index ? 'rotate-90' : ''
-                    }`} 
-                  />
-                </button>
-                {openFAQ === index && (
-                  <div className="px-4 sm:px-6 py-3 sm:py-4 bg-white animate-fade-in">
-                    <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{item.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-orange-500 to-orange-600"> {/* Changed background to orange */}
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+          <h2 className="text-4xl font-bold text-white mb-6">
             Bereit für dein neues Traumbad?
           </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Lass dich kostenlos beraten und erfahre, wie viel Förderung du erhalten kannst.
           </p>
           <Button 
             size="lg" 
-            className="bg-white text-orange-600 hover:bg-gray-100 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl w-full max-w-xs sm:max-w-sm mx-auto"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
             onClick={handleCTAClick}
           >
-            Angebot anfragen {/* Changed text and style */}
-            <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2" />
+            Jetzt kostenlose Beratung anfragen
+            <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
-        { // ... keep existing code (footer content)
-        }
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <div className="text-2xl font-bold text-blue-400 mb-4">badhelden24</div>
+              <p className="text-gray-400">Dein Partner für professionelle Badsanierung in ganz Deutschland.</p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Services</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="/badsanierung" className="hover:text-white transition-colors">Badsanierung</a></li>
+                <li><a href="/badumbau" className="hover:text-white transition-colors">Badumbau</a></li>
+                <li><a href="/ratgeber" className="hover:text-white transition-colors">Ratgeber</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Rechtliches</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="/impressum" className="hover:text-white transition-colors">Impressum</a></li>
+                <li><a href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</a></li>
+                <li><a href="/agb" className="hover:text-white transition-colors">AGB</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Kontakt</h4>
+              <p className="text-gray-400">
+                <span className="block">📞 0800 123 456 789</span>
+                <span className="block">✉️ info@badhelden24.de</span>
+              </p>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 badhelden24. Alle Rechte vorbehalten.</p>
+          </div>
+        </div>
       </footer>
     </div>
   );
