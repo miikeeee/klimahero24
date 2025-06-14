@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -151,7 +150,7 @@ const RatgeberPage = () => {
       {/* Hero Section */}
       <section className="pt-20 sm:pt-24 pb-8 sm:pb-12 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto px-4 max-w-7xl">
-          <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-12 relative overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 lg:p-12 relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full -translate-y-16 translate-x-16 opacity-50"></div>
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-green-100 to-green-200 rounded-full translate-y-12 -translate-x-12 opacity-50"></div>
@@ -203,28 +202,6 @@ const RatgeberPage = () => {
         </div>
       </section>
 
-      {/* Alert Banner */}
-      <div className="bg-red-50 border-l-4 border-red-400 py-3 sm:py-4">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-            </div>
-            <div className="ml-3 flex-1">
-              <p className="text-sm sm:text-base text-red-800">
-                <span className="font-medium">Förderkürzung unter Schwarz-Rot?</span> Lieber jetzt Förderungen sichern, bevor Sie es später bereuen! 
-                <button 
-                  onClick={handleCTAClick}
-                  className="font-semibold underline hover:no-underline ml-2"
-                >
-                  Jetzt kostenlos beraten lassen
-                </button>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Content */}
       <div className="pb-12 sm:pb-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
@@ -237,9 +214,9 @@ const RatgeberPage = () => {
               </div>
             </div>
 
-            {/* Sticky Sidebar - only appears in main content section */}
+            {/* Sticky Sidebar - positioned to align with content start */}
             <div className="lg:col-span-1">
-              <div className="lg:sticky lg:top-28 space-y-6">
+              <div className="lg:sticky lg:top-40 space-y-6">
                 <RatgeberSidebar config={data.sidebar} />
                 
                 {/* Additional info box */}
