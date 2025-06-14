@@ -2,14 +2,29 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
+import CityCards from "@/components/CityCards";
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [cityCards, setCityCards] = useState([]);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const loadCityCards = async () => {
+      try {
+        const response = await fetch('/data/cities.json');
+        const data = await response.json();
+        setCityCards(data.cityCards);
+      } catch (error) {
+        console.error('Error loading city cards:', error);
+      }
+    };
+    loadCityCards();
   }, []);
 
   const benefits = [
@@ -19,6 +34,10 @@ const Index = () => {
     "3 Jahre Garantie auf alle Arbeiten"
   ];
 
+  const handleCTAClick = () => {
+    window.open('https://app.neko24.de', '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
@@ -27,7 +46,10 @@ const Index = () => {
           <div className="text-2xl font-bold text-blue-600">
             badhelden24
           </div>
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105">
+          <Button 
+            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
+            onClick={handleCTAClick}
+          >
             <Phone className="w-4 h-4 mr-2" />
             Jetzt anfragen
           </Button>
@@ -60,11 +82,20 @@ const Index = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                <Button 
+                  size="lg" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  onClick={handleCTAClick}
+                >
                   Kostenlose Beratung
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-                <Button variant="outline" size="lg" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
+                  onClick={handleCTAClick}
+                >
                   Beispiele ansehen
                 </Button>
               </div>
@@ -139,6 +170,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* City Cards Section */}
+      {cityCards.length > 0 && <CityCards cities={cityCards} />}
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800">
         <div className="container mx-auto px-4 text-center">
@@ -148,7 +182,11 @@ const Index = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Lass dich kostenlos beraten und erfahre, wie viel Förderung du erhalten kannst.
           </p>
-          <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+          <Button 
+            size="lg" 
+            className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            onClick={handleCTAClick}
+          >
             Jetzt kostenlose Beratung anfragen
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>

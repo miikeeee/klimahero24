@@ -48,6 +48,10 @@ const LandingPage = ({ data }: LandingPageProps) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
+  const handleCTAClick = () => {
+    window.open('https://app.neko24.de', '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
@@ -58,7 +62,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
           </div>
           <Button 
             className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
-            onClick={() => window.open(data.cta.url, '_blank')}
+            onClick={handleCTAClick}
           >
             <Phone className="w-4 h-4 mr-2" />
             Jetzt anfragen
@@ -102,12 +106,17 @@ const LandingPage = ({ data }: LandingPageProps) => {
                 <Button 
                   size="lg" 
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                  onClick={() => window.open(data.cta.url, '_blank')}
+                  onClick={handleCTAClick}
                 >
                   {data.cta.text}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-                <Button variant="outline" size="lg" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
+                  onClick={handleCTAClick}
+                >
                   Kostenlos anrufen
                 </Button>
               </div>
@@ -149,7 +158,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
                 <div className="flex space-x-4">
                   <Button 
                     className="bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 hover:scale-105"
-                    onClick={() => window.open(data.cta.url, '_blank')}
+                    onClick={handleCTAClick}
                   >
                     Mehr erfahren
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -244,7 +253,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
           <Button 
             size="lg" 
             className="bg-white text-orange-600 hover:bg-gray-100 px-12 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
-            onClick={() => window.open(data.cta.url, '_blank')}
+            onClick={handleCTAClick}
           >
             {data.cta.text}
             <ArrowRight className="w-5 h-5 ml-2" />
