@@ -294,7 +294,7 @@ const RatgeberPage = () => {
             <p>&copy; 2024 badhelden24. Alle Rechte vorbehalten.</p>
           </div>
         </div>
-      </div>
+      </footer>
     </div>
   );
 };
