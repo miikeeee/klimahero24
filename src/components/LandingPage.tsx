@@ -134,14 +134,14 @@ const LandingPage = ({ data }: LandingPageProps) => {
 
               <div className="space-y-3 sm:space-y-4">
                 <Button 
-                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   onClick={handleCTAClick}
                 >
                    Jetzt Beratung anfragen
                 </Button>
                 <Button 
                   variant="outline" 
-                  className="w-full sm:w-auto border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg transition-all duration-300"
+                  className="w-full sm:w-auto border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg transition-all duration-300"
                   onClick={handleCTAClick}
                 >
                   Kostenlos anrufen
@@ -184,7 +184,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
                 </p>
                 <div className="flex space-x-4">
                   <Button 
-                    className="bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 hover:scale-105 text-sm sm:text-base"
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white transition-all duration-300 hover:scale-105 text-sm sm:text-base"
                     onClick={handleCTAClick}
                   >
                     Mehr erfahren
