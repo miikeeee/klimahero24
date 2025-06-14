@@ -87,6 +87,50 @@ const BadsanierungPage = () => {
         document.head.appendChild(meta);
       }
 
+      // Add Open Graph tags
+      const ogTags = [
+        { property: 'og:title', content: data.title },
+        { property: 'og:description', content: data.metaDescription },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: `${window.location.origin}/badsanierung/${data.slug}` },
+        { property: 'og:site_name', content: 'badhelden24' },
+        { property: 'og:locale', content: 'de_DE' }
+      ];
+
+      if (data.heroImage) {
+        ogTags.push({ property: 'og:image', content: data.heroImage });
+        ogTags.push({ property: 'og:image:alt', content: data.h1 });
+      }
+
+      // Remove existing OG tags and add new ones
+      document.querySelectorAll('meta[property^="og:"]').forEach(tag => tag.remove());
+      document.querySelectorAll('meta[name^="twitter:"]').forEach(tag => tag.remove());
+
+      ogTags.forEach(({ property, content }) => {
+        const meta = document.createElement('meta');
+        meta.setAttribute('property', property);
+        meta.setAttribute('content', content);
+        document.head.appendChild(meta);
+      });
+
+      // Add Twitter Card tags
+      const twitterTags = [
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: data.title },
+        { name: 'twitter:description', content: data.metaDescription }
+      ];
+
+      if (data.heroImage) {
+        twitterTags.push({ name: 'twitter:image', content: data.heroImage });
+      }
+
+      twitterTags.forEach(({ name, content }) => {
+        const meta = document.createElement('meta');
+        meta.setAttribute('name', name);
+        meta.setAttribute('content', content);
+        document.head.appendChild(meta);
+      });
+
       // Add structured data
       if (data.structuredData) {
         const existingScript = document.querySelector('#structured-data');
