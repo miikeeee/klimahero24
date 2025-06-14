@@ -1,7 +1,15 @@
-
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import LandingPage from '@/components/LandingPage';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 interface LandingPageData {
   slug: string;
@@ -125,7 +133,58 @@ const BadsanierungPage = () => {
     );
   }
 
-  return <LandingPage data={data} />;
+  const breadcrumbItems = [
+    { name: 'Startseite', url: '/' },
+    { name: 'Badsanierung', url: '/badsanierung' },
+    { name: data.location || data.h1, url: `/badsanierung/${data.slug}` }
+  ];
+
+  return (
+    <>
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        {/* Header */}
+        <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+          <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div className="text-xl sm:text-2xl font-bold text-blue-600">
+              <a href="/">badhelden24</a>
+            </div>
+            <div className="flex items-center space-x-2">
+              <a 
+                href="tel:08001234567"
+                className="text-gray-600 hover:text-blue-600 transition-colors hidden sm:block"
+              >
+                📞 0800 123 456 789
+              </a>
+            </div>
+          </div>
+        </header>
+
+        {/* Breadcrumb Navigation */}
+        <section className="pt-20 pb-4 bg-white">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/">Startseite</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/badsanierung">Badsanierung</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbPage>{data.location || data.h1}</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
+        </section>
+
+        <LandingPage data={data} />
+      </div>
+    </>
+  );
 };
 
 export default BadsanierungPage;
