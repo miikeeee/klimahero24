@@ -55,6 +55,27 @@ const RatgeberListPage = () => {
           readTime: "16 Min. Lesezeit"
         },
         {
+          slug: "badsanierung-ohne-fliesen",
+          title: "Badsanierung ohne Fliesen",
+          description: "Moderne Alternativen zu Fliesen: Wandpaneele, Putz, Naturstein. Alle Vor- und Nachteile im Überblick.",
+          image: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          readTime: "15 Min. Lesezeit"
+        },
+        {
+          slug: "badezimmer-renovieren-schritt-fuer-schritt",
+          title: "Badezimmer renovieren Schritt für Schritt",
+          description: "Komplette Renovierungsanleitung von der Planung bis zur Fertigstellung. Mit Zeitplan und Profi-Tipps.",
+          image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          readTime: "18 Min. Lesezeit"
+        },
+        {
+          slug: "moderne-badausstattung-2025",
+          title: "Moderne Badausstattung 2025",
+          description: "Neueste Trends bei Sanitärobjekten: Smart-Toiletten, berührungslose Armaturen und nachhaltige Lösungen.",
+          image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          readTime: "16 Min. Lesezeit"
+        },
+        {
           slug: "badumbau-kosten",
           title: "Badsanierung Kosten 2024",
           description: "Was kostet eine Badsanierung wirklich? Alle Infos zu Preisen, Förderungen und Sparmöglichkeiten.",
