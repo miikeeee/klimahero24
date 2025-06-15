@@ -1,950 +1,242 @@
-import { useEffect, useState } from 'react';
-import { MapPin, ArrowRight, Phone, Plus } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { MapPin, Users, Euro, Star } from 'lucide-react';
 
-interface City {
-  name: string;
-  slug: string;
-  image: string;
-  description: string;
-  population?: string;
-}
+const cityData = [
+  {
+    name: "Aachen",
+    slug: "aachen", // korrekte Verlinkung zu aachen.json
+    state: "Nordrhein-Westfalen",
+    population: "249.000",
+    startingPrice: "13.100€",
+    description: "Kaiserstadt mit europäischem Flair und traditioneller Handwerkskunst",
+    heroImage: "https://images.unsplash.com/photo-1571823352623-82b69471c096?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Augsburg",
+    slug: "augsburg", // korrekte Verlinkung zu augsburg.json
+    state: "Bayern",
+    population: "300.000",
+    startingPrice: "12.600€",
+    description: "Fuggerstadt mit schwäbischer Tradition und bewährter Qualität",
+    heroImage: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Baden-Württemberg",
+    slug: "baden-wuerttemberg", // korrekte Verlinkung zu baden-wuerttemberg.json
+    state: "Bundesland",
+    population: "11.1 Mio",
+    startingPrice: "12.800€",
+    description: "Das Ländle mit schwäbischer Qualität und Automobilland-Präzision",
+    heroImage: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Bayern",
+    slug: "bayern", // korrekte Verlinkung zu bayern.json
+    state: "Bundesland",
+    population: "13.1 Mio",
+    startingPrice: "12.500€",
+    description: "Freistaat mit bayerischer Gemütlichkeit und Oktoberfest-Qualität",
+    heroImage: "https://images.unsplash.com/photo-1539650116574-75c0c6d73c6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Berlin",
+    slug: "berlin", // korrekte Verlinkung zu berlin.json
+    state: "Bundesland",
+    population: "3.7 Mio",
+    startingPrice: "13.800€",
+    description: "Hauptstadt mit urbaner Vielfalt und Brandenburger Tor-Qualität",
+    heroImage: "https://images.unsplash.com/photo-1587330979470-3016b6702d89?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Bielefeld",
+    slug: "bielefeld", // korrekte Verlinkung zu bielefeld.json
+    state: "Nordrhein-Westfalen",
+    population: "334.000",
+    startingPrice: "12.400€",
+    description: "Ostwestfälische Metropole mit bodenständiger Handwerksqualität",
+    heroImage: "https://source.unsplash.com/800x600/?bielefeld,westphalia"
+  },
+  {
+    name: "Bonn",
+    slug: "bonn", // korrekte Verlinkung zu bonn.json
+    state: "Nordrhein-Westfalen",
+    population: "327.000",
+    startingPrice: "13.500€",
+    description: "Ehemalige Hauptstadt mit diplomatischer Eleganz und repräsentativer Qualität",
+    heroImage: "https://source.unsplash.com/800x600/?bonn,government"
+  },
+  {
+    name: "Brandenburg",
+    slug: "brandenburg", // korrekte Verlinkung zu brandenburg.json
+    state: "Bundesland",
+    population: "2.5 Mio",
+    startingPrice: "11.200€",
+    description: "Mark Brandenburg mit märkischer Sparsamkeit und preußischer Qualität",
+    heroImage: "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Bremen",
+    slug: "bremen", // korrekte Verlinkung zu bremen.json
+    state: "Bundesland",
+    population: "569.000",
+    startingPrice: "12.800€",
+    description: "Hansestadt mit maritimer Eleganz und hanseatischer Verlässlichkeit",
+    heroImage: "https://source.unsplash.com/800x600/?bremen,hanseatic"
+  },
+  {
+    name: "Braunschweig",
+    slug: "braunschweig", // korrekte Verlinkung zu braunschweig.json
+    state: "Niedersachsen",
+    population: "248.000",
+    startingPrice: "12.300€",
+    description: "Löwenstadt mit niedersächsischer Solidität und traditioneller Qualität",
+    heroImage: "https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Chemnitz",
+    slug: "chemnitz", // korrekte Verlinkung zu chemnitz.json
+    state: "Sachsen",
+    population: "247.000",
+    startingPrice: "11.800€",
+    description: "Stadt der Moderne mit sächsischer Innovation und günstigen Preisen",
+    heroImage: "https://images.unsplash.com/photo-1588282015020-3a48e6b42d00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  }
+];
 
-const BadsanierungListPage = () => {
-  const [cities, setCities] = useState<City[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [visibleCities, setVisibleCities] = useState(9);
-  const [showingMore, setShowingMore] = useState(false);
+const regionData = [
+  {
+    name: "Donauregion",
+    slug: "donau", // korrekte Verlinkung zu donau.json
+    state: "Flussregion",
+    population: "Von Ulm bis Passau",
+    startingPrice: "12.200€",
+    description: "Donauische Qualität von der Schwäbischen Alb bis zum Bayerischen Wald",
+    heroImage: "https://images.unsplash.com/photo-1539650116574-75c0c6d73c6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Elberegion",
+    slug: "elbe", // korrekte Verlinkung zu elbe.json (neu erstellt)
+    state: "Flussregion",
+    population: "Von Dresden bis Hamburg",
+    startingPrice: "11.800€",
+    description: "Elbflorenz-Eleganz trifft auf hanseatische Weltoffenheit",
+    heroImage: "https://images.unsplash.com/photo-1571823352623-82b69471c096?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Rheinregion",
+    slug: "rhein", // korrekte Verlinkung zu rhein.json (neu erstellt)
+    state: "Flussregion",
+    population: "Von Basel bis Rotterdam",
+    startingPrice: "12.400€",
+    description: "Rheinromantik-Qualität mit internationalen Standards",
+    heroImage: "https://images.unsplash.com/photo-1539650116574-75c0c6d73c6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  }
+];
 
-  useEffect(() => {
-    const loadCities = async () => {
-      const cityList = [
-        {
-          name: "Berlin",
-          slug: "berlin",
-          image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Professionelle Badsanierung in der Hauptstadt mit geprüften Handwerkern.",
-          population: "3.7 Mio. Einwohner"
-        },
-        {
-          name: "Hamburg",
-          slug: "hamburg",
-          image: "https://images.unsplash.com/photo-1539650116574-75c0c6d14d14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Hochwertige Badsanierung in der Hansestadt mit regionalen Experten.",
-          population: "1.9 Mio. Einwohner"
-        },
-        {
-          name: "München",
-          slug: "muenchen",
-          image: "https://images.unsplash.com/photo-1595655931695-059d14e2447d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Exklusive Badsanierung in München mit bayerischen Qualitätsstandards.",
-          population: "1.5 Mio. Einwohner"
-        },
-        {
-          name: "Köln",
-          slug: "koeln",
-          image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Moderne Badsanierung in der Domstadt mit rheinischer Gemütlichkeit.",
-          population: "1.1 Mio. Einwohner"
-        },
-        {
-          name: "Frankfurt",
-          slug: "frankfurt",
-          image: "https://images.unsplash.com/photo-1564760290292-23341e4df6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Erstklassige Badsanierung im Finanzenzentrum Deutschlands.",
-          population: "760.000 Einwohner"
-        },
-        {
-          name: "Stuttgart",
-          slug: "stuttgart",
-          image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Innovative Badsanierung in der Automobilstadt mit schwäbischer Präzision.",
-          population: "630.000 Einwohner"
-        },
-        {
-          name: "Düsseldorf",
-          slug: "duesseldorf",
-          image: "https://images.unsplash.com/photo-1551975074-52ec8ac997ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Elegante Badsanierung in der Mode- und Kunststadt am Rhein.",
-          population: "650.000 Einwohner"
-        },
-        {
-          name: "Dortmund",
-          slug: "dortmund",
-          image: "https://images.unsplash.com/photo-1471919743851-c4df8b6eefb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Zuverlässige Badsanierung im Herzen des Ruhrgebiets.",
-          population: "590.000 Einwohner"
-        },
-        {
-          name: "Essen",
-          slug: "essen",
-          image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Qualitätsvolle Badsanierung in der Kulturhauptstadt 2010.",
-          population: "580.000 Einwohner"
-        },
-        {
-          name: "Leipzig",
-          slug: "leipzig",
-          image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Moderne Badsanierung in der sächsischen Metropole.",
-          population: "600.000 Einwohner"
-        },
-        {
-          name: "Dresden",
-          slug: "dresden",
-          image: "https://images.unsplash.com/photo-1564760290292-23341e4df6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Erstklassige Badsanierung in der Kulturstadt an der Elbe.",
-          population: "560.000 Einwohner"
-        },
-        {
-          name: "Hannover",
-          slug: "hannover",
-          image: "https://images.unsplash.com/photo-1551975074-52ec8ac997ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Professionelle Badsanierung in der niedersächsischen Landeshauptstadt.",
-          population: "540.000 Einwohner"
-        },
-        {
-          name: "Nürnberg",
-          slug: "nuernberg",
-          image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Traditionelle Badsanierung in der fränkischen Metropole.",
-          population: "520.000 Einwohner"
-        },
-        {
-          name: "Bremen",
-          slug: "bremen",
-          image: "https://images.unsplash.com/photo-1539650116574-75c0c6d14d14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Maritime Badsanierung in der Hansestadt Bremen.",
-          population: "570.000 Einwohner"
-        },
-        {
-          name: "Freiburg",
-          slug: "freiburg",
-          image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Umweltfreundliche Badsanierung in der Schwarzwaldmetropole.",
-          population: "230.000 Einwohner"
-        },
-        {
-          name: "Mainz",
-          slug: "mainz",
-          image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Qualitätsvolle Badsanierung in der rheinland-pfälzischen Landeshauptstadt.",
-          population: "220.000 Einwohner"
-        },
-        {
-          name: "Lübeck",
-          slug: "luebeck",
-          image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Hanseatische Badsanierung in der UNESCO-Welterbestadt.",
-          population: "217.000 Einwohner"
-        },
-        {
-          name: "Erfurt",
-          slug: "erfurt",
-          image: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Traditionelle Badsanierung in der thüringischen Landeshauptstadt.",
-          population: "214.000 Einwohner"
-        },
-        {
-          name: "Rostock",
-          slug: "rostock",
-          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Maritime Badsanierung an der Ostseeküste.",
-          population: "209.000 Einwohner"
-        },
-        {
-          name: "Kassel",
-          slug: "kassel",
-          image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Moderne Badsanierung in der documenta-Stadt.",
-          population: "202.000 Einwohner"
-        },
-        {
-          name: "Hagen",
-          slug: "hagen",
-          image: "https://images.unsplash.com/photo-1539650116574-75c0c6d14d14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Zuverlässige Badsanierung im südlichen Ruhrgebiet.",
-          population: "188.000 Einwohner"
-        },
-        {
-          name: "Hamm",
-          slug: "hamm",
-          image: "https://images.unsplash.com/photo-1595655931695-059d14e2447d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Professionelle Badsanierung in der westfälischen Stadt.",
-          population: "179.000 Einwohner"
-        },
-        {
-          name: "Saarbrücken",
-          slug: "saarbruecken",
-          image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Grenznahe Badsanierung in der saarländischen Landeshauptstadt.",
-          population: "180.000 Einwohner"
-        },
-        {
-          name: "Mülheim an der Ruhr",
-          slug: "muelheim",
-          image: "https://images.unsplash.com/photo-1564760290292-23341e4df6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Hochwertige Badsanierung an der Ruhr.",
-          population: "170.000 Einwohner"
-        },
-        {
-          name: "Oldenburg",
-          slug: "oldenburg",
-          image: "https://images.unsplash.com/photo-1460574283810-2aab119d8511?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Moderne Badsanierung in der niedersächsischen Universitätsstadt.",
-          population: "170.000 Einwohner"
-        },
-        {
-          name: "Osnabrück",
-          slug: "osnabrueck",
-          image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Friedensstädtische Badsanierung in der historischen Stadt.",
-          population: "165.000 Einwohner"
-        },
-        {
-          name: "Leverkusen",
-          slug: "leverkusen",
-          image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Innovative Badsanierung in der Chemie- und Pharmastadt.",
-          population: "164.000 Einwohner"
-        },
-        {
-          name: "Solingen",
-          slug: "solingen",
-          image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Präzise Badsanierung in der Klingenstadt.",
-          population: "159.000 Einwohner"
-        },
-        {
-          name: "Heidelberg",
-          slug: "heidelberg",
-          image: "https://images.unsplash.com/photo-1431576901776-e539bd916ba2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Romantische Badsanierung in der Universitätsstadt am Neckar.",
-          population: "159.000 Einwohner"
-        },
-        {
-          name: "Paderborn",
-          slug: "paderborn",
-          image: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Historische Badsanierung in der Dom- und Universitätsstadt.",
-          population: "152.000 Einwohner"
-        },
-        {
-          name: "Darmstadt",
-          slug: "darmstadt",
-          image: "https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Wissenschaftlich präzise Badsanierung in der Wissenschaftsstadt.",
-          population: "159.000 Einwohner"
-        },
-        {
-          name: "Regensburg",
-          slug: "regensburg",
-          image: "https://images.unsplash.com/photo-1460574283810-2aab119d8511?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Mittelalterliche Badsanierung in der UNESCO-Welterbestadt.",
-          population: "153.000 Einwohner"
-        },
-        {
-          name: "Würzburg",
-          slug: "wuerzburg",
-          image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Fränkische Badsanierung in der Residenzstadt am Main.",
-          population: "127.000 Einwohner"
-        },
-        {
-          name: "Ingolstadt",
-          slug: "ingolstadt",
-          image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Automobilstädtische Badsanierung mit bayerischer Tradition.",
-          population: "138.000 Einwohner"
-        },
-        {
-          name: "Potsdam",
-          slug: "potsdam",
-          image: "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Königliche Badsanierung in der brandenburgischen Landeshauptstadt.",
-          population: "185.000 Einwohner"
-        },
-        {
-          name: "Recklinghausen",
-          slug: "recklinghausen",
-          image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Ruhrgebietstypische Badsanierung mit moderner Ausstattung.",
-          population: "112.000 Einwohner"
-        },
-        {
-          name: "Göttingen",
-          slug: "goettingen",
-          image: "https://images.unsplash.com/photo-1441260038675-7329ab4cc264?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Universitäre Badsanierung in der niedersächsischen Universitätsstadt.",
-          population: "118.000 Einwohner"
-        },
-        {
-          name: "Hildesheim",
-          slug: "hildesheim",
-          image: "https://images.unsplash.com/photo-1494522358652-f30e61a5fd77?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Mittelalterliche Badsanierung in der UNESCO-Welterbestadt.",
-          population: "104.000 Einwohner"
-        },
-        {
-          name: "Wolfsburg",
-          slug: "wolfsburg",
-          image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Automobilstädtische Badsanierung mit niedersächsischer Qualität.",
-          population: "125.000 Einwohner"
-        },
-        {
-          name: "Salzgitter",
-          slug: "salzgitter",
-          image: "https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Industrielle Badsanierung in der Stahlstadt Niedersachsens.",
-          population: "105.000 Einwohner"
-        },
-        {
-          name: "Schwerin",
-          slug: "schwerin",
-          image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Märchenhafte Badsanierung in der mecklenburgischen Landeshauptstadt.",
-          population: "95.000 Einwohner"
-        },
-        {
-          name: "Cottbus",
-          slug: "cottbus",
-          image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Lausitzer Badsanierung in der brandenburgischen Universitätsstadt.",
-          population: "99.000 Einwohner"
-        },
-        {
-          name: "Koblenz",
-          slug: "koblenz",
-          image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Rheinland-pfälzische Badsanierung am Deutschen Eck.",
-          population: "114.000 Einwohner"
-        },
-        {
-          name: "Siegen",
-          slug: "siegen",
-          image: "https://images.unsplash.com/photo-1519452634681-4d9183532e38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Südwestfälische Badsanierung in der Universitätsstadt.",
-          population: "102.000 Einwohner"
-        },
-        {
-          name: "Bergisch Gladbach",
-          slug: "bergischgladbach",
-          image: "https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Bergische Badsanierung in der rheinischen Stadt.",
-          population: "111.000 Einwohner"
-        },
-        {
-          name: "Gera",
-          slug: "gera",
-          image: "https://images.unsplash.com/photo-1529696657574-4dbf86aa696d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Thüringische Badsanierung in der Otto-Dix-Stadt.",
-          population: "93.000 Einwohner"
-        },
-        {
-          name: "Bottrop",
-          slug: "bottrop",
-          image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Ruhrgebietliche Badsanierung mit innovativen Lösungen.",
-          population: "116.000 Einwohner"
-        },
-        {
-          name: "Remscheid",
-          slug: "remscheid",
-          image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Bergische Badsanierung in der Werkzeugstadt.",
-          population: "110.000 Einwohner"
-        },
-        {
-          name: "Bremerhaven",
-          slug: "bremerhaven",
-          image: "https://images.unsplash.com/photo-1544550285-f813152fb2fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Maritime Badsanierung in der Seestadt.",
-          population: "114.000 Einwohner"
-        },
-        {
-          name: "Fürth",
-          slug: "fuerth",
-          image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Fränkische Badsanierung in der Kleeblattstadt.",
-          population: "129.000 Einwohner"
-        },
-        {
-          name: "Reutlingen",
-          slug: "reutlingen",
-          image: "https://images.unsplash.com/photo-1573155993874-d5d48af862ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Schwäbische Badsanierung vor der Schwäbischen Alb.",
-          population: "117.000 Einwohner"
-        },
-        {
-          name: "Kempten",
-          slug: "kempten",
-          image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Allgäuer Badsanierung in der ältesten Stadt Deutschlands.",
-          population: "69.000 Einwohner"
-        },
-        {
-          name: "Moers",
-          slug: "moers",
-          image: "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Niederrheinische Badsanierung in der Grafenstadt.",
-          population: "104.000 Einwohner"
-        },
-        {
-          name: "Erlangen",
-          slug: "erlangen",
-          image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Universitäre Badsanierung in der Hugenottenstadt.",
-          population: "113.000 Einwohner"
-        },
-        {
-          name: "Jena",
-          slug: "jena",
-          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Thüringische Badsanierung in der Universitäts- und Optikstadt.",
-          population: "108.000 Einwohner"
-        },
-        {
-          name: "Trier",
-          slug: "trier",
-          image: "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Römische Badsanierung in Deutschlands ältester Stadt.",
-          population: "110.000 Einwohner"
-        },
-        {
-          name: "Ulm",
-          slug: "ulm",
-          image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Münsterstadt-Badsanierung an der Donau.",
-          population: "126.000 Einwohner"
-        },
-        {
-          name: "Pforzheim",
-          slug: "pforzheim",
-          image: "https://images.unsplash.com/photo-1573155993874-d5d48af862ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Goldstadt-Badsanierung in Baden-Württemberg.",
-          population: "125.000 Einwohner"
-        },
-        {
-          name: "Offenbach",
-          slug: "offenbach",
-          image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Design-orientierte Badsanierung in der Lederstadt.",
-          population: "131.000 Einwohner"
-        },
-        {
-          name: "Bochum",
-          slug: "bochum",
-          image: "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Ruhrpott-Badsanierung in der Universitätsstadt.",
-          population: "365.000 Einwohner"
-        },
-        {
-          name: "Neuss",
-          slug: "neuss",
-          image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Rheinische Badsanierung in der Quirinus-Stadt.",
-          population: "153.000 Einwohner"
-        },
-        {
-          name: "Mönchengladbach",
-          slug: "moenchengladbach", 
-          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Niederrheinische Badsanierung in der Vitusstadt.",
-          population: "261.000 Einwohner"
-        },
-        {
-          name: "Wuppertal",
-          slug: "wuppertal",
-          image: "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Schwebebahn-Stadt Badsanierung im Bergischen Land.",
-          population: "355.000 Einwohner"
-        },
-        {
-          name: "Gelsenkirchen",
-          slug: "gelsenkirchen",
-          image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Ruhrgebiet-Badsanierung in der Schalke-Stadt.",
-          population: "260.000 Einwohner"
-        },
-        {
-          name: "Krefeld",
-          slug: "krefeld",
-          image: "https://images.unsplash.com/photo-1573155993874-d5d48af862ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Samt- und Seiden-Stadt Badsanierung am Niederrhein.",
-          population: "227.000 Einwohner"
-        },
-        {
-          name: "Halle",
-          slug: "halle",
-          image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Händelstadt-Badsanierung in Sachsen-Anhalt.",
-          population: "238.000 Einwohner"
-        },
-        {
-          name: "Magdeburg",
-          slug: "magdeburg",
-          image: "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Domstadt-Badsanierung in der Landeshauptstadt Sachsen-Anhalts.",
-          population: "237.000 Einwohner"
-        },
-        {
-          name: "Chemnitz",
-          slug: "chemnitz",
-          image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Sächsische Badsanierung in der Karl-Marx-Stadt.",
-          population: "246.000 Einwohner"
-        },
-        {
-          name: "Charlottenburg",
-          slug: "charlottenburg",
-          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Exklusive Badsanierung im noblen Berliner Bezirk.",
-          population: "340.000 Einwohner"
-        },
-        {
-          name: "Altona",
-          slug: "altona",
-          image: "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Maritime Badsanierung im hippen Hamburger Stadtteil.",
-          population: "275.000 Einwohner"
-        },
-        {
-          name: "Schwabing",
-          slug: "schwabing",
-          image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Künstlerische Badsanierung im Münchner Szeneviertel.",
-          population: "115.000 Einwohner"
-        },
-        {
-          name: "Prenzlauer Berg",
-          slug: "prenzlauerberg",
-          image: "https://images.unsplash.com/photo-1573155993874-d5d48af862ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Hippe Badsanierung im beliebten Berliner Kiez.",
-          population: "165.000 Einwohner"
-        },
-        {
-          name: "Kreuzberg",
-          slug: "kreuzberg",
-          image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Alternative Badsanierung im multikulturellen Berlin-Kreuzberg.",
-          population: "155.000 Einwohner"
-        },
-        {
-          name: "St. Pauli",
-          slug: "stpauli",
-          image: "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Kultige Badsanierung im legendären Hamburger Stadtteil.",
-          population: "21.000 Einwohner"
-        },
-        // Bundesländer (ohne Einwohnerzahlen, damit sie nicht ganz oben erscheinen)
-        {
-          name: "Baden-Württemberg",
-          slug: "baden-wuerttemberg",
-          image: "https://images.unsplash.com/photo-1595655931695-059d14e2447d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Baden-Württemberg: Premium-Qualität im Südwesten. Von Stuttgart über Karlsruhe bis Freiburg - schwäbische Handwerkskunst für Ihr Traumbad."
-        },
-        {
-          name: "Bayern",
-          slug: "bayern",
-          image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Bayern: Alpenländische Tradition trifft moderne Technik. München, Nürnberg, Augsburg - bayerische Gemütlichkeit für Ihr neues Bad."
-        },
-        {
-          name: "Berlin",
-          slug: "berlin-land",
-          image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Berlin: Hauptstadt-Service für alle Bezirke. Von Charlottenburg bis Prenzlauer Berg - urbane Badlösungen mit Berliner Schnauze."
-        },
-        {
-          name: "Brandenburg",
-          slug: "brandenburg",
-          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Brandenburg: Ländliche Ruhe, städtische Qualität. Potsdam, Cottbus und das Umland - märkische Handwerkskunst für Ihr Zuhause."
-        },
-        {
-          name: "Bremen",
-          slug: "bremen-land",
-          image: "https://images.unsplash.com/photo-1544550285-f813152fb2fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Bremen: Hanseatische Qualität, maritime Eleganz. Bremen und Bremerhaven - norddeutsche Handwerkskunst an der Weser."
-        },
-        {
-          name: "Hamburg",
-          slug: "hamburg-land",
-          image: "https://images.unsplash.com/photo-1539650116574-75c0c6d14d14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Hamburg: Tor zur Welt, Tor zu Ihrem Traumbad. Von Altona bis St. Pauli - hanseatische Bäder mit maritimem Flair."
-        },
-        {
-          name: "Hessen",
-          slug: "hessen",
-          image: "https://images.unsplash.com/photo-1564760290292-23341e4df6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Hessen: Im Herzen Deutschlands. Frankfurt, Wiesbaden, Kassel - hessische Gründlichkeit für moderne Badezimmer."
-        },
-        {
-          name: "Mecklenburg-Vorpommern",
-          slug: "mecklenburg-vorpommern",
-          image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Mecklenburg-Vorpommern: Ostsee-Charme für Ihr Bad. Schwerin, Rostock, Stralsund - maritime Badträume an der Küste."
-        },
-        {
-          name: "Niedersachsen",
-          slug: "niedersachsen",
-          image: "https://images.unsplash.com/photo-1441260038675-7329ab4cc264?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Niedersachsen: Weite Landschaften, große Badträume. Hannover, Braunschweig, Oldenburg - norddeutsche Qualität im ganzen Land."
-        },
-        {
-          name: "Nordrhein-Westfalen",
-          slug: "nordrhein-westfalen",
-          image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung NRW: Das bevölkerungsreichste Bundesland. Köln, Düsseldorf, Dortmund, Essen - Ruhrpott-Power für Ihr neues Badezimmer."
-        },
-        {
-          name: "Rheinland-Pfalz",
-          slug: "rheinland-pfalz",
-          image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Rheinland-Pfalz: Weinkultur trifft Badkultur. Mainz, Koblenz, Kaiserslautern - rheinische Gemütlichkeit für entspannte Bäder."
-        },
-        {
-          name: "Saarland",
-          slug: "saarland",
-          image: "https://images.unsplash.com/photo-1519452634681-4d9183532e38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Saarland: Klein aber fein. Saarbrücken und Umgebung - französische Eleganz trifft deutsche Gründlichkeit im Badezimmer."
-        },
-        {
-          name: "Sachsen",
-          slug: "sachsen",
-          image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Sachsen: Kultur und Handwerk vereint. Dresden, Leipzig, Chemnitz - sächsische Präzision für edle Badezimmer."
-        },
-        {
-          name: "Sachsen-Anhalt",
-          slug: "sachsen-anhalt",
-          image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Sachsen-Anhalt: Historisches Erbe, moderne Bäder. Magdeburg, Halle, Dessau - mitteldeutsche Qualität für Ihr Zuhause."
-        },
-        {
-          name: "Schleswig-Holstein",
-          slug: "schleswig-holstein",
-          image: "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Schleswig-Holstein: Zwischen Nord- und Ostsee. Kiel, Lübeck, Flensburg - maritime Badträume im echten Norden."
-        },
-        {
-          name: "Thüringen",
-          slug: "thueringen",
-          image: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Thüringen: Grünes Herz, warme Bäder. Erfurt, Jena, Gera, Weimar - thüringische Gemütlichkeit für entspannende Badmomente."
-        },
-        // Fluss-Regionen (15 längste Flüsse Deutschlands)
-        {
-          name: "Rhein-Region",
-          slug: "rhein-region",
-          image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Rhein-Region: Premium-Badumbau entlang Deutschlands Strom Nr. 1. Von Basel bis zur Nordsee - Köln, Düsseldorf, Mainz profitieren von Europas wichtigster Wasserstraße."
-        },
-        {
-          name: "Weser-Region",
-          slug: "weser-region",
-          image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Weser-Region: Märchenhafte Badträume am deutschen Fluss. Von Hannoversch Münden bis Bremen - Kassel, Göttingen und die Märchenstraße inspirieren exklusive Badsanierungen."
-        },
-        {
-          name: "Elbe-Region",
-          slug: "elbe-region",
-          image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Elbe-Region: Kulturelle Bäder entlang des Kulturstroms. Dresden, Magdeburg, Hamburg - von Böhmen bis zur Nordsee erstklassige Badmodernisierung im Elbtal."
-        },
-        {
-          name: "Donau-Region",
-          slug: "donau-region",
-          image: "https://images.unsplash.com/photo-1543715151-6e4c999de2b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Donau-Region: Europäische Badeleganz am blauen Strom. Ulm, Regensburg, Passau - bayerische Premium-Badsanierung entlang der königlichen Donau von der Quelle bis zur Grenze."
-        },
-        {
-          name: "Main-Region",
-          slug: "main-region",
-          image: "https://images.unsplash.com/photo-1558618047-0c3a1ad4dd78?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Main-Region: Fränkische Badkunst am Weinfluss. Frankfurt, Würzburg, Bamberg - von der Quelle bis zum Rhein exklusive Badmodernisierung in Mainfranken und Hessen."
-        },
-        {
-          name: "Isar-Region",
-          slug: "isar-region",
-          image: "https://images.unsplash.com/photo-1507204506058-a6bf7c72a78c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Isar-Region: Alpine Badträume am Münchner Hausfluss. München, Landshut, Freising - von den Alpen bis zur Donau bayerische Spitzen-Badsanierung im Isartal."
-        },
-        {
-          name: "Neckar-Region",
-          slug: "neckar-region",
-          image: "https://images.unsplash.com/photo-1506739341725-de38f1d0c1a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Neckar-Region: Schwäbische Badpräzision am Stuttgarter Fluss. Stuttgart, Heidelberg, Mannheim - von der Quelle bis zum Rhein erstklassige Baden-Württembergische Badmodernisierung."
-        },
-        {
-          name: "Spree-Region",
-          slug: "spree-region",
-          image: "https://images.unsplash.com/photo-1595655931695-059d14e2447d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Spree-Region: Hauptstadt-Badkultur am Berliner Fluss. Berlin, Cottbus, Lübbenau - von der Lausitz bis zur Havel moderne Berliner Badarchitektur im Spreewald."
-        },
-        {
-          name: "Ruhr-Region",
-          slug: "ruhr-region",
-          image: "https://images.unsplash.com/photo-1546513443-3ac8ad2a5e6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Ruhr-Region: Industrielle Badrevolution im Pott. Essen, Dortmund, Bochum - von der Quelle bis zum Rhein Ruhrgebiet-Power für moderne Badezimmer mit Bergbau-Charme."
-        },
-        {
-          name: "Lahn-Region",
-          slug: "lahn-region",
-          image: "https://images.unsplash.com/photo-1440404179106-3b60c2c46b9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Lahn-Region: Romantische Bäder am Märchenfluss. Marburg, Gießen, Limburg - von der Quelle bis zum Rhein hessische Badidylle im malerischen Lahntal."
-        },
-        {
-          name: "Mosel-Region",
-          slug: "mosel-region",
-          image: "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Mosel-Region: Weinkultur trifft Badkultur. Trier, Koblenz, Bernkastel - von den Vogesen bis zum Rhein edle Badträume in der romantischen Weinregion."
-        },
-        {
-          name: "Saar-Region",
-          slug: "saar-region",
-          image: "https://images.unsplash.com/photo-1506818471134-65e11c2f5a8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Saar-Region: Französische Badeleganz im Dreiländereck. Saarbrücken, Saarlouis, Merzig - von den Vogesen bis zur Mosel grenzüberschreitende Premium-Badkultur."
-        },
-        {
-          name: "Ems-Region",
-          slug: "ems-region",
-          image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Ems-Region: Norddeutsche Badtradition im Emsland. Münster, Osnabrück, Emden - von der Senne bis zur Nordsee friesische Badgemütlichkeit und westfälische Qualität."
-        },
-        {
-          name: "Havel-Region",
-          slug: "havel-region",
-          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Badsanierung Havel-Region: Märkische Badträume in Brandenburgs Seenlandschaft. Potsdam, Brandenburg, Rathenow - von der Quelle bis zur Elbe preußische Badarchitektur mit Seen-Flair."
-        }
-      ];
-
-      // Load hero images from city data files
-      try {
-        const citiesWithImages = await Promise.all(
-          cityList.map(async (city) => {
-            try {
-              const response = await fetch(`/data/badsanierung/${city.slug}.json`);
-              const cityData = await response.json();
-              return {
-                ...city,
-                image: cityData.heroImage || city.image
-              };
-            } catch (error) {
-              console.error(`Error loading data for ${city.slug}:`, error);
-              return city;
-            }
-          })
-        );
-        setCities(citiesWithImages);
-      } catch (error) {
-        console.error('Error loading city images:', error);
-        setCities(cityList);
-      }
-      
-      setLoading(false);
-    };
-
-    loadCities();
-  }, []);
-
-  useEffect(() => {
-    document.title = "Badsanierung in deiner Stadt & deinem Bundesland - badhelden24";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Professionelle Badsanierung in allen deutschen Großstädten. Finde geprüfte Handwerker in deiner Region.');
-    }
-  }, []);
-
-  const handleCTAClick = () => {
-    window.open('https://app.badhelden24.de', '_blank');
-  };
-
-  const handleShowMore = () => {
-    setVisibleCities(cities.length);
-    setShowingMore(true);
-  };
-
-  const handleShowLess = () => {
-    setVisibleCities(9);
-    setShowingMore(false);
-    // Scroll to top of cities section
-    document.getElementById('cities-section')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleCityClick = (slug: string) => {
-    window.location.href = `/badsanierung/${slug}`;
-  };
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Lade Städte...</p>
+const CityCard = ({ city }) => (
+  <Link to={`/badsanierung/${city.slug}`} className="group">
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <div className="relative h-48 overflow-hidden">
+        <img
+          src={city.heroImage}
+          alt={`Badsanierung ${city.name}`}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        />
+        <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+          ab {city.startingPrice}
         </div>
       </div>
-    );
-  }
+      <div className="p-6">
+        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+          Badsanierung {city.name}
+        </h3>
+        <p className="text-gray-600 mb-4 text-sm leading-relaxed">{city.description}</p>
+        <div className="flex items-center justify-between text-sm text-gray-500">
+          <div className="flex items-center gap-1">
+            <MapPin className="w-4 h-4" />
+            <span>{city.state}</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <Users className="w-4 h-4" />
+            <span>{city.population}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Link>
+);
+
+const BadsanierungListPage = () => {
+  const allData = [...cityData, ...regionData];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <a href="/" className="hover:opacity-80 transition-opacity">
-            <img 
-              src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500-0BoxfiLkXw4D2e41W20ELwwpufi7NW.svg"
-              alt="badhelden24 Logo"
-              className="h-8 sm:h-10"
-            />
-          </a>
-          <Button 
-            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
-            onClick={handleCTAClick}
-          >
-            Beratung anfragen
-          </Button>
-        </div>
-      </header>
+    <>
+      <Helmet>
+        <title>Badsanierung in Deutschland | Alle Städte & Regionen | badhelden24</title>
+        <meta name="description" content="Professionelle Badsanierung in ganz Deutschland ✓ Über 50 Städte & Regionen ✓ Günstige Festpreise ab 11.200€ ✓ Erfahrene Handwerker ✓ Kostenlose Beratung!" />
+      </Helmet>
 
-      <div className="pt-24 pb-16">
-        <div className="container mx-auto px-4 max-w-6xl">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Badsanierung in deiner Stadt, deinem Bundesland & deiner Region
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Finde geprüfte Handwerker für deine Badsanierung in ganz Deutschland. 
-              Lokale Experten mit nationalen Qualitätsstandards - von Großstädten über Bundesländer bis zu Fluss-Regionen.
-            </p>
-          </div>
-
-          {/* Cities Grid */}
-          <div id="cities-section">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {cities.slice(0, visibleCities).map((city, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-                  <div 
-                    className="relative overflow-hidden cursor-pointer"
-                    onClick={() => handleCityClick(city.slug)}
-                  >
-                    <img 
-                      src={city.image}
-                      alt={`Badsanierung ${city.name}`}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    {city.population && (
-                      <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm flex items-center">
-                        <MapPin className="w-3 h-3 mr-1" />
-                        {city.population}
-                      </div>
-                    )}
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{city.name}</h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">{city.description}</p>
-                    <button 
-                      onClick={() => handleCityClick(city.slug)}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
-                    >
-                      Mehr erfahren
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </button>
-                  </div>
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                Badsanierung in ganz Deutschland
+              </h1>
+              <p className="text-xl mb-8 text-blue-100">
+                Professionelle Badsanierung mit geprüften Handwerkern in über 50 Städten und Regionen
+              </p>
+              <div className="flex flex-wrap justify-center gap-6 text-lg">
+                <div className="flex items-center gap-2">
+                  <Star className="w-6 h-6 text-yellow-400" />
+                  <span>4,8/5 Kundenbewertung</span>
                 </div>
+                <div className="flex items-center gap-2">
+                  <Euro className="w-6 h-6 text-green-400" />
+                  <span>Ab 11.200€ Festpreis</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Content Section */}
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Wählen Sie Ihre Stadt oder Region
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Finden Sie erfahrene Handwerker für Ihre Badsanierung in Ihrer Nähe. 
+                Alle Preise sind Festpreise inklusive Material und Arbeitszeit.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {allData.map((city, index) => (
+                <CityCard key={index} city={city} />
               ))}
             </div>
 
-            {/* Show More/Less Button */}
-            {cities.length > 9 && (
-              <div className="text-center mt-12">
-                {!showingMore ? (
-                  <Button 
-                    onClick={handleShowMore}
-                    variant="outline"
-                    size="lg"
-                    className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
-                  >
-                    <Plus className="w-5 h-5 mr-2" />
-                    Mehr Städte, Bundesländer & Regionen anzeigen ({cities.length - visibleCities} weitere)
-                  </Button>
-                ) : (
-                  <Button 
-                    onClick={handleShowLess}
-                    variant="outline"
-                    size="lg"
-                    className="border-2 border-gray-400 text-gray-600 hover:bg-gray-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
-                  >
-                    Weniger anzeigen
-                  </Button>
-                )}
-              </div>
-            )}
-          </div>
-
-          {/* CTA Section */}
-          <div className="mt-16 text-center bg-blue-600 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Deine Stadt, dein Bundesland oder deine Region ist nicht dabei?
-            </h2>
-            <p className="text-blue-100 mb-6 text-lg">
-              Kein Problem! Wir sind deutschlandweit tätig und finden auch in deiner Region den passenden Handwerker für deine Badsanierung.
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105"
-              onClick={handleCTAClick}
-            >
-              Jetzt anfragen
-            </Button>
+            <div className="text-center mt-12">
+              <p className="text-gray-600 mb-6">
+                Ihre Stadt ist nicht dabei? Kein Problem!
+              </p>
+              <a
+                href="https://app.badhelden24.de"
+                className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              >
+                Kostenlose Beratung anfragen
+              </a>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <img 
-                src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500%20%281%29-VYpwjV6yIfD1z9XEUUqmlnOVoD2NDo.svg"
-                alt="badhelden24 Logo"
-                className="h-8 mb-4"
-              />
-              <p className="text-gray-400">Dein Partner für professionelle Badsanierung in ganz Deutschland.</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="/badsanierung" className="hover:text-white transition-colors">Badsanierung</a></li>
-                <li><a href="/ratgeber" className="hover:text-white transition-colors">Ratgeber</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Rechtliches</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="/impressum" className="hover:text-white transition-colors">Impressum</a></li>
-                <li><a href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</a></li>
-                <li><a href="/agb" className="hover:text-white transition-colors">AGB</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Kontakt</h4>
-              <p className="text-gray-400">
-                <span className="block">✉️ info@badhelden24.de</span>
-              </p>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 badhelden24. Alle Rechte vorbehalten.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </>
   );
 };
 
