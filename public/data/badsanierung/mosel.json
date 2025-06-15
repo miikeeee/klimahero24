@@ -1,0 +1,110 @@
+
+{
+  "slug": "mosel",
+  "title": "Badsanierung Moselregion | Trier, Koblenz & Bernkastel | badhelden24",
+  "metaDescription": "Badsanierung an der Mosel ✓ Trier, Koblenz, Bernkastel-Kues ✓ Kosten ab 11.500€ ✓ Mosel-Qualität ✓ Festpreise ✓ Weinregion-Expertise!",
+  "h1": "Badsanierung Moselregion",
+  "heroText": "Weinkultur trifft auf römische Geschichte. Von Trier bis Koblenz – erleben Sie professionelle Badsanierung entlang der Mosel mit regionalen Experten und Moselland-Charme.",
+  "heroImage": "https://images.unsplash.com/photo-1551975074-52ec8ac997ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "location": "Moselregion",
+  "sections": [
+    {
+      "heading": "Badsanierung entlang der Mosel – Weinkultur und Römergeschichte",
+      "text": "Die Mosel ist Deutschlands älteste Weinregion und verbindet 2000 Jahre Geschichte mit moderner Lebensart. Diese einzigartige Atmosphäre spiegelt sich in unseren Badsanierungen wider – von der ältesten deutschen Stadt Trier über die romantischen Weinorte Bernkastel-Kues und Cochem bis zur Rheinmündung in Koblenz. Als UNESCO-Welterbe vereint die Moselregion kulturelle Tradition mit gemütlicher Weinland-Atmosphäre.",
+      "image": "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
+    },
+    {
+      "heading": "Kosten Badsanierung Moselregion – Römisch solide",
+      "text": "Die Preise für eine Komplett-Badsanierung beginnen an der Mosel bei etwa 11.500€ für eine solide Grundausstattung. Premium-Sanierungen können bis zu 26.000€ kosten. Die Moselregion bietet als traditionelle Weinbauregion mit etablierten Handwerksbetrieben besonders attraktive Preise bei höchster rheinland-pfälzischer Qualität.",
+      "image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
+    },
+    {
+      "heading": "Moselland-Handwerker von der Quelle bis zur Mündung",
+      "text": "Von Perl über Trier, Bernkastel-Kues und Cochem bis Koblenz – wir arbeiten mit qualifizierten Handwerksbetrieben entlang der gesamten deutschen Mosel. Ob Badsanierung in Schweich, Traben-Trarbach, Zell oder Winningen – unsere Partner kennen die regionalen Besonderheiten von Weinbau-Architektur bis zu römischen Fundamenten. Moselland-Gemütlichkeit trifft auf deutsche Gründlichkeit.",
+      "image": "https://images.unsplash.com/photo-1744869524920-f0efc925b82f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
+    },
+    {
+      "heading": "Mosel-Charme für Ihr Wellness-Bad",
+      "text": "Die Moselregion steht für Genuss, Entspannung und kulturelle Vielfalt. Diese Eigenschaften fließen in jede unserer Badsanierungen ein. Ob römische Eleganz in Trier, Weinland-Romantik in Bernkastel oder moderne Wellness-Atmosphäre in Koblenz – wir schaffen Bäder mit dem besonderen Moselland-Flair für erholsame Stunden.",
+      "image": "https://images.unsplash.com/photo-1722858810036-e917b4dd3f3f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
+    }
+  ],
+  "processSection": {
+    "heading": "Ihr Badsanierungsprozess an der Mosel",
+    "subheading": "Römisch gründlich und moselländisch gemütlich – so verwirklichen wir Ihr Traumbad.",
+    "steps": [
+      {
+        "icon": "PhoneOutgoing",
+        "title": "Kostenlose Erstberatung",
+        "description": "Kontaktieren Sie uns für eine moselländisch-gemütliche Beratung zu Ihrer Badsanierung."
+      },
+      {
+        "icon": "Home",
+        "title": "Moselregion Vor-Ort-Service",
+        "description": "Ein regionaler Experte plant mit Mosel-Kompetenz Ihr individuelles Traumbad."
+      },
+      {
+        "icon": "FileText",
+        "title": "Römisch faires Angebot",
+        "description": "Sie erhalten ein transparentes Angebot mit moselländischer Ehrlichkeit und fairen Preisen."
+      },
+      {
+        "icon": "Wrench",
+        "title": "Mosel-Handwerkskunst",
+        "description": "Erfahrene Moselland-Handwerker setzen Ihr Projekt zuverlässig und gründlich um."
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Weinland-Übergabe",
+        "description": "Gemeinsame Abnahme Ihres neuen Bads mit 5 Jahren Moselregion-Garantie."
+      }
+    ]
+  },
+  "keyBenefitsSection": {
+    "heading": "Ihre Vorteile mit Badhelden24 an der Mosel",
+    "benefits": [
+      {
+        "icon": "Users",
+        "title": "Moselregion-Handwerksbetriebe",
+        "description": "Traditionelle Handwerksbetriebe an der Mosel mit Weinland-Gemütlichkeit."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Römisch-solide Qualität",
+        "description": "Hochwertige Materialien und bewährte rheinland-pfälzische Handwerkskunst."
+      },
+      {
+        "icon": "DollarSign",
+        "title": "Moselländisch faire Preise",
+        "description": "Attraktive Preise durch etablierte Weinregion-Netzwerke und kurze Wege."
+      },
+      {
+        "icon": "MapPin",
+        "title": "Komplette deutsche Mosel",
+        "description": "Von der luxemburgischen Grenze bis zur Rheinmündung in Koblenz."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Was kostet eine Badsanierung an der Mosel?",
+      "answer": "Eine Standard-Badsanierung beginnt bei etwa 11.500€. Je nach Ausstattung können die Kosten bis zu 26.000€ betragen. Die Moselregion bietet sehr attraktive Preise bei hoher Qualität."
+    },
+    {
+      "question": "Arbeiten Sie entlang der gesamten deutschen Mosel?",
+      "answer": "Ja, von Trier über Bernkastel-Kues bis Koblenz und in alle Weinorte und Gemeinden entlang der Mosel. Unsere Handwerkspartner decken die komplette deutsche Moselregion ab."
+    },
+    {
+      "question": "Haben Sie Erfahrung mit historischen Weinbau-Gebäuden?",
+      "answer": "Selbstverständlich. Unsere Mosel-Partner haben umfangreiche Erfahrung mit historischen Winzerhöfen, römischen Fundamenten und denkmalgeschützten Weinbau-Gebäuden."
+    },
+    {
+      "question": "Welche Erfahrungen haben Kunden in der Moselregion gemacht?",
+      "answer": "Kunden schätzen besonders die moselländische Gemütlichkeit, faire Preise und die Kombination aus traditioneller Handwerkskunst mit modernen Wellness-Standards."
+    }
+  ],
+  "cta": {
+    "text": "Badsanierung Moselregion anfragen",
+    "url": "https://app.badhelden24.de"
+  }
+}

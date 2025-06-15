@@ -1,0 +1,110 @@
+
+{
+  "slug": "elbe",
+  "title": "Badsanierung Elbe-Region | Hamburg, Dresden & Magdeburg | badhelden24",
+  "metaDescription": "Badsanierung an der Elbe ✓ Hamburg, Dresden, Magdeburg ✓ Kosten ab 11.500€ ✓ Elbregion-Qualität ✓ Festpreise ✓ Von der Quelle bis zur Mündung!",
+  "h1": "Badsanierung Elbe-Region",
+  "heroText": "Hanseatische Tradition trifft auf sächsische Eleganz. Von Hamburg bis Dresden – erleben Sie professionelle Badsanierung entlang der Elbe mit regionalen Experten und norddeutscher Verlässlichkeit.",
+  "heroImage": "https://images.unsplash.com/photo-1560969184-10fe8719e047?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "location": "Elbe-Region",
+  "sections": [
+    {
+      "heading": "Badsanierung entlang der Elbe – Von der Hansestadt bis zur Sächsischen Schweiz",
+      "text": "Die Elbe verbindet Norddeutschland mit dem Herzen Sachsens und prägt dabei verschiedene Kulturlandschaften. Diese Vielfalt spiegelt sich in unseren Badsanierungen wider – von der Hansestadt <a href='/badsanierung/hamburg' class='text-blue-600 hover:underline'>Hamburg</a> über die Kulturstadt <a href='/badsanierung/dresden' class='text-blue-600 hover:underline'>Dresden</a> bis zu den historischen Städten Magdeburg und Lüneburg. Als wichtige europäische Wasserstraße verbindet die Elbe maritime Tradition mit kontinentaler Eleganz.",
+      "image": "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
+    },
+    {
+      "heading": "Kosten Badsanierung Elbregion – Nord bis Süd fair",
+      "text": "Die Preise für eine Komplett-Badsanierung beginnen an der Elbe bei etwa 11.500€ für eine solide Grundausstattung. Premium-Sanierungen können bis zu 26.000€ kosten. Die Elbregion bietet durch ihre Lage zwischen Nordsee und Mittelgebirge besonders attraktive Materialpreise und etablierte Handwerksnetzwerke.",
+      "image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
+    },
+    {
+      "heading": "Handwerker von der Elbmündung bis zur Quelle",
+      "text": "Von Cuxhaven über Lüneburg und Magdeburg bis nach Meißen – wir arbeiten mit qualifizierten Handwerksbetrieben entlang der gesamten deutschen Elbe. Ob Badsanierung in Stade, Wittenberg, Pirna oder Geesthacht – unsere Partner kennen die regionalen Besonderheiten von der Marsch bis zum Elbsandsteingebirge. Maritime Kompetenz trifft auf kontinentale Handwerkskunst.",
+      "image": "https://images.unsplash.com/photo-1744869524920-f0efc925b82f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
+    },
+    {
+      "heading": "Elbregion-Charakter für Ihr Wohlfühlbad",
+      "text": "Die Elbregion steht für Weltoffenheit, kulturelle Vielfalt und Naturverbundenheit. Diese Eigenschaften fließen in jede unserer Badsanierungen ein. Ob maritimes Design in Hamburg, barocke Eleganz in Dresden oder moderne Wellness-Oasen in der Altmark – wir schaffen Bäder, die zum Charakter der jeweiligen Elbregion passen und dabei höchste Standards erfüllen.",
+      "image": "https://images.unsplash.com/photo-1722858810036-e917b4dd3f3f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
+    }
+  ],
+  "processSection": {
+    "heading": "Ihr Badsanierungsprozess an der Elbe",
+    "subheading": "Von Nord bis Süd zuverlässig – so verwirklichen wir Ihr Traumbad in der Elbregion.",
+    "steps": [
+      {
+        "icon": "PhoneOutgoing",
+        "title": "Kostenlose Erstberatung",
+        "description": "Kontaktieren Sie uns für eine kompetente Beratung zu Ihrer Badsanierung an der Elbe."
+      },
+      {
+        "icon": "Home",
+        "title": "Regionaler Vor-Ort-Service",
+        "description": "Ein Elbregion-Experte plant mit lokaler Kompetenz Ihr individuelles Traumbad."
+      },
+      {
+        "icon": "FileText",
+        "title": "Transparentes Festpreisangebot",
+        "description": "Sie erhalten ein klares Angebot mit norddeutscher Ehrlichkeit und fairen Preisen."
+      },
+      {
+        "icon": "Wrench",
+        "title": "Elbregion-Handwerkskunst",
+        "description": "Erfahrene Handwerker von der Elbe setzen Ihr Projekt zuverlässig um."
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Elbregion-Übergabe",
+        "description": "Gemeinsame Abnahme Ihres neuen Bads mit 5 Jahren regionaler Garantie."
+      }
+    ]
+  },
+  "keyBenefitsSection": {
+    "heading": "Ihre Vorteile mit Badhelden24 an der Elbe",
+    "benefits": [
+      {
+        "icon": "Users",
+        "title": "Elbregion-Handwerksbetriebe",
+        "description": "Erfahrene Handwerksbetriebe von Hamburg bis Dresden mit regionaler Kompetenz."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Nord-Süd-Qualität",
+        "description": "Hochwertige Materialien und bewährte Handwerkskunst entlang der Elbe."
+      },
+      {
+        "icon": "DollarSign",
+        "title": "Elbregion-faire Preise",
+        "description": "Attraktive Preise durch etablierte Netzwerke von der Mündung bis zur Quelle."
+      },
+      {
+        "icon": "MapPin",
+        "title": "Komplette Elbregion",
+        "description": "Von Schleswig-Holstein über Niedersachsen bis nach Sachsen an der Elbe."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Was kostet eine Badsanierung an der Elbe?",
+      "answer": "Eine Standard-Badsanierung beginnt bei etwa 11.500€. Je nach Region und Ausstattung können die Kosten bis zu 26.000€ betragen. Die Elbregion bietet sehr gute Preise durch etablierte Handwerksnetzwerke."
+    },
+    {
+      "question": "Arbeiten Sie entlang der gesamten deutschen Elbe?",
+      "answer": "Ja, von Hamburg über Magdeburg bis Dresden und in alle Städte und Gemeinden entlang der Elbe. Unsere Handwerkspartner decken die komplette deutsche Elbregion ab."
+    },
+    {
+      "question": "Berücksichtigen Sie regionale Unterschiede?",
+      "answer": "Selbstverständlich. Unsere Partner kennen die Besonderheiten von norddeutschen Backsteinbauten bis zu sächsischen Gründerzeithäusern entlang der Elbe."
+    },
+    {
+      "question": "Welche Erfahrungen haben Kunden an der Elbe gemacht?",
+      "answer": "Kunden schätzen besonders die Kombination aus norddeutscher Zuverlässigkeit und sächsischer Gründlichkeit sowie das ausgezeichnete Preis-Leistungs-Verhältnis."
+    }
+  ],
+  "cta": {
+    "text": "Badsanierung Elbregion anfragen",
+    "url": "https://app.badhelden24.de"
+  }
+}

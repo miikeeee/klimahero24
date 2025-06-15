@@ -1,0 +1,110 @@
+
+{
+  "slug": "main",
+  "title": "Badsanierung Main-Region | Frankfurt, Würzburg & Bamberg | badhelden24",
+  "metaDescription": "Badsanierung am Main ✓ Frankfurt, Würzburg, Bamberg, Schweinfurt ✓ Kosten ab 12.500€ ✓ Fränkische Qualität ✓ Festpreise ✓ Main-Franken-Expertise!",
+  "h1": "Badsanierung Main-Region",
+  "heroText": "Fränkische Tradition trifft auf metropolitane Eleganz. Von Frankfurt bis Bamberg – erleben Sie professionelle Badsanierung entlang des Mains mit regionalen Experten und fränkischem Charme.",
+  "heroImage": "https://images.unsplash.com/photo-1564760290292-23341e4df6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "location": "Main-Region",
+  "sections": [
+    {
+      "heading": "Badsanierung entlang des Mains – Von Franken bis zur Finanzmetropole",
+      "text": "Der Main verbindet das fränkische Herz Deutschlands mit der internationalen Finanzmetropole <a href='/badsanierung/frankfurt' class='text-blue-600 hover:underline'>Frankfurt</a>. Diese einzigartige Mischung spiegelt sich in unseren Badsanierungen wider – von der UNESCO-Welterbestadt Bamberg über die Residenzstadt Würzburg bis zur Bankenmetropole Frankfurt am Main. Als wichtige deutsche Kulturachse vereint der Main fränkische Gemütlichkeit mit cosmopolitaner Eleganz.",
+      "image": "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
+    },
+    {
+      "heading": "Kosten Badsanierung Main-Region – Fränkisch fair",
+      "text": "Die Preise für eine Komplett-Badsanierung beginnen am Main bei etwa 12.500€ für eine solide Grundausstattung. Premium-Sanierungen können bis zu 32.000€ kosten. Die Main-Region bietet als wirtschaftsstarker hessisch-bayerischer Raum mit etablierten Handwerkstraditionen ausgezeichnete Qualität bei metropolitanen Standards.",
+      "image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
+    },
+    {
+      "heading": "Fränkische Handwerker vom Fichtelgebirge bis zum Rhein",
+      "text": "Von Kulmbach über Bamberg, Würzburg und Aschaffenburg bis Frankfurt – wir arbeiten mit qualifizierten Handwerksbetrieben entlang des gesamten Mains. Ob Badsanierung in Schweinfurt, Lohr, Miltenberg oder Offenbach – unsere Partner kennen die regionalen Besonderheiten von fränkischer Gastfreundschaft bis zu hessischer Effizienz.",
+      "image": "https://images.unsplash.com/photo-1744869524920-f0efc925b82f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
+    },
+    {
+      "heading": "Main-Franken-Flair für Ihr Traumbad",
+      "text": "Die Main-Region steht für Tradition, Innovation und Lebensqualität. Diese Eigenschaften fließen in jede unserer Badsanierungen ein. Ob fränkische Gemütlichkeit in Bamberg, Residenz-Eleganz in Würzburg oder moderne Business-Atmosphäre in Frankfurt – wir schaffen Bäder, die zum jeweiligen Main-Charakter passen und höchste Standards erfüllen.",
+      "image": "https://images.unsplash.com/photo-1722858810036-e917b4dd3f3f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
+    }
+  ],
+  "processSection": {
+    "heading": "Ihr Badsanierungsprozess am Main",
+    "subheading": "Fränkisch herzlich und professionell – so verwirklichen wir Ihr Traumbad in der Main-Region.",
+    "steps": [
+      {
+        "icon": "PhoneOutgoing",
+        "title": "Kostenlose Erstberatung",
+        "description": "Kontaktieren Sie uns für eine fränkisch-herzliche Beratung zu Ihrer Badsanierung."
+      },
+      {
+        "icon": "Home",
+        "title": "Main-Region Vor-Ort-Service",
+        "description": "Ein regionaler Experte plant mit Main-Kompetenz Ihr individuelles Traumbad."
+      },
+      {
+        "icon": "FileText",
+        "title": "Fränkisch faires Angebot",
+        "description": "Sie erhalten ein transparentes Angebot mit fränkischer Ehrlichkeit und fairen Preisen."
+      },
+      {
+        "icon": "Wrench",
+        "title": "Main-Handwerkskunst",
+        "description": "Erfahrene fränkische Handwerker setzen Ihr Projekt zuverlässig und gründlich um."
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Main-Franken-Übergabe",
+        "description": "Gemeinsame Abnahme Ihres neuen Bads mit 5 Jahren fränkischer Garantie."
+      }
+    ]
+  },
+  "keyBenefitsSection": {
+    "heading": "Ihre Vorteile mit Badhelden24 am Main",
+    "benefits": [
+      {
+        "icon": "Users",
+        "title": "Main-Region-Handwerksbetriebe",
+        "description": "Erfahrene Handwerksbetriebe am Main mit fränkischer Tradition und hessischer Effizienz."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Fränkische Qualität",
+        "description": "Hochwertige Materialien und bewährte fränkische Handwerkskunst."
+      },
+      {
+        "icon": "DollarSign",
+        "title": "Main-faire Preise",
+        "description": "Wettbewerbsfähige Preise durch etablierte Netzwerke in der Main-Region."
+      },
+      {
+        "icon": "MapPin",
+        "title": "Komplette Main-Region",
+        "description": "Von Bayern über Baden-Württemberg bis Hessen entlang des Mains."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Was kostet eine Badsanierung am Main?",
+      "answer": "Eine Standard-Badsanierung beginnt bei etwa 12.500€. Je nach Ausstattung können die Kosten bis zu 32.000€ betragen. Die Main-Region bietet fränkische Qualität zu metropolitanen Standards."
+    },
+    {
+      "question": "Arbeiten Sie entlang des gesamten Mains?",
+      "answer": "Ja, von Frankfurt über Würzburg bis Bamberg und in alle Städte und Gemeinden entlang des Mains. Unsere Handwerkspartner decken die komplette Main-Region ab."
+    },
+    {
+      "question": "Berücksichtigen Sie regionale Unterschiede zwischen Franken und Hessen?",
+      "answer": "Selbstverständlich. Unsere Partner kennen sowohl fränkische als auch hessische Bautradition und regionale Vorlieben in der Main-Region."
+    },
+    {
+      "question": "Welche Erfahrungen haben Kunden in der Main-Region gemacht?",
+      "answer": "Kunden schätzen besonders die fränkische Herzlichkeit kombiniert mit professioneller Abwicklung und das ausgezeichnete Preis-Leistungs-Verhältnis."
+    }
+  ],
+  "cta": {
+    "text": "Badsanierung Main-Region anfragen",
+    "url": "https://app.badhelden24.de"
+  }
+}
