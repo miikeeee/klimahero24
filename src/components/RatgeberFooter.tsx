@@ -1,5 +1,4 @@
 
-
 const RatgeberFooter = () => {
   return (
     <footer className="bg-gray-900 text-white py-8 sm:py-12">
@@ -32,6 +31,7 @@ const RatgeberFooter = () => {
           <div>
             <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Kontakt</h4>
             <p className="text-gray-400 text-sm sm:text-base">
+              <span className="block">📞 0800 123 456 789</span>
               <span className="block">✉️ info@badhelden24.de</span>
             </p>
           </div>

@@ -1,242 +1,349 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { MapPin, Users, Euro, Star } from 'lucide-react';
 
-const cityData = [
-  {
-    name: "Aachen",
-    slug: "aachen", // korrekte Verlinkung zu aachen.json
-    state: "Nordrhein-Westfalen",
-    population: "249.000",
-    startingPrice: "13.100€",
-    description: "Kaiserstadt mit europäischem Flair und traditioneller Handwerkskunst",
-    heroImage: "https://images.unsplash.com/photo-1571823352623-82b69471c096?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    name: "Augsburg",
-    slug: "augsburg", // korrekte Verlinkung zu augsburg.json
-    state: "Bayern",
-    population: "300.000",
-    startingPrice: "12.600€",
-    description: "Fuggerstadt mit schwäbischer Tradition und bewährter Qualität",
-    heroImage: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    name: "Baden-Württemberg",
-    slug: "baden-wuerttemberg", // korrekte Verlinkung zu baden-wuerttemberg.json
-    state: "Bundesland",
-    population: "11.1 Mio",
-    startingPrice: "12.800€",
-    description: "Das Ländle mit schwäbischer Qualität und Automobilland-Präzision",
-    heroImage: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    name: "Bayern",
-    slug: "bayern", // korrekte Verlinkung zu bayern.json
-    state: "Bundesland",
-    population: "13.1 Mio",
-    startingPrice: "12.500€",
-    description: "Freistaat mit bayerischer Gemütlichkeit und Oktoberfest-Qualität",
-    heroImage: "https://images.unsplash.com/photo-1539650116574-75c0c6d73c6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    name: "Berlin",
-    slug: "berlin", // korrekte Verlinkung zu berlin.json
-    state: "Bundesland",
-    population: "3.7 Mio",
-    startingPrice: "13.800€",
-    description: "Hauptstadt mit urbaner Vielfalt und Brandenburger Tor-Qualität",
-    heroImage: "https://images.unsplash.com/photo-1587330979470-3016b6702d89?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    name: "Bielefeld",
-    slug: "bielefeld", // korrekte Verlinkung zu bielefeld.json
-    state: "Nordrhein-Westfalen",
-    population: "334.000",
-    startingPrice: "12.400€",
-    description: "Ostwestfälische Metropole mit bodenständiger Handwerksqualität",
-    heroImage: "https://source.unsplash.com/800x600/?bielefeld,westphalia"
-  },
-  {
-    name: "Bonn",
-    slug: "bonn", // korrekte Verlinkung zu bonn.json
-    state: "Nordrhein-Westfalen",
-    population: "327.000",
-    startingPrice: "13.500€",
-    description: "Ehemalige Hauptstadt mit diplomatischer Eleganz und repräsentativer Qualität",
-    heroImage: "https://source.unsplash.com/800x600/?bonn,government"
-  },
-  {
-    name: "Brandenburg",
-    slug: "brandenburg", // korrekte Verlinkung zu brandenburg.json
-    state: "Bundesland",
-    population: "2.5 Mio",
-    startingPrice: "11.200€",
-    description: "Mark Brandenburg mit märkischer Sparsamkeit und preußischer Qualität",
-    heroImage: "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    name: "Bremen",
-    slug: "bremen", // korrekte Verlinkung zu bremen.json
-    state: "Bundesland",
-    population: "569.000",
-    startingPrice: "12.800€",
-    description: "Hansestadt mit maritimer Eleganz und hanseatischer Verlässlichkeit",
-    heroImage: "https://source.unsplash.com/800x600/?bremen,hanseatic"
-  },
-  {
-    name: "Braunschweig",
-    slug: "braunschweig", // korrekte Verlinkung zu braunschweig.json
-    state: "Niedersachsen",
-    population: "248.000",
-    startingPrice: "12.300€",
-    description: "Löwenstadt mit niedersächsischer Solidität und traditioneller Qualität",
-    heroImage: "https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    name: "Chemnitz",
-    slug: "chemnitz", // korrekte Verlinkung zu chemnitz.json
-    state: "Sachsen",
-    population: "247.000",
-    startingPrice: "11.800€",
-    description: "Stadt der Moderne mit sächsischer Innovation und günstigen Preisen",
-    heroImage: "https://images.unsplash.com/photo-1588282015020-3a48e6b42d00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  }
-];
+import { useEffect, useState } from 'react';
+import { MapPin, ArrowRight, Phone, Plus } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
-const regionData = [
-  {
-    name: "Donauregion",
-    slug: "donau", // korrekte Verlinkung zu donau.json
-    state: "Flussregion",
-    population: "Von Ulm bis Passau",
-    startingPrice: "12.200€",
-    description: "Donauische Qualität von der Schwäbischen Alb bis zum Bayerischen Wald",
-    heroImage: "https://images.unsplash.com/photo-1539650116574-75c0c6d73c6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    name: "Elberegion",
-    slug: "elbe", // korrekte Verlinkung zu elbe.json (neu erstellt)
-    state: "Flussregion",
-    population: "Von Dresden bis Hamburg",
-    startingPrice: "11.800€",
-    description: "Elbflorenz-Eleganz trifft auf hanseatische Weltoffenheit",
-    heroImage: "https://images.unsplash.com/photo-1571823352623-82b69471c096?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    name: "Rheinregion",
-    slug: "rhein", // korrekte Verlinkung zu rhein.json (neu erstellt)
-    state: "Flussregion",
-    population: "Von Basel bis Rotterdam",
-    startingPrice: "12.400€",
-    description: "Rheinromantik-Qualität mit internationalen Standards",
-    heroImage: "https://images.unsplash.com/photo-1539650116574-75c0c6d73c6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  }
-];
-
-const CityCard = ({ city }) => (
-  <Link to={`/badsanierung/${city.slug}`} className="group">
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-      <div className="relative h-48 overflow-hidden">
-        <img
-          src={city.heroImage}
-          alt={`Badsanierung ${city.name}`}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-        <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-          ab {city.startingPrice}
-        </div>
-      </div>
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-          Badsanierung {city.name}
-        </h3>
-        <p className="text-gray-600 mb-4 text-sm leading-relaxed">{city.description}</p>
-        <div className="flex items-center justify-between text-sm text-gray-500">
-          <div className="flex items-center gap-1">
-            <MapPin className="w-4 h-4" />
-            <span>{city.state}</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <Users className="w-4 h-4" />
-            <span>{city.population}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </Link>
-);
+interface City {
+  name: string;
+  slug: string;
+  image: string;
+  description: string;
+  population?: string;
+}
 
 const BadsanierungListPage = () => {
-  const allData = [...cityData, ...regionData];
+  const [cities, setCities] = useState<City[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [visibleCities, setVisibleCities] = useState(9);
+  const [showingMore, setShowingMore] = useState(false);
+
+  useEffect(() => {
+    const loadCities = async () => {
+      const cityList = [
+        {
+          name: "Berlin",
+          slug: "berlin",
+          image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Professionelle Badsanierung in der Hauptstadt mit geprüften Handwerkern.",
+          population: "3.7 Mio. Einwohner"
+        },
+        {
+          name: "Hamburg",
+          slug: "hamburg",
+          image: "https://images.unsplash.com/photo-1539650116574-75c0c6d14d14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Hochwertige Badsanierung in der Hansestadt mit regionalen Experten.",
+          population: "1.9 Mio. Einwohner"
+        },
+        {
+          name: "München",
+          slug: "muenchen",
+          image: "https://images.unsplash.com/photo-1595655931695-059d14e2447d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Exklusive Badsanierung in München mit bayerischen Qualitätsstandards.",
+          population: "1.5 Mio. Einwohner"
+        },
+        {
+          name: "Köln",
+          slug: "koeln",
+          image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Moderne Badsanierung in der Domstadt mit rheinischer Gemütlichkeit.",
+          population: "1.1 Mio. Einwohner"
+        },
+        {
+          name: "Frankfurt",
+          slug: "frankfurt",
+          image: "https://images.unsplash.com/photo-1564760290292-23341e4df6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Erstklassige Badsanierung im Finanzenzentrum Deutschlands.",
+          population: "760.000 Einwohner"
+        },
+        {
+          name: "Stuttgart",
+          slug: "stuttgart",
+          image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Innovative Badsanierung in der Automobilstadt mit schwäbischer Präzision.",
+          population: "630.000 Einwohner"
+        },
+        {
+          name: "Düsseldorf",
+          slug: "duesseldorf",
+          image: "https://images.unsplash.com/photo-1551975074-52ec8ac997ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Elegante Badsanierung in der Mode- und Kunststadt am Rhein.",
+          population: "650.000 Einwohner"
+        },
+        {
+          name: "Dortmund",
+          slug: "dortmund",
+          image: "https://images.unsplash.com/photo-1471919743851-c4df8b6eefb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Zuverlässige Badsanierung im Herzen des Ruhrgebiets.",
+          population: "590.000 Einwohner"
+        },
+        {
+          name: "Essen",
+          slug: "essen",
+          image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Qualitätsvolle Badsanierung in der Kulturhauptstadt 2010.",
+          population: "580.000 Einwohner"
+        },
+        {
+          name: "Leipzig",
+          slug: "leipzig",
+          image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Moderne Badsanierung in der sächsischen Metropole.",
+          population: "600.000 Einwohner"
+        },
+        {
+          name: "Dresden",
+          slug: "dresden",
+          image: "https://images.unsplash.com/photo-1564760290292-23341e4df6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Erstklassige Badsanierung in der Kulturstadt an der Elbe.",
+          population: "560.000 Einwohner"
+        },
+        {
+          name: "Hannover",
+          slug: "hannover",
+          image: "https://images.unsplash.com/photo-1551975074-52ec8ac997ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Professionelle Badsanierung in der niedersächsischen Landeshauptstadt.",
+          population: "540.000 Einwohner"
+        },
+        {
+          name: "Nürnberg",
+          slug: "nuernberg",
+          image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Traditionelle Badsanierung in der fränkischen Metropole.",
+          population: "520.000 Einwohner"
+        },
+        {
+          name: "Bremen",
+          slug: "bremen",
+          image: "https://images.unsplash.com/photo-1539650116574-75c0c6d14d14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Maritime Badsanierung in der Hansestadt Bremen.",
+          population: "570.000 Einwohner"
+        },
+        {
+          name: "Mannheim",
+          slug: "mannheim",
+          image: "https://images.unsplash.com/photo-1595655931695-059d14e2447d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Innovative Badsanierung in der Quadratestadt.",
+          population: "310.000 Einwohner"
+        }
+      ];
+
+      // Load hero images from city data files
+      try {
+        const citiesWithImages = await Promise.all(
+          cityList.map(async (city) => {
+            try {
+              const response = await fetch(`/data/badsanierung/${city.slug}.json`);
+              const cityData = await response.json();
+              return {
+                ...city,
+                image: cityData.heroImage || city.image
+              };
+            } catch (error) {
+              console.error(`Error loading data for ${city.slug}:`, error);
+              return city;
+            }
+          })
+        );
+        setCities(citiesWithImages);
+      } catch (error) {
+        console.error('Error loading city images:', error);
+        setCities(cityList);
+      }
+      
+      setLoading(false);
+    };
+
+    loadCities();
+  }, []);
+
+  useEffect(() => {
+    document.title = "Badsanierung in deiner Stadt - badhelden24";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Professionelle Badsanierung in allen deutschen Großstädten. Finde geprüfte Handwerker in deiner Region.');
+    }
+  }, []);
+
+  const handleCTAClick = () => {
+    window.open('https://app.badhelden24.de', '_blank');
+  };
+
+  const handleShowMore = () => {
+    setVisibleCities(cities.length);
+    setShowingMore(true);
+  };
+
+  const handleShowLess = () => {
+    setVisibleCities(9);
+    setShowingMore(false);
+    // Scroll to top of cities section
+    document.getElementById('cities-section')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Lade Städte...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <>
-      <Helmet>
-        <title>Badsanierung in Deutschland | Alle Städte & Regionen | badhelden24</title>
-        <meta name="description" content="Professionelle Badsanierung in ganz Deutschland ✓ Über 50 Städte & Regionen ✓ Günstige Festpreise ab 11.200€ ✓ Erfahrene Handwerker ✓ Kostenlose Beratung!" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Badsanierung in ganz Deutschland
-              </h1>
-              <p className="text-xl mb-8 text-blue-100">
-                Professionelle Badsanierung mit geprüften Handwerkern in über 50 Städten und Regionen
-              </p>
-              <div className="flex flex-wrap justify-center gap-6 text-lg">
-                <div className="flex items-center gap-2">
-                  <Star className="w-6 h-6 text-yellow-400" />
-                  <span>4,8/5 Kundenbewertung</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Euro className="w-6 h-6 text-green-400" />
-                  <span>Ab 11.200€ Festpreis</span>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Header */}
+      <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <a href="/" className="hover:opacity-80 transition-opacity">
+            <img 
+              src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500-0BoxfiLkXw4D2e41W20ELwwpufi7NW.svg"
+              alt="badhelden24 Logo"
+              className="h-8 sm:h-10"
+            />
+          </a>
+          <Button 
+            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
+            onClick={handleCTAClick}
+          >
+            <Phone className="w-4 h-4 mr-2" />
+            Beratung anfragen
+          </Button>
         </div>
+      </header>
 
-        {/* Content Section */}
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Wählen Sie Ihre Stadt oder Region
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Finden Sie erfahrene Handwerker für Ihre Badsanierung in Ihrer Nähe. 
-                Alle Preise sind Festpreise inklusive Material und Arbeitszeit.
-              </p>
-            </div>
+      <div className="pt-24 pb-16">
+        <div className="container mx-auto px-4 max-w-6xl">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Badsanierung in deiner Stadt
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Finde geprüfte Handwerker für deine Badsanierung in ganz Deutschland. 
+              Lokale Experten mit nationalen Qualitätsstandards.
+            </p>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {allData.map((city, index) => (
-                <CityCard key={index} city={city} />
+          {/* Cities Grid */}
+          <div id="cities-section">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {cities.slice(0, visibleCities).map((city, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                  <div className="relative overflow-hidden">
+                    <img 
+                      src={city.image}
+                      alt={`Badsanierung ${city.name}`}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm flex items-center">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      {city.population}
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{city.name}</h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed">{city.description}</p>
+                    <a 
+                      href={`/badsanierung/${city.slug}`}
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
+                    >
+                      Mehr erfahren
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </a>
+                  </div>
+                </div>
               ))}
             </div>
 
-            <div className="text-center mt-12">
-              <p className="text-gray-600 mb-6">
-                Ihre Stadt ist nicht dabei? Kein Problem!
-              </p>
-              <a
-                href="https://app.badhelden24.de"
-                className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-              >
-                Kostenlose Beratung anfragen
-              </a>
-            </div>
+            {/* Show More/Less Button */}
+            {cities.length > 9 && (
+              <div className="text-center mt-12">
+                {!showingMore ? (
+                  <Button 
+                    onClick={handleShowMore}
+                    variant="outline"
+                    size="lg"
+                    className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
+                  >
+                    <Plus className="w-5 h-5 mr-2" />
+                    Mehr Städte anzeigen ({cities.length - visibleCities} weitere)
+                  </Button>
+                ) : (
+                  <Button 
+                    onClick={handleShowLess}
+                    variant="outline"
+                    size="lg"
+                    className="border-2 border-gray-400 text-gray-600 hover:bg-gray-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
+                  >
+                    Weniger anzeigen
+                  </Button>
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* CTA Section */}
+          <div className="mt-16 text-center bg-blue-600 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Deine Stadt ist nicht dabei?
+            </h2>
+            <p className="text-blue-100 mb-6 text-lg">
+              Kein Problem! Wir sind deutschlandweit tätig und finden auch in deiner Region den passenden Handwerker.
+            </p>
+            <Button 
+              size="lg" 
+              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105"
+              onClick={handleCTAClick}
+            >
+              Jetzt anfragen
+            </Button>
           </div>
         </div>
       </div>
-    </>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <img 
+                src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500%20%281%29-VYpwjV6yIfD1z9XEUUqmlnOVoD2NDo.svg"
+                alt="badhelden24 Logo"
+                className="h-8 mb-4"
+              />
+              <p className="text-gray-400">Dein Partner für professionelle Badsanierung in ganz Deutschland.</p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Services</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="/badsanierung" className="hover:text-white transition-colors">Badsanierung</a></li>
+                <li><a href="/ratgeber" className="hover:text-white transition-colors">Ratgeber</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Rechtliches</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="/impressum" className="hover:text-white transition-colors">Impressum</a></li>
+                <li><a href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</a></li>
+                <li><a href="/agb" className="hover:text-white transition-colors">AGB</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Kontakt</h4>
+              <p className="text-gray-400">
+                <span className="block">📞 0800 123 456 789</span>
+                <span className="block">✉️ info@badhelden24.de</span>
+              </p>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 badhelden24. Alle Rechte vorbehalten.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 };
 
