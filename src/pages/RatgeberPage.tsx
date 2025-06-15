@@ -1,4 +1,5 @@
 
+import { useEffect, useRef } from 'react';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -17,7 +18,40 @@ import { useSEO } from '@/hooks/useSEO';
 
 const RatgeberPage = () => {
   const { data, loading, error } = useRatgeberData();
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  
   useSEO(data);
+
+  // Scroll reveal effect
+  useEffect(() => {
+    if (loading || error || !data) return;
+
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in');
+            entry.target.classList.remove('opacity-0', 'translate-y-8');
+          }
+        });
+      },
+      { 
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+
+    // Apply observer to elements that should have scroll reveal
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    revealElements.forEach((el) => {
+      el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-700', 'ease-out');
+      observerRef.current?.observe(el);
+    });
+
+    return () => {
+      observerRef.current?.disconnect();
+    };
+  }, [data, loading, error]);
 
   const handleCTAClick = () => {
     window.open('https://app.neko24.de', '_blank');
@@ -66,7 +100,7 @@ const RatgeberPage = () => {
         <RatgeberHeader onCTAClick={handleCTAClick} />
 
         {/* Breadcrumb Navigation */}
-        <section className="pt-20 pb-4 bg-white">
+        <section className="pt-20 pb-4 bg-white scroll-reveal">
           <div className="container mx-auto px-4 max-w-7xl">
             <Breadcrumb>
               <BreadcrumbList>
@@ -86,9 +120,15 @@ const RatgeberPage = () => {
           </div>
         </section>
 
-        <RatgeberHero data={data} onCTAClick={handleCTAClick} />
-        <RatgeberContent data={data} onCTAClick={handleCTAClick} />
-        <RatgeberFooter />
+        <div className="scroll-reveal">
+          <RatgeberHero data={data} onCTAClick={handleCTAClick} />
+        </div>
+        <div className="scroll-reveal">
+          <RatgeberContent data={data} onCTAClick={handleCTAClick} />
+        </div>
+        <div className="scroll-reveal">
+          <RatgeberFooter />
+        </div>
       </div>
     </>
   );

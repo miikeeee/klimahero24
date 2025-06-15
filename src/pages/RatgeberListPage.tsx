@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { ArrowRight, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -13,6 +13,7 @@ interface RatgeberArticle {
 const RatgeberListPage = () => {
   const [articles, setArticles] = useState<RatgeberArticle[]>([]);
   const [loading, setLoading] = useState(true);
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
     // Simulate loading ratgeber articles
@@ -53,6 +54,35 @@ const RatgeberListPage = () => {
 
     loadArticles();
   }, []);
+
+  // Scroll reveal effect
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in');
+            entry.target.classList.remove('opacity-0', 'translate-y-8');
+          }
+        });
+      },
+      { 
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+
+    // Apply observer to elements that should have scroll reveal
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    revealElements.forEach((el) => {
+      el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-700', 'ease-out');
+      observerRef.current?.observe(el);
+    });
+
+    return () => {
+      observerRef.current?.disconnect();
+    };
+  }, [articles]);
 
   useEffect(() => {
     document.title = "Ratgeber - badhelden24";
@@ -102,7 +132,7 @@ const RatgeberListPage = () => {
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-6xl">
           {/* Hero Section */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-reveal">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Ratgeber für deine Badsanierung
             </h1>
@@ -115,7 +145,7 @@ const RatgeberListPage = () => {
           {/* Articles Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map((article, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group scroll-reveal" style={{transitionDelay: `${index * 100}ms`}}>
                 <div className="relative overflow-hidden">
                   <img 
                     src={article.image}
@@ -142,7 +172,7 @@ const RatgeberListPage = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="mt-16 text-center bg-blue-600 rounded-2xl p-8">
+          <div className="mt-16 text-center bg-blue-600 rounded-2xl p-8 scroll-reveal">
             <h2 className="text-3xl font-bold text-white mb-4">
               Brauchst du persönliche Beratung?
             </h2>
@@ -161,7 +191,7 @@ const RatgeberListPage = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 text-white py-12 scroll-reveal">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
