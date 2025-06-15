@@ -263,6 +263,160 @@ const BadsanierungListPage = () => {
           image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
           description: "Automobilstädtische Badsanierung mit bayerischer Tradition.",
           population: "138.000 Einwohner"
+        },
+        {
+          name: "Potsdam",
+          slug: "potsdam",
+          image: "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Königliche Badsanierung in der brandenburgischen Landeshauptstadt.",
+          population: "185.000 Einwohner"
+        },
+        {
+          name: "Recklinghausen",
+          slug: "recklinghausen",
+          image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Ruhrgebietstypische Badsanierung mit moderner Ausstattung.",
+          population: "112.000 Einwohner"
+        },
+        {
+          name: "Göttingen",
+          slug: "goettingen",
+          image: "https://images.unsplash.com/photo-1441260038675-7329ab4cc264?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Universitäre Badsanierung in der niedersächsischen Universitätsstadt.",
+          population: "118.000 Einwohner"
+        },
+        {
+          name: "Hildesheim",
+          slug: "hildesheim",
+          image: "https://images.unsplash.com/photo-1494522358652-f30e61a5fd77?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Mittelalterliche Badsanierung in der UNESCO-Welterbestadt.",
+          population: "104.000 Einwohner"
+        },
+        {
+          name: "Wolfsburg",
+          slug: "wolfsburg",
+          image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Automobilstädtische Badsanierung mit niedersächsischer Qualität.",
+          population: "125.000 Einwohner"
+        },
+        {
+          name: "Salzgitter",
+          slug: "salzgitter",
+          image: "https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Industrielle Badsanierung in der Stahlstadt Niedersachsens.",
+          population: "105.000 Einwohner"
+        },
+        {
+          name: "Schwerin",
+          slug: "schwerin",
+          image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Märchenhafte Badsanierung in der mecklenburgischen Landeshauptstadt.",
+          population: "95.000 Einwohner"
+        },
+        {
+          name: "Cottbus",
+          slug: "cottbus",
+          image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Lausitzer Badsanierung in der brandenburgischen Universitätsstadt.",
+          population: "99.000 Einwohner"
+        },
+        {
+          name: "Koblenz",
+          slug: "koblenz",
+          image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Rheinland-pfälzische Badsanierung am Deutschen Eck.",
+          population: "114.000 Einwohner"
+        },
+        {
+          name: "Siegen",
+          slug: "siegen",
+          image: "https://images.unsplash.com/photo-1519452634681-4d9183532e38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Südwestfälische Badsanierung in der Universitätsstadt.",
+          population: "102.000 Einwohner"
+        },
+        {
+          name: "Bergisch Gladbach",
+          slug: "bergischgladbach",
+          image: "https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Bergische Badsanierung in der rheinischen Stadt.",
+          population: "111.000 Einwohner"
+        },
+        {
+          name: "Gera",
+          slug: "gera",
+          image: "https://images.unsplash.com/photo-1529696657574-4dbf86aa696d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Thüringische Badsanierung in der Otto-Dix-Stadt.",
+          population: "93.000 Einwohner"
+        },
+        {
+          name: "Bottrop",
+          slug: "bottrop",
+          image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Ruhrgebietliche Badsanierung mit innovativen Lösungen.",
+          population: "116.000 Einwohner"
+        },
+        {
+          name: "Remscheid",
+          slug: "remscheid",
+          image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Bergische Badsanierung in der Werkzeugstadt.",
+          population: "110.000 Einwohner"
+        },
+        {
+          name: "Bremerhaven",
+          slug: "bremerhaven",
+          image: "https://images.unsplash.com/photo-1544550285-f813152fb2fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Maritime Badsanierung in der Seestadt.",
+          population: "114.000 Einwohner"
+        },
+        {
+          name: "Fürth",
+          slug: "fuerth",
+          image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Fränkische Badsanierung in der Kleeblattstadt.",
+          population: "129.000 Einwohner"
+        },
+        {
+          name: "Reutlingen",
+          slug: "reutlingen",
+          image: "https://images.unsplash.com/photo-1573155993874-d5d48af862ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Schwäbische Badsanierung vor der Schwäbischen Alb.",
+          population: "117.000 Einwohner"
+        },
+        {
+          name: "Kempten",
+          slug: "kempten",
+          image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Allgäuer Badsanierung in der ältesten Stadt Deutschlands.",
+          population: "69.000 Einwohner"
+        },
+        {
+          name: "Moers",
+          slug: "moers",
+          image: "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Niederrheinische Badsanierung in der Grafenstadt.",
+          population: "104.000 Einwohner"
+        },
+        {
+          name: "Erlangen",
+          slug: "erlangen",
+          image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Universitäre Badsanierung in der Hugenottenstadt.",
+          population: "113.000 Einwohner"
+        },
+        {
+          name: "Jena",
+          slug: "jena",
+          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Thüringische Badsanierung in der Universitäts- und Optikstadt.",
+          population: "108.000 Einwohner"
+        },
+        {
+          name: "Trier",
+          slug: "trier",
+          image: "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Römische Badsanierung in Deutschlands ältester Stadt.",
+          population: "110.000 Einwohner"
         }
       ];
 
@@ -472,7 +626,6 @@ const BadsanierungListPage = () => {
             <div>
               <h4 className="font-semibold mb-4">Kontakt</h4>
               <p className="text-gray-400">
-                <span className="block">📞 0800 123 456 789</span>
                 <span className="block">✉️ info@badhelden24.de</span>
               </p>
             </div>
