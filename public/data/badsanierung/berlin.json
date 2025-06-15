@@ -1,177 +1,110 @@
+
 {
   "slug": "berlin",
-  "title": "Badsanierung Berlin | Kosten, Erfahrung & Günstig | badhelden24",
-  "metaDescription": "Professionelle Badsanierung in Berlin ✓ Kosten-Übersicht ✓ Erfahrene Handwerker ✓ Günstige Angebote ✓ Bis zu 20% Förderung ✓ Beratung!",
+  "title": "Badsanierung Berlin | Prenzlauer Berg, Mitte & Charlottenburg | badhelden24", 
+  "metaDescription": "Badsanierung Berlin ✓ Alle Bezirke ✓ Kosten ab 13.500€ ✓ Altbau-Expertise ✓ Festpreise ✓ Berliner Schnauze & Qualität!",
   "h1": "Badsanierung Berlin",
-  "heroText": "Dein Traumbad in Berlin – Modern, Förderfähig & Stressfrei umgesetzt von geprüften Experten. Erfahre mehr über Kosten, Erfahrungen und günstige Optionen.",
-  "heroImage": "https://source.unsplash.com/800x600/?berlin,architecture",
+  "heroText": "Hauptstadt-Flair für Ihr neues Bad. Von Kreuzberg bis Charlottenburg – erleben Sie professionelle Badsanierung in Berlin mit regionalen Experten und Berliner Schnauze.",
+  "heroImage": "https://images.unsplash.com/photo-1560969184-10fe8719e047?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   "location": "Berlin",
   "sections": [
     {
-      "heading": "Warum Badsanierung mit badhelden24 in Berlin?",
-      "text": "Wir begleiten dich von der ersten Planung bis zur Fertigstellung deines Traumbads. Unsere geprüften Handwerker aus Berlin kennen die lokalen Gegebenheiten und Vorschriften. Mit über 10 Jahren Erfahrung und mehr als 2.500 zufriedenen Kunden sind wir dein zuverlässiger Partner für die Badsanierung in der Hauptstadt.",
-      "image": "https://images.unsplash.com/photo-1744869524920-f0efc925b82f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
-    },
-    {
-      "heading": "Badsanierung Berlin Kosten – Was kostet ein neues Bad in der Hauptstadt?",
-      "text": "Die Kosten für eine Badsanierung in Berlin können stark variieren. Im Durchschnitt liegen die Preise für eine Komplettsanierung eines mittelgroßen Bades (ca. 6-8 qm) zwischen 15.000€ und 28.000€. Faktoren wie Materialauswahl, Größe des Bades, Zustand der Bausubstanz und spezielle Wünsche (z.B. bodengleiche Dusche, Smart-Home-Technik) beeinflussen den Endpreis. Ein transparentes Festpreisangebot erhalten Sie nach einer kostenlosen Vor-Ort-Besichtigung.",
-      "image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
-    },
-    {
-      "heading": "Erfahrungen Badsanierung Berlin – Darauf sollten Sie achten",
-      "text": "Unsere Kunden in Berlin schätzen besonders unsere Zuverlässigkeit, Pünktlichkeit und die hohe Qualität der Ausführung. Viele teilen ihre positiven Erfahrungen mit der transparenten Kommunikation während des gesamten Projekts. Wichtige Aspekte sind die Einhaltung des Zeitplans, sauberes Arbeiten und die Kompetenz der Handwerker, insbesondere im Umgang mit Berliner Altbauten. Informieren Sie sich über Kundenbewertungen und Referenzprojekte.",
+      "heading": "Badsanierung in der Hauptstadt – Von Altbau bis Neubau",
+      "text": "Berlin vereint Geschichte mit Moderne wie keine andere deutsche Stadt. Diese Vielfalt spiegelt sich in unseren Badsanierungen wider – von historischen Altbauten in Prenzlauer Berg über Loft-Wohnungen in Mitte bis zu modernen Neubauten in Charlottenburg. Unsere Berliner Handwerkspartner kennen die Eigenarten der Hauptstadt-Architektur und meistern sowohl Gründerzeitvillen als auch Plattenbau-Sanierungen mit Berliner Know-how.",
       "image": "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
     },
     {
-      "heading": "Günstige Badsanierung Berlin – Qualität muss nicht teuer sein",
-      "text": "Eine günstige Badsanierung in Berlin ist möglich, ohne an Qualität zu sparen. Durch clevere Materialauswahl, optimierte Prozesse und unsere Einkaufsvorteile bei Herstellern können wir attraktive Preise anbieten. Teilsanierungen, der Fokus auf Standardausstattungen oder die Nutzung von Förderprogrammen können die Kosten ebenfalls senken. Wir beraten Sie gerne zu Optionen für Ihr Budget.",
+      "heading": "Kosten Badsanierung Berlin – Hauptstadt-Budget",
+      "text": "Die Kosten für eine Komplett-Badsanierung in Berlin beginnen bei etwa 13.500€ für eine solide Grundausstattung. Premium-Sanierungen mit hochwertigen Materialien können bis zu 32.000€ kosten. Als Hauptstadt bietet Berlin den Vorteil kurzer Lieferwege und eines großen Handwerkernetzes, was trotz höherer Lebenshaltungskosten für wettbewerbsfähige Preise sorgt.",
+      "image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
+    },
+    {
+      "heading": "Berliner Handwerker in allen Bezirken",
+      "text": "Von Spandau über Tempelhof bis nach Lichtenberg – wir arbeiten mit qualifizierten Handwerksbetrieben in ganz Berlin. Ob Badsanierung in Friedrichshain, Wilmersdorf oder Wedding – unsere Partner kennen die besonderen Herausforderungen der Berliner Bausubstanz. Von denkmalgeschützten Altbauten bis zu modernen Eigentumswohnungen – Berliner Handwerker meistern jede Herausforderung mit der typischen Berliner Direktheit.",
+      "image": "https://images.unsplash.com/photo-1744869524920-f0efc925b82f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
+    },
+    {
+      "heading": "Hauptstadt-Qualität für Ihr Traumbad",
+      "text": "Berlin steht für Innovation, Kreativität und Durchsetzungsvermögen. Diese Eigenschaften fließen in jede unserer Badsanierungen ein. Ob minimalistisches Design in Mitte, vintage-inspirierte Gestaltung in Kreuzberg oder klassische Eleganz in Charlottenburg – wir realisieren Ihren persönlichen Stil. Die Berliner Mentalität 'Wat mutt, dat mutt' sorgt für pragmatische Lösungen bei höchsten Qualitätsansprüchen.",
       "image": "https://images.unsplash.com/photo-1722858810036-e917b4dd3f3f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0"
-    },
-    {
-      "heading": "Badsanierung in der Nähe Berlin – Handwerker in Ihrem Bezirk",
-      "text": "Wir verfügen über ein breites Netzwerk an Partnerbetrieben in allen Berliner Bezirken – von Charlottenburg bis Marzahn, von Spandau bis Köpenick. Das bedeutet kurze Anfahrtswege, schnelle Reaktionszeiten und Handwerker, die mit den lokalen Gegebenheiten vertraut sind. Finden Sie Ihren Experten für Badsanierung in der Nähe.",
-      "image": ""
-    },
-    {
-      "heading": "Staatliche Förderung für deine Badsanierung in Berlin",
-      "text": "Nutze die Fördermöglichkeiten für barrierefreies Bauen! Bis zu 6.250 Euro Zuschuss von der KfW sind möglich. Wir prüfen deine Ansprüche und unterstützen dich bei der Beantragung. Zusätzlich gibt es in Berlin spezielle Landesförderprogramme der IBB für energetische Sanierungen und Wohnraumanpassung.",
-      "image": ""
-    },
-    {
-      "heading": "Ablauf deiner Badsanierung in Berlin",
-      "text": "1. Kostenlose Vor-Ort-Beratung und Aufmaß in Ihrem Berliner Objekt. 2. Individuelle Planung und detaillierter Kostenvoranschlag. 3. Koordination aller Gewerke (Sanitär, Fliesen, Elektro etc.). 4. Professionelle Umsetzung durch unsere Berliner Partnerbetriebe. 5. Abnahme und Übergabe deines neuen Bads. Während der gesamten Bauzeit stehen wir dir als Ansprechpartner zur Verfügung.",
-      "image": ""
-    },
-    {
-      "heading": "Besonderheiten bei Berliner Altbauten",
-      "text": "Berlin ist geprägt von wunderschönen Altbauten mit besonderen Herausforderungen: Hohe Decken, alte Rohrleitungen und Denkmalschutz. Unsere Experten kennen sich bestens mit den Berliner Baubesonderheiten aus und finden für jede Situation die passende Lösung – von der Gründerzeit-Villa bis zum Plattenbau.",
-      "image": ""
-    }
-  ],
-  "imageSections": [
-    {
-      "src": "https://source.unsplash.com/800x600/?berlin,architecture",
-      "alt": "Modernes Badezimmer nach Sanierung in Berlin"
     }
   ],
   "processSection": {
-    "heading": "Ihr Weg zum Traumbad in Berlin – Schritt für Schritt",
-    "subheading": "Transparent und unkompliziert: So läuft Ihre Badsanierung mit uns in der Hauptstadt ab.",
+    "heading": "Ihr Badsanierungsprozess in Berlin",
+    "subheading": "Berlinerisch direkt und professionell – so läuft Ihre Badsanierung in der Hauptstadt ab.",
     "steps": [
       {
         "icon": "PhoneOutgoing",
         "title": "Kostenlose Erstberatung",
-        "description": "Kontaktieren Sie uns. Wir besprechen Ihre Wünsche und Vorstellungen für Ihr neues Bad in Berlin unverbindlich."
+        "description": "Kontaktieren Sie uns für eine direkte Beratung zu Ihrer Badsanierung in Berlin."
       },
       {
         "icon": "Home",
-        "title": "Vor-Ort-Termin & Planung",
-        "description": "Ein Fachexperte kommt zu Ihnen nach Berlin, nimmt präzise Maß und plant gemeinsam mit Ihnen Ihr individuelles Badkonzept."
+        "title": "Berliner Vor-Ort-Termin",
+        "description": "Ein Hauptstadt-Experte plant mit Ihnen vor Ort Ihr individuelles Berliner Traumbad."
       },
       {
         "icon": "FileText",
-        "title": "Detailliertes Festpreisangebot",
-        "description": "Sie erhalten ein transparentes und faires Angebot für Ihre Badsanierung in Berlin, ohne versteckte Kosten."
+        "title": "Transparentes Festpreisangebot",
+        "description": "Sie erhalten ein klares Angebot mit Berliner Direktheit und fairer Preisgestaltung."
       },
       {
         "icon": "Wrench",
-        "title": "Professionelle Umsetzung",
-        "description": "Unsere erfahrenen Berliner Handwerker setzen Ihr Traumbad fachgerecht, sauber und termingerecht um."
+        "title": "Berliner Handwerkskunst",
+        "description": "Erfahrene Berliner Handwerker setzen Ihr Projekt zuverlässig und termingerecht um."
       },
       {
         "icon": "Sparkles",
-        "title": "Abnahme & Garantie",
-        "description": "Nach Fertigstellung erfolgt die gemeinsame Abnahme. Sie erhalten 5 Jahre Garantie auf alle ausgeführten Arbeiten in Berlin."
+        "title": "Hauptstadt-Übergabe",
+        "description": "Gemeinsame Abnahme Ihres neuen Bads mit 5 Jahren Berliner Garantie."
       }
     ]
   },
   "keyBenefitsSection": {
-    "heading": "Ihre Vorteile bei einer Badsanierung mit uns in Berlin",
+    "heading": "Ihre Vorteile mit Badhelden24 in Berlin",
     "benefits": [
       {
         "icon": "Users",
-        "title": "Berliner Fachexperten",
-        "description": "Wir arbeiten ausschließlich mit handverlesenen Meisterbetrieben direkt aus Berlin und Umgebung, die lokale Gegebenheiten kennen."
+        "title": "Berliner Handwerksbetriebe",
+        "description": "Erfahrene Handwerksbetriebe aus Berlin mit Hauptstadt-Know-how und Berliner Schnauze."
       },
       {
         "icon": "ShieldCheck",
-        "title": "Qualität & Garantie",
-        "description": "Einsatz hochwertiger Materialien und eine umfassende 5-Jahres-Garantie auf alle Sanierungsarbeiten in Ihrem Berliner Bad."
+        "title": "Hauptstadt-Qualität",
+        "description": "Hochwertige Materialien und bewährte Berliner Handwerkskunst für langlebige Bäder."
       },
       {
         "icon": "DollarSign",
-        "title": "Faire Festpreise",
-        "description": "Profitieren Sie von einer transparenten Kostenkalkulation und fairen Festpreisen, die Ihr Budget schonen – auch in Berlin."
+        "title": "Faire Berliner Preise",
+        "description": "Wettbewerbsfähige Preise durch kurze Wege und etablierte Netzwerke in der Hauptstadt."
       },
       {
-        "icon": "Smile",
-        "title": "Rundum-Sorglos-Service",
-        "description": "Von der ersten Idee bis zur finalen Übergabe Ihres neuen Badezimmers in Berlin – wir koordinieren alles für Sie."
+        "icon": "MapPin",
+        "title": "Alle Berliner Bezirke",
+        "description": "Von Reinickendorf bis Treptow – wir sind in ganz Berlin für Sie da."
       }
     ]
   },
   "faq": [
     {
-      "question": "Wie lange dauert eine Badsanierung in Berlin?",
-      "answer": "Die Dauer hängt vom Umfang ab. Ein komplettes Bad dauert in der Regel 2-3 Wochen. Bei Teilsanierungen oder einfachen Renovierungen kann es auch schneller gehen. Wir planen individuell und berücksichtigen dabei auch die Berliner Ruhezeiten."
+      "question": "Was kostet eine Badsanierung in Berlin?",
+      "answer": "Eine Standard-Badsanierung beginnt bei etwa 13.500€. Je nach Ausstattung und Bezirk können die Kosten bis zu 32.000€ betragen. Berlin bietet durch kurze Lieferwege und große Handwerkernetze gute Preise."
     },
     {
-      "question": "Welche Fördermittel gibt es in Berlin für Badsanierung?",
-      "answer": "Neben den bundesweiten KfW-Förderungen (bis zu 6.250€ Zuschuss für barrierearmen Umbau) gibt es in Berlin zusätzliche Landesprogramme über die IBB. Das IBB Wohnraummodernisierungsprogramm und Förderungen für energetische Sanierungen können relevant sein."
+      "question": "Arbeiten Sie in allen Berliner Bezirken?",
+      "answer": "Ja, wir sind in ganz Berlin tätig – von Charlottenburg über Mitte und Prenzlauer Berg bis nach Lichtenberg, Tempelhof und allen anderen Bezirken."
     },
     {
-      "question": "Kann ich während der Sanierung in meiner Berliner Wohnung bleiben?",
-      "answer": "Bei einer Komplettsanierung ist das Bad nicht nutzbar. Wir helfen bei der Planung von Übergangslösungen und koordinieren die Arbeiten so, dass die Beeinträchtigung minimal ist. Oft können wir auch etappenweise sanieren, wenn die Gegebenheiten es zulassen."
+      "question": "Haben Sie Erfahrung mit Berliner Altbauten?",
+      "answer": "Selbstverständlich. Unsere Berliner Handwerkspartner haben langjährige Erfahrung mit Gründerzeit-Altbauten, Plattenbau-Sanierungen und allen anderen typischen Berliner Bauformen."
     },
     {
-      "question": "Was sind typische Kosten für eine Badsanierung in Berlin?",
-      "answer": "Die Kosten variieren je nach Ausstattung und Umfang. Eine Standardsanierung beginnt bei etwa 15.000€, während Luxusbäder 30.000€ und mehr kosten können. Ein detailliertes Angebot erhalten Sie nach kostenloser Besichtigung."
-    },
-    {
-      "question": "Arbeiten Sie auch in allen Berliner Bezirken?",
-      "answer": "Ja, wir sind in ganz Berlin tätig – von Mitte bis Spandau, von Charlottenburg bis Lichtenberg. Unsere Partnerbetriebe sind über die ganze Stadt verteilt, sodass wir immer einen Experten in deiner Nähe haben."
+      "question": "Welche Erfahrungen haben Berliner Kunden gemacht?",
+      "answer": "Berliner Kunden schätzen besonders die direkte Art, Termintreue und das ausgezeichnete Preis-Leistungs-Verhältnis unserer Hauptstadt-Handwerkspartner."
     }
   ],
-  "structuredData": {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Was kostet eine Badsanierung in Berlin?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Eine Standard-Badsanierung in Berlin beginnt bei etwa 15.000€. Die Kosten hängen von Größe, Ausstattung und baulichen Gegebenheiten ab."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Welche Erfahrungen haben Kunden mit Badsanierungen in Berlin gemacht?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Kunden schätzen Zuverlässigkeit und Expertise im Umgang mit Berliner Altbauten. Positive Erfahrungen werden oft mit transparenter Kommunikation und Einhaltung von Zeitplänen gemacht."
-        }
-      },
-      {
-        "@type": "Question", 
-        "name": "Gibt es günstige Optionen für Badsanierung in Berlin?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, durch clevere Materialwahl, Teilsanierungen und Nutzung von Fördermitteln lässt sich eine Badsanierung in Berlin auch günstiger gestalten."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie finde ich Handwerker für Badsanierung in meiner Nähe in Berlin?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "badhelden24 verfügt über ein Netzwerk von Partnerbetrieben in allen Berliner Bezirken, wodurch kurze Anfahrtswege gewährleistet sind."
-        }
-      }
-    ]
-  },
   "cta": {
-    "text": "Jetzt kostenlose Beratung für Berlin anfragen",
-    "url": "https://app.neko24.de"
+    "text": "Badsanierung Berlin anfragen",
+    "url": "https://app.badhelden24.de"
   }
 }
