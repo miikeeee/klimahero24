@@ -27,6 +27,34 @@ const RatgeberListPage = () => {
           readTime: "5 Min. Lesezeit"
         },
         {
+          slug: "badsanierung-kosten-2025",
+          title: "Badsanierung Kosten 2025",
+          description: "Was kostet eine Badsanierung wirklich? Kompletter Preisüberblick, Spartipps und Förderungen für Ihr Traumbad.",
+          image: "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          readTime: "12 Min. Lesezeit"
+        },
+        {
+          slug: "kleine-bader-optimal-gestalten",
+          title: "Kleine Bäder optimal gestalten",
+          description: "Platzsparende Lösungen und clevere Tricks für kleine Badezimmer. So holen Sie das Maximum aus jedem Quadratmeter heraus.",
+          image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          readTime: "14 Min. Lesezeit"
+        },
+        {
+          slug: "badezimmer-fliesen-trends-2025",
+          title: "Badezimmer Fliesen Trends 2025",
+          description: "Moderne Fliesendesigns, neue Materialien und angesagte Verlegemuster für Ihr Badezimmer. Alle Trends im Überblick.",
+          image: "https://images.unsplash.com/photo-1586105251261-72a756497a11?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          readTime: "13 Min. Lesezeit"
+        },
+        {
+          slug: "barrierefreies-bad-planen",
+          title: "Barrierefreies Bad planen",
+          description: "Alles über barrierefreie Bäder: DIN-Normen, Förderungen bis 6.250€, Kosten und professionelle Planungstipps.",
+          image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          readTime: "16 Min. Lesezeit"
+        },
+        {
           slug: "badumbau-kosten",
           title: "Badsanierung Kosten 2024",
           description: "Was kostet eine Badsanierung wirklich? Alle Infos zu Preisen, Förderungen und Sparmöglichkeiten.",
