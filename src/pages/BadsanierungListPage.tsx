@@ -193,6 +193,76 @@ const BadsanierungListPage = () => {
           image: "https://images.unsplash.com/photo-1564760290292-23341e4df6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
           description: "Hochwertige Badsanierung an der Ruhr.",
           population: "170.000 Einwohner"
+        },
+        {
+          name: "Oldenburg",
+          slug: "oldenburg",
+          image: "https://images.unsplash.com/photo-1460574283810-2aab119d8511?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Moderne Badsanierung in der niedersächsischen Universitätsstadt.",
+          population: "170.000 Einwohner"
+        },
+        {
+          name: "Osnabrück",
+          slug: "osnabrueck",
+          image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Friedensstädtische Badsanierung in der historischen Stadt.",
+          population: "165.000 Einwohner"
+        },
+        {
+          name: "Leverkusen",
+          slug: "leverkusen",
+          image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Innovative Badsanierung in der Chemie- und Pharmastadt.",
+          population: "164.000 Einwohner"
+        },
+        {
+          name: "Solingen",
+          slug: "solingen",
+          image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Präzise Badsanierung in der Klingenstadt.",
+          population: "159.000 Einwohner"
+        },
+        {
+          name: "Heidelberg",
+          slug: "heidelberg",
+          image: "https://images.unsplash.com/photo-1431576901776-e539bd916ba2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Romantische Badsanierung in der Universitätsstadt am Neckar.",
+          population: "159.000 Einwohner"
+        },
+        {
+          name: "Paderborn",
+          slug: "paderborn",
+          image: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Historische Badsanierung in der Dom- und Universitätsstadt.",
+          population: "152.000 Einwohner"
+        },
+        {
+          name: "Darmstadt",
+          slug: "darmstadt",
+          image: "https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Wissenschaftlich präzise Badsanierung in der Wissenschaftsstadt.",
+          population: "159.000 Einwohner"
+        },
+        {
+          name: "Regensburg",
+          slug: "regensburg",
+          image: "https://images.unsplash.com/photo-1460574283810-2aab119d8511?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Mittelalterliche Badsanierung in der UNESCO-Welterbestadt.",
+          population: "153.000 Einwohner"
+        },
+        {
+          name: "Würzburg",
+          slug: "wuerzburg",
+          image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Fränkische Badsanierung in der Residenzstadt am Main.",
+          population: "127.000 Einwohner"
+        },
+        {
+          name: "Ingolstadt",
+          slug: "ingolstadt",
+          image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Automobilstädtische Badsanierung mit bayerischer Tradition.",
+          population: "138.000 Einwohner"
         }
       ];
 
