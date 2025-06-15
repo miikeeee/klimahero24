@@ -230,7 +230,11 @@ const BadsanierungListPage = () => {
           <div id="cities-section">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {cities.slice(0, visibleCities).map((city, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                <a 
+                  key={index} 
+                  href={`/badsanierung/${city.slug}`}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group block"
+                >
                   <div className="relative overflow-hidden">
                     <img 
                       src={city.image}
@@ -245,15 +249,12 @@ const BadsanierungListPage = () => {
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">{city.name}</h3>
                     <p className="text-gray-600 mb-4 leading-relaxed">{city.description}</p>
-                    <a 
-                      href={`/badsanierung/${city.slug}`}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
-                    >
+                    <div className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors">
                       Mehr erfahren
                       <ArrowRight className="w-4 h-4 ml-2" />
-                    </a>
+                    </div>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
 
@@ -333,7 +334,6 @@ const BadsanierungListPage = () => {
             <div>
               <h4 className="font-semibold mb-4">Kontakt</h4>
               <p className="text-gray-400">
-                <span className="block">📞 0800 123 456 789</span>
                 <span className="block">✉️ info@badhelden24.de</span>
               </p>
             </div>
