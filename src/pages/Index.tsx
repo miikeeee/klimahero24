@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Star, Phone, ShieldCheck, Wind, User, Package } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import CityCards from "@/components/CityCards";
 import {
   Accordion,
@@ -13,12 +13,42 @@ const Index = () => {
   const [scrollY, setScrollY] = useState(0);
   const [cityCards, setCityCards] = useState([]);
   const [ratgeberArticles, setRatgeberArticles] = useState([]);
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Scroll reveal effect
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in');
+            entry.target.classList.remove('opacity-0', 'translate-y-8');
+          }
+        });
+      },
+      { 
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+
+    // Apply observer to elements that should have scroll reveal
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    revealElements.forEach((el) => {
+      el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-700', 'ease-out');
+      observerRef.current?.observe(el);
+    });
+
+    return () => {
+      observerRef.current?.disconnect();
+    };
+  }, [cityCards, ratgeberArticles]);
 
   useEffect(() => {
     const loadCityCards = async () => {
@@ -263,7 +293,7 @@ const Index = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white scroll-reveal">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -295,7 +325,7 @@ const Index = () => {
                 icon: "🔨"
               }
             ].map((item, index) => (
-              <div key={index} className="text-center group hover:transform hover:scale-105 transition-all duration-300">
+              <div key={index} className="text-center group hover:transform hover:scale-105 transition-all duration-300 scroll-reveal" style={{transitionDelay: `${index * 100}ms`}}>
                 <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl group-hover:bg-blue-200 transition-colors">
                   {item.icon}
                 </div>
@@ -311,7 +341,7 @@ const Index = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white scroll-reveal">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -323,7 +353,7 @@ const Index = () => {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {keyBenefits.map((benefit, index) => (
-              <div key={index} className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow duration-300">
+              <div key={index} className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow duration-300 scroll-reveal" style={{transitionDelay: `${index * 100}ms`}}>
                 <div className="flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-full mx-auto mb-4">
                   <benefit.icon className="w-8 h-8" />
                 </div>
@@ -336,10 +366,14 @@ const Index = () => {
       </section>
 
       {/* City Cards Section */}
-      {cityCards.length > 0 && <CityCards cities={cityCards} showAllButton={true} />}
+      {cityCards.length > 0 && (
+        <div className="scroll-reveal">
+          <CityCards cities={cityCards} showAllButton={true} />
+        </div>
+      )}
 
       {/* Ratgeber Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 scroll-reveal">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -355,7 +389,8 @@ const Index = () => {
               <a 
                 key={index}
                 href={article.link}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group block"
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group block scroll-reveal"
+                style={{transitionDelay: `${index * 100}ms`}}
               >
                 <div className="relative overflow-hidden">
                   <img 
@@ -391,7 +426,7 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 scroll-reveal">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -403,7 +438,7 @@ const Index = () => {
           </div>
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
+              <AccordionItem key={index} value={`item-${index}`} className="scroll-reveal" style={{transitionDelay: `${index * 100}ms`}}>
                 <AccordionTrigger className="text-lg font-semibold text-left">{faq.question}</AccordionTrigger>
                 <AccordionContent className="text-base text-gray-600 leading-relaxed">
                   {faq.answer}
@@ -414,18 +449,29 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800">
-        <div className="container mx-auto px-4 text-center">
+      {/* CTA Section with Background Pattern */}
+      <section className="py-16 bg-gradient-to-r from-orange-500 to-orange-600 relative overflow-hidden scroll-reveal">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-8 left-8 w-24 h-24 bg-white/20 rounded-lg rotate-12"></div>
+          <div className="absolute top-20 right-16 w-16 h-16 bg-white/15 rounded-full"></div>
+          <div className="absolute bottom-16 left-20 w-20 h-20 bg-white/20 rounded-lg -rotate-12"></div>
+          <div className="absolute bottom-8 right-8 w-32 h-32 bg-white/10 rounded-lg rotate-45"></div>
+          <div className="absolute top-1/2 left-1/3 w-12 h-12 bg-white/15 rounded-full"></div>
+          <div className="absolute top-1/3 right-1/4 w-14 h-14 bg-white/20 rounded-lg rotate-45"></div>
+          <div className="absolute bottom-1/3 left-1/2 w-18 h-18 bg-white/10 rounded-full"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl font-bold text-white mb-6">
             Bereit für dein neues Traumbad?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
             Lass dich kostenlos beraten und erfahre, wie viel Förderung du erhalten kannst.
           </p>
           <Button 
             size="lg" 
-            className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="bg-white text-orange-600 hover:bg-gray-100 px-12 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl font-bold"
             onClick={handleCTAClick}
           >
             Jetzt Beratung anfragen
