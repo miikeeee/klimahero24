@@ -28,67 +28,188 @@ const DatenschutzPage = () => {
           
           <div className="prose prose-lg max-w-none space-y-6">
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Datenschutz auf einen Blick</h2>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Allgemeine Hinweise</h3>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Einleitung</h2>
               <p className="text-gray-700 mb-4">
-                Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+                Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, BDSG, TMG, TTDSG). In dieser Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Website badhelden24.de.
+              </p>
+              <p className="text-gray-700 mb-4">
+                Mit dem Besuch dieser Website erklären Sie sich mit der nachfolgenden Verarbeitung Ihrer personenbezogenen Daten einverstanden.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Verantwortliche Stelle</h2>
-              <p className="text-gray-700 mb-4">
-                Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
-              </p>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Verantwortlicher im Sinne der DSGVO</h2>
               <div className="text-gray-700 bg-gray-50 p-4 rounded-lg">
                 <p className="mb-1">Mike Mildenberger</p>
                 <p className="mb-1">Rosenweg 21</p>
                 <p className="mb-1">53604 Bad Honnef</p>
-                <p>E-Mail: mike.mildenberger@live.de</p>
+                <p className="mb-1">E-Mail: info@badhelden24.de</p>
+                <p>Website: https://www.badhelden24.de</p>
               </div>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. Datenerfassung auf dieser Website</h2>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Server-Log-Dateien</h3>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. Hosting & Zugriffsdaten</h2>
               <p className="text-gray-700 mb-4">
-                Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:
+                Unsere Website wird gehostet bei:
+              </p>
+              <div className="text-gray-700 bg-gray-50 p-4 rounded-lg mb-4">
+                <p className="mb-1">Vercel Inc.</p>
+                <p className="mb-1">340 S Lemon Ave #4133</p>
+                <p className="mb-1">Walnut, CA 91789, USA</p>
+                <p>https://vercel.com/legal/privacy-policy</p>
+              </div>
+              <p className="text-gray-700 mb-4">
+                Beim Besuch unserer Website erhebt Vercel automatisch Daten über Zugriffe auf die Website und speichert diese in sogenannten Server-Logfiles. Dabei werden folgende Daten erfasst:
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-4">
-                <li>Browsertyp und Browserversion</li>
-                <li>verwendetes Betriebssystem</li>
-                <li>Referrer URL</li>
-                <li>Hostname des zugreifenden Rechners</li>
-                <li>Uhrzeit der Serveranfrage</li>
-                <li>IP-Adresse</li>
+                <li>Besuchte Website / URL</li>
+                <li>Datum und Uhrzeit des Zugriffs</li>
+                <li>Menge der gesendeten Daten</li>
+                <li>Quelle/Verweis, von welchem Sie auf die Seite gelangten</li>
+                <li>Verwendeter Browser</li>
+                <li>Verwendetes Betriebssystem</li>
+                <li>Verwendete IP-Adresse (ggf. anonymisiert)</li>
+              </ul>
+              <p className="text-gray-700 mb-4">
+                Diese Daten dienen ausschließlich der technischen Überwachung, Sicherheit und statistischen Auswertung und werden nicht mit anderen Datenquellen zusammengeführt.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Erhebung und Verarbeitung personenbezogener Daten</h2>
+              <p className="text-gray-700 mb-4">
+                Wir verarbeiten personenbezogene Daten nur dann, wenn Sie uns diese freiwillig mitteilen, etwa durch:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4">
+                <li>eine E-Mail-Anfrage</li>
+                <li>die Nutzung unseres Kontaktformulars (falls vorhanden)</li>
+                <li>den Zugriff auf bereitgestellte Inhalte (z. B. Google Drive-Dokumente)</li>
+              </ul>
+              <p className="text-gray-700 mb-4">
+                Die Verarbeitung erfolgt zu folgenden Zwecken:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4">
+                <li>zur Kommunikation mit Ihnen</li>
+                <li>zur Bearbeitung Ihrer Anfragen</li>
+                <li>zur technischen Bereitstellung und Optimierung der Website</li>
+                <li>zur Erfüllung gesetzlicher Pflichten</li>
+              </ul>
+              <p className="text-gray-700 mb-4">
+                <strong>Rechtsgrundlage:</strong>
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4">
+                <li>Art. 6 Abs. 1 lit. b DSGVO (Vertrag oder Vertragsanbahnung)</li>
+                <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</li>
+                <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Kontaktformular</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Datenweitergabe an Dritte</h2>
               <p className="text-gray-700 mb-4">
-                Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.
+                Grundsätzlich geben wir Ihre personenbezogenen Daten nicht an Dritte weiter – außer, dies ist im Rahmen der Nutzung technischer Dienstleister erforderlich oder gesetzlich vorgeschrieben.
+              </p>
+              
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">Unsere externen Dienstleister:</h3>
+              
+              <h4 className="text-lg font-semibold text-gray-800 mb-2">a) Google Analytics</h4>
+              <p className="text-gray-700 mb-4">
+                Diese Website verwendet Google Analytics, einen Webanalysedienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland („Google").
+              </p>
+              <p className="text-gray-700 mb-4">
+                Google Analytics verwendet Cookies, die eine Analyse Ihrer Nutzung der Website ermöglichen. Die erzeugten Informationen (einschließlich Ihrer gekürzten IP-Adresse) werden an Server von Google in den USA übertragen und dort gespeichert.
+              </p>
+              <p className="text-gray-700 mb-4">
+                Wir haben die IP-Anonymisierung („anonymizeIP") aktiviert. Ihre IP-Adresse wird also innerhalb der EU gekürzt und nicht vollständig an Google übermittelt.
+              </p>
+              <p className="text-gray-700 mb-4">
+                Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern oder über unser Cookie-Banner steuern.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)
+              </p>
+              
+              <h4 className="text-lg font-semibold text-gray-800 mb-2">b) Google Gmail (E-Mail-Kommunikation)</h4>
+              <p className="text-gray-700 mb-4">
+                Für unsere geschäftliche Kommunikation nutzen wir Gmail von Google (Google Ireland Limited). Dabei werden Ihre E-Mails und ggf. enthaltene personenbezogene Daten über Server von Google verarbeitet.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertrag/Anfrage)
+              </p>
+              
+              <h4 className="text-lg font-semibold text-gray-800 mb-2">c) Google Drive (Dokumentenfreigabe)</h4>
+              <p className="text-gray-700 mb-4">
+                Zur Bereitstellung von Inhalten oder Arbeitsunterlagen setzen wir Google Drive ein. Wenn Sie auf einen Link zu einem Dokument klicken, werden technische Informationen wie Ihre IP-Adresse an Google übermittelt.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Ihre Rechte</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Speicherdauer</h2>
               <p className="text-gray-700 mb-4">
-                Sie haben jederzeit das Recht:
+                Wir speichern personenbezogene Daten nur so lange, wie dies zur Erreichung der genannten Zwecke erforderlich ist oder wie es gesetzlich vorgeschrieben ist.
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-4">
-                <li>unentgeltlich Auskunft über Ihre gespeicherten personenbezogenen Daten zu erhalten</li>
-                <li>Ihre Daten berichtigen zu lassen</li>
-                <li>Ihre Daten löschen zu lassen</li>
-                <li>die Einschränkung der Datenverarbeitung zu verlangen</li>
-                <li>der Datenverarbeitung zu widersprechen</li>
+                <li>E-Mails werden nach abgeschlossener Bearbeitung und Ablauf gesetzlicher Fristen gelöscht.</li>
+                <li>Log-Daten auf dem Server werden in der Regel automatisch nach 14–30 Tagen gelöscht.</li>
+                <li>Google Analytics-Daten werden standardmäßig nach 14 Monaten gelöscht.</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. SSL-Verschlüsselung</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Ihre Rechte</h2>
               <p className="text-gray-700 mb-4">
-                Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von "http://" auf "https://" wechselt.
+                Sie haben nach Art. 15 ff. DSGVO folgende Rechte:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4">
+                <li>Auskunft über die bei uns gespeicherten Daten</li>
+                <li>Berichtigung, wenn wir unrichtige Daten verarbeiten</li>
+                <li>Löschung Ihrer Daten („Recht auf Vergessenwerden")</li>
+                <li>Einschränkung der Verarbeitung</li>
+                <li>Datenübertragbarkeit</li>
+                <li>Widerspruch gegen die Verarbeitung</li>
+                <li>Widerruf Ihrer Einwilligung (jederzeit mit Wirkung für die Zukunft)</li>
+              </ul>
+              <p className="text-gray-700 mb-4">
+                Bitte senden Sie Ihre Anfrage an: info@badhelden24.de
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Beschwerderecht bei der Aufsichtsbehörde</h2>
+              <p className="text-gray-700 mb-4">
+                Sollten Sie der Ansicht sein, dass die Verarbeitung Ihrer Daten gegen Datenschutzrecht verstößt, haben Sie das Recht, sich bei der zuständigen Aufsichtsbehörde zu beschweren:
+              </p>
+              <div className="text-gray-700 bg-gray-50 p-4 rounded-lg">
+                <p className="mb-1">Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen</p>
+                <p className="mb-1">Kavalleriestraße 2-4</p>
+                <p className="mb-1">40213 Düsseldorf</p>
+                <p>www.ldi.nrw.de</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Sicherheit der Verarbeitung</h2>
+              <p className="text-gray-700 mb-4">
+                Wir setzen technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre Daten vor Manipulation, Verlust oder unberechtigtem Zugriff zu schützen. Unsere Website ist durch HTTPS (SSL/TLS) gesichert.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Aktualisierungen dieser Datenschutzerklärung</h2>
+              <p className="text-gray-700 mb-4">
+                Diese Datenschutzerklärung ist aktuell gültig (Stand: 15. Juni 2025). Wir behalten uns vor, sie bei technischen Änderungen oder rechtlichen Vorgaben anzupassen. Die jeweils aktuelle Version finden Sie stets unter:
+              </p>
+              <p className="text-gray-700">
+                <a href="https://www.badhelden24.de/datenschutz" className="text-blue-600 hover:underline">
+                  https://www.badhelden24.de/datenschutz
+                </a>
               </p>
             </section>
           </div>
