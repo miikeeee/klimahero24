@@ -27,66 +27,170 @@ const AgbPage = () => {
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Allgemeine Geschäftsbedingungen</h1>
           
           <div className="prose prose-lg max-w-none space-y-6">
+            <p className="text-gray-700 mb-6">
+              für die Nutzung von badhelden24.de<br />
+              <strong>Stand: 15. Juni 2025</strong>
+            </p>
+
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">§ 1 Geltungsbereich</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Anbieterinformationen</h2>
               <p className="text-gray-700 mb-4">
-                Diese Allgemeinen Geschäftsbedingungen (nachfolgend "AGB") gelten für alle Verträge zwischen Mike Mildenberger (nachfolgend "Anbieter") und dem Kunden über die Erbringung von Dienstleistungen im Bereich der Badsanierung.
+                badhelden24.de ist ein Angebot von:
+              </p>
+              <div className="text-gray-700 bg-gray-50 p-4 rounded-lg">
+                <p className="mb-1">Mike Mildenberger</p>
+                <p className="mb-1">Rosenweg 21</p>
+                <p className="mb-1">53604 Bad Honnef</p>
+                <p>E-Mail: info@badhelden24.de</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Geltungsbereich und Vertragsgegenstand</h2>
+              <p className="text-gray-700 mb-4">
+                <strong>(1)</strong> Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Nutzer der Webseite www.badhelden24.de und regeln die Bedingungen der Nutzung sowie die angebotenen Vermittlungsleistungen.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>(2)</strong> Die Webseite dient der Leadgenerierung und -vermittlung. Nutzer können über bereitgestellte Formulare Angaben zu geplanten Bau- oder Sanierungsvorhaben machen, die nach ihrer Zustimmung an ausgewählte, externe Dienstleister weitergeleitet werden. Es kommt kein Vertrag über eine handwerkliche Leistung mit badhelden24.de zustande.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>(3)</strong> Die Vermittlung erfolgt ausschließlich auf Grundlage dieser AGB. Abweichende Bedingungen gelten nur, wenn sie durch den Betreiber schriftlich bestätigt wurden.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">§ 2 Vertragsschluss</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. Leistungen von badhelden24.de</h2>
               <p className="text-gray-700 mb-4">
-                Der Vertrag kommt durch die Annahme des Angebots des Anbieters durch den Kunden zustande. Die Annahme kann schriftlich, mündlich oder durch schlüssiges Verhalten erfolgen.
+                <strong>(1)</strong> badhelden24.de vermittelt auf Anfrage den Kontakt zwischen interessierten Endkunden (Nutzern) und ausgewählten Dienstleistern, insbesondere im Bereich Badsanierung, Renovierung und vergleichbare handwerkliche Leistungen.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>(2)</strong> Die Vermittlung erfolgt auf Basis der im Formular übermittelten Angaben. Diese werden nach explizitem Einverständnis der Nutzer an geeignete Partnerunternehmen übermittelt.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>(3)</strong> Es erfolgt keine Prüfung der Bonität, Seriosität oder Fachkunde der angefragten Nutzer. Ebenso erfolgt keine Gewährleistung für das Zustandekommen eines Auftrags oder die Qualität der erbrachten Leistung durch die vermittelten Dienstleister.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>(4)</strong> Die Leistung des Webseitenbetreibers ist mit der erfolgreichen Übermittlung der Nutzerdaten an mindestens einen geeigneten Dienstleister erfüllt.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">§ 3 Leistungsumfang</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Keine Beratung und keine eigene Leistungserbringung</h2>
               <p className="text-gray-700 mb-4">
-                Der Umfang der zu erbringenden Leistungen ergibt sich aus dem jeweiligen Angebot bzw. der Auftragsbestätigung. Änderungen und Ergänzungen bedürfen der Schriftform.
+                <strong>(1)</strong> badhelden24.de erbringt keine handwerklichen Dienstleistungen, Beratungen oder bautechnische Planungen. Der Betreiber ist ausschließlich für die Vermittlung von Kontakten zuständig.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>(2)</strong> Vertragsverhältnisse über handwerkliche oder bauliche Leistungen kommen ausschließlich zwischen dem vermittelten Dienstleister und dem Nutzer zustande.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>(3)</strong> badhelden24.de wird nicht Vertragspartner und übernimmt keine Gewährleistung, Haftung oder Verantwortung für Leistungen oder Aussagen der vermittelten Dienstleister.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">§ 4 Preise und Zahlungsbedingungen</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Nutzerpflichten</h2>
               <p className="text-gray-700 mb-4">
-                Die Preise verstehen sich als Festpreise inklusive der gesetzlichen Mehrwertsteuer. Zahlungen sind nach Rechnungsstellung innerhalb von 14 Tagen ohne Abzug fällig.
+                <strong>(1)</strong> Der Nutzer verpflichtet sich, im Rahmen der Nutzung der Website:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4">
+                <li>alle Angaben im Anfrageformular wahrheitsgemäß und vollständig zu machen,</li>
+                <li>keine rechtswidrigen Inhalte zu übermitteln,</li>
+                <li>keine Daten Dritter ohne deren Zustimmung einzugeben,</li>
+                <li>das Formular nicht missbräuchlich oder zu Testzwecken zu verwenden.</li>
+              </ul>
+              <p className="text-gray-700 mb-4">
+                <strong>(2)</strong> Der Nutzer ist dafür verantwortlich, sicherzustellen, dass er unter der angegebenen E-Mail-Adresse oder Telefonnummer erreichbar ist.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">§ 5 Ausführungsfristen</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Weitergabe von Nutzerdaten</h2>
               <p className="text-gray-700 mb-4">
-                Die vereinbarten Fristen sind verbindlich. Verzögerungen durch höhere Gewalt oder andere unvorhersehbare Umstände berechtigen zur angemessenen Verlängerung der Ausführungsfristen.
+                <strong>(1)</strong> Mit Absenden des Formulars erklärt der Nutzer seine ausdrückliche Einwilligung zur Weitergabe seiner personenbezogenen Daten an Dritte (z. B. Handwerksbetriebe, Dienstleister).
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>(2)</strong> Die Daten werden ausschließlich zu dem Zweck verwendet, den Kontakt zwischen Nutzer und Dienstleister herzustellen. Eine weitergehende Nutzung oder Speicherung erfolgt nicht.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>(3)</strong> Die Einwilligung kann jederzeit mit Wirkung für die Zukunft widerrufen werden. Bis dahin vorgenommene Datenverarbeitungen bleiben rechtmäßig.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>(4)</strong> Näheres regelt die Datenschutzerklärung.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">§ 6 Gewährleistung</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Kosten</h2>
               <p className="text-gray-700 mb-4">
-                Der Anbieter gewährt eine Garantie von 3 Jahren auf alle durchgeführten Arbeiten. Ausgenommen sind Schäden durch unsachgemäße Behandlung oder natürlichen Verschleiß.
+                <strong>(1)</strong> Die Nutzung der Plattform und das Ausfüllen sowie Absenden des Formulars ist für den Nutzer kostenfrei.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>(2)</strong> Die Finanzierung der Seite erfolgt durch Vermittlungshonorare, die ggf. von den angebundenen Partnerunternehmen gezahlt werden. Daraus entstehen dem Nutzer keine zusätzlichen Kosten.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">§ 7 Haftung</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Keine Erfolgsgarantie</h2>
               <p className="text-gray-700 mb-4">
-                Die Haftung des Anbieters ist auf Vorsatz und grobe Fahrlässigkeit beschränkt, soweit nicht Leben, Körper oder Gesundheit betroffen sind oder eine Garantie übernommen wurde.
+                <strong>(1)</strong> badhelden24.de übernimmt keine Garantie dafür, dass:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4">
+                <li>ein geeigneter Anbieter zur Verfügung steht,</li>
+                <li>ein Rückruf oder Angebot durch die Partnerunternehmen erfolgt,</li>
+                <li>die übermittelten Anbieter zur Anfrage passen,</li>
+                <li>ein Vertrag zustande kommt.</li>
+              </ul>
+              <p className="text-gray-700 mb-4">
+                <strong>(2)</strong> Der Betreiber behält sich das Recht vor, Anfragen nicht zu übermitteln oder abzulehnen, etwa bei unvollständigen Angaben, offensichtlichem Spam oder unseriösen Inhalten.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">§ 8 Datenschutz</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Haftungsausschluss</h2>
               <p className="text-gray-700 mb-4">
-                Der Anbieter verpflichtet sich, alle erhaltenen Daten vertraulich zu behandeln und nur für die Vertragserfüllung zu verwenden. Weitere Informationen finden Sie in unserer Datenschutzerklärung.
+                <strong>(1)</strong> Der Betreiber haftet ausschließlich bei Vorsatz oder grober Fahrlässigkeit. Eine Haftung für leichte Fahrlässigkeit ist ausgeschlossen, soweit keine Kardinalpflicht verletzt wurde.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>(2)</strong> Es wird insbesondere keine Haftung übernommen für:
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 mb-4">
+                <li>Schäden, die aus der Nutzung der Plattform entstehen,</li>
+                <li>Schäden durch fehlerhafte oder verspätete Weiterleitung,</li>
+                <li>Schäden durch Dienstleistungen Dritter (vermittelte Handwerksbetriebe),</li>
+                <li>technische Probleme oder Ausfälle der Webseite.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Geistiges Eigentum und Nutzung der Inhalte</h2>
+              <p className="text-gray-700 mb-4">
+                <strong>(1)</strong> Alle Inhalte auf badhelden24.de, wie Texte, Bilder, Grafiken, Logos und Layouts, sind urheberrechtlich geschützt.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>(2)</strong> Eine Nutzung außerhalb des bestimmungsgemäßen Gebrauchs ist untersagt. Eine Vervielfältigung, Verbreitung oder kommerzielle Nutzung bedarf der ausdrücklichen Zustimmung des Betreibers.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">§ 9 Schlussbestimmungen</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Änderungen der AGB</h2>
               <p className="text-gray-700 mb-4">
-                Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, berührt dies nicht die Wirksamkeit der übrigen Bestimmungen. Gerichtsstand ist Bad Honnef.
+                <strong>(1)</strong> Der Betreiber behält sich das Recht vor, diese AGB jederzeit zu ändern oder anzupassen. Die jeweils aktuelle Fassung ist auf der Website einsehbar.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>(2)</strong> Wesentliche Änderungen, die Nutzerrechte betreffen, werden gesondert mitgeteilt – z. B. durch E-Mail oder gut sichtbaren Hinweis auf der Website.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">12. Schlussbestimmungen</h2>
+              <p className="text-gray-700 mb-4">
+                <strong>(1)</strong> Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>(2)</strong> Gerichtsstand für alle Streitigkeiten im Zusammenhang mit der Nutzung dieser Webseite ist – soweit gesetzlich zulässig – Königswinter.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>(3)</strong> Sollte eine Bestimmung dieser AGB ganz oder teilweise unwirksam sein, berührt dies nicht die Wirksamkeit der übrigen Bestimmungen. Die unwirksame Regelung wird durch eine wirtschaftlich möglichst gleichkommende Regelung ersetzt.
               </p>
             </section>
           </div>
