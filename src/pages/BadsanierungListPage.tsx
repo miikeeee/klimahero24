@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { MapPin, ArrowRight, Phone, Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -116,13 +117,6 @@ const BadsanierungListPage = () => {
           image: "https://images.unsplash.com/photo-1539650116574-75c0c6d14d14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
           description: "Maritime Badsanierung in der Hansestadt Bremen.",
           population: "570.000 Einwohner"
-        },
-        {
-          name: "Mannheim",
-          slug: "mannheim",
-          image: "https://images.unsplash.com/photo-1595655931695-059d14e2447d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Innovative Badsanierung in der Quadratestadt.",
-          population: "310.000 Einwohner"
         },
         {
           name: "Freiburg",
@@ -417,6 +411,132 @@ const BadsanierungListPage = () => {
           image: "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
           description: "Römische Badsanierung in Deutschlands ältester Stadt.",
           population: "110.000 Einwohner"
+        },
+        {
+          name: "Ulm",
+          slug: "ulm",
+          image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Münsterstadt-Badsanierung an der Donau.",
+          population: "126.000 Einwohner"
+        },
+        {
+          name: "Pforzheim",
+          slug: "pforzheim",
+          image: "https://images.unsplash.com/photo-1573155993874-d5d48af862ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Goldstadt-Badsanierung in Baden-Württemberg.",
+          population: "125.000 Einwohner"
+        },
+        {
+          name: "Offenbach",
+          slug: "offenbach",
+          image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Design-orientierte Badsanierung in der Lederstadt.",
+          population: "131.000 Einwohner"
+        },
+        {
+          name: "Bochum",
+          slug: "bochum",
+          image: "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Ruhrpott-Badsanierung in der Universitätsstadt.",
+          population: "365.000 Einwohner"
+        },
+        {
+          name: "Neuss",
+          slug: "neuss",
+          image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Rheinische Badsanierung in der Quirinus-Stadt.",
+          population: "153.000 Einwohner"
+        },
+        {
+          name: "Mönchengladbach",
+          slug: "moenchengladbach", 
+          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Niederrheinische Badsanierung in der Vitusstadt.",
+          population: "261.000 Einwohner"
+        },
+        {
+          name: "Wuppertal",
+          slug: "wuppertal",
+          image: "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Schwebebahn-Stadt Badsanierung im Bergischen Land.",
+          population: "355.000 Einwohner"
+        },
+        {
+          name: "Gelsenkirchen",
+          slug: "gelsenkirchen",
+          image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Ruhrgebiet-Badsanierung in der Schalke-Stadt.",
+          population: "260.000 Einwohner"
+        },
+        {
+          name: "Krefeld",
+          slug: "krefeld",
+          image: "https://images.unsplash.com/photo-1573155993874-d5d48af862ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Samt- und Seiden-Stadt Badsanierung am Niederrhein.",
+          population: "227.000 Einwohner"
+        },
+        {
+          name: "Halle",
+          slug: "halle",
+          image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Händelstadt-Badsanierung in Sachsen-Anhalt.",
+          population: "238.000 Einwohner"
+        },
+        {
+          name: "Magdeburg",
+          slug: "magdeburg",
+          image: "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Domstadt-Badsanierung in der Landeshauptstadt Sachsen-Anhalts.",
+          population: "237.000 Einwohner"
+        },
+        {
+          name: "Chemnitz",
+          slug: "chemnitz",
+          image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Sächsische Badsanierung in der Karl-Marx-Stadt.",
+          population: "246.000 Einwohner"
+        },
+        {
+          name: "Charlottenburg",
+          slug: "charlottenburg",
+          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Exklusive Badsanierung im noblen Berliner Bezirk.",
+          population: "340.000 Einwohner"
+        },
+        {
+          name: "Altona",
+          slug: "altona",
+          image: "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Maritime Badsanierung im hippen Hamburger Stadtteil.",
+          population: "275.000 Einwohner"
+        },
+        {
+          name: "Schwabing",
+          slug: "schwabing",
+          image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Künstlerische Badsanierung im Münchner Szeneviertel.",
+          population: "115.000 Einwohner"
+        },
+        {
+          name: "Prenzlauer Berg",
+          slug: "prenzlauerberg",
+          image: "https://images.unsplash.com/photo-1573155993874-d5d48af862ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Hippe Badsanierung im beliebten Berliner Kiez.",
+          population: "165.000 Einwohner"
+        },
+        {
+          name: "Kreuzberg",
+          slug: "kreuzberg",
+          image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Alternative Badsanierung im multikulturellen Berlin-Kreuzberg.",
+          population: "155.000 Einwohner"
+        },
+        {
+          name: "St. Pauli",
+          slug: "stpauli",
+          image: "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Kultige Badsanierung im legendären Hamburger Stadtteil.",
+          population: "21.000 Einwohner"
         }
       ];
 
@@ -473,6 +593,10 @@ const BadsanierungListPage = () => {
     document.getElementById('cities-section')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleCityClick = (slug: string) => {
+    window.location.href = `/badsanierung/${slug}`;
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50">
@@ -524,7 +648,10 @@ const BadsanierungListPage = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {cities.slice(0, visibleCities).map((city, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-                  <div className="relative overflow-hidden">
+                  <div 
+                    className="relative overflow-hidden cursor-pointer"
+                    onClick={() => handleCityClick(city.slug)}
+                  >
                     <img 
                       src={city.image}
                       alt={`Badsanierung ${city.name}`}
@@ -538,13 +665,13 @@ const BadsanierungListPage = () => {
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">{city.name}</h3>
                     <p className="text-gray-600 mb-4 leading-relaxed">{city.description}</p>
-                    <a 
-                      href={`/badsanierung/${city.slug}`}
+                    <button 
+                      onClick={() => handleCityClick(city.slug)}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
                     >
                       Mehr erfahren
                       <ArrowRight className="w-4 h-4 ml-2" />
-                    </a>
+                    </button>
                   </div>
                 </div>
               ))}

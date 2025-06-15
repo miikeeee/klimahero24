@@ -464,7 +464,6 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Kontakt</h4>
               <p className="text-gray-400">
-                <span className="block">📞 0800 123 456 789</span>
                 <span className="block">✉️ info@badhelden24.de</span>
               </p>
             </div>
