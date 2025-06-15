@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { MapPin, ArrowRight, Phone, Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -537,6 +536,103 @@ const BadsanierungListPage = () => {
           image: "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
           description: "Kultige Badsanierung im legendären Hamburger Stadtteil.",
           population: "21.000 Einwohner"
+        },
+        // Bundesländer (ohne Einwohnerzahlen, damit sie nicht ganz oben erscheinen)
+        {
+          name: "Baden-Württemberg",
+          slug: "baden-wuerttemberg",
+          image: "https://images.unsplash.com/photo-1595655931695-059d14e2447d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Baden-Württemberg: Premium-Qualität im Südwesten. Von Stuttgart über Karlsruhe bis Freiburg - schwäbische Handwerkskunst für Ihr Traumbad."
+        },
+        {
+          name: "Bayern",
+          slug: "bayern",
+          image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Bayern: Alpenländische Tradition trifft moderne Technik. München, Nürnberg, Augsburg - bayerische Gemütlichkeit für Ihr neues Bad."
+        },
+        {
+          name: "Berlin",
+          slug: "berlin-land",
+          image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Berlin: Hauptstadt-Service für alle Bezirke. Von Charlottenburg bis Prenzlauer Berg - urbane Badlösungen mit Berliner Schnauze."
+        },
+        {
+          name: "Brandenburg",
+          slug: "brandenburg",
+          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Brandenburg: Ländliche Ruhe, städtische Qualität. Potsdam, Cottbus und das Umland - märkische Handwerkskunst für Ihr Zuhause."
+        },
+        {
+          name: "Bremen",
+          slug: "bremen-land",
+          image: "https://images.unsplash.com/photo-1544550285-f813152fb2fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Bremen: Hanseatische Qualität, maritime Eleganz. Bremen und Bremerhaven - norddeutsche Handwerkskunst an der Weser."
+        },
+        {
+          name: "Hamburg",
+          slug: "hamburg-land",
+          image: "https://images.unsplash.com/photo-1539650116574-75c0c6d14d14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Hamburg: Tor zur Welt, Tor zu Ihrem Traumbad. Von Altona bis St. Pauli - hanseatische Bäder mit maritimem Flair."
+        },
+        {
+          name: "Hessen",
+          slug: "hessen",
+          image: "https://images.unsplash.com/photo-1564760290292-23341e4df6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Hessen: Im Herzen Deutschlands. Frankfurt, Wiesbaden, Kassel - hessische Gründlichkeit für moderne Badezimmer."
+        },
+        {
+          name: "Mecklenburg-Vorpommern",
+          slug: "mecklenburg-vorpommern",
+          image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Mecklenburg-Vorpommern: Ostsee-Charme für Ihr Bad. Schwerin, Rostock, Stralsund - maritime Badträume an der Küste."
+        },
+        {
+          name: "Niedersachsen",
+          slug: "niedersachsen",
+          image: "https://images.unsplash.com/photo-1441260038675-7329ab4cc264?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Niedersachsen: Weite Landschaften, große Badträume. Hannover, Braunschweig, Oldenburg - norddeutsche Qualität im ganzen Land."
+        },
+        {
+          name: "Nordrhein-Westfalen",
+          slug: "nordrhein-westfalen",
+          image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung NRW: Das bevölkerungsreichste Bundesland. Köln, Düsseldorf, Dortmund, Essen - Ruhrpott-Power für Ihr neues Badezimmer."
+        },
+        {
+          name: "Rheinland-Pfalz",
+          slug: "rheinland-pfalz",
+          image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Rheinland-Pfalz: Weinkultur trifft Badkultur. Mainz, Koblenz, Kaiserslautern - rheinische Gemütlichkeit für entspannte Bäder."
+        },
+        {
+          name: "Saarland",
+          slug: "saarland",
+          image: "https://images.unsplash.com/photo-1519452634681-4d9183532e38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Saarland: Klein aber fein. Saarbrücken und Umgebung - französische Eleganz trifft deutsche Gründlichkeit im Badezimmer."
+        },
+        {
+          name: "Sachsen",
+          slug: "sachsen",
+          image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Sachsen: Kultur und Handwerk vereint. Dresden, Leipzig, Chemnitz - sächsische Präzision für edle Badezimmer."
+        },
+        {
+          name: "Sachsen-Anhalt",
+          slug: "sachsen-anhalt",
+          image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Sachsen-Anhalt: Historisches Erbe, moderne Bäder. Magdeburg, Halle, Dessau - mitteldeutsche Qualität für Ihr Zuhause."
+        },
+        {
+          name: "Schleswig-Holstein",
+          slug: "schleswig-holstein",
+          image: "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Schleswig-Holstein: Zwischen Nord- und Ostsee. Kiel, Lübeck, Flensburg - maritime Badträume im echten Norden."
+        },
+        {
+          name: "Thüringen",
+          slug: "thueringen",
+          image: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Thüringen: Grünes Herz, warme Bäder. Erfurt, Jena, Gera, Weimar - thüringische Gemütlichkeit für entspannende Badmomente."
         }
       ];
 
@@ -570,7 +666,7 @@ const BadsanierungListPage = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "Badsanierung in deiner Stadt - badhelden24";
+    document.title = "Badsanierung in deiner Stadt & deinem Bundesland - badhelden24";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Professionelle Badsanierung in allen deutschen Großstädten. Finde geprüfte Handwerker in deiner Region.');
@@ -624,7 +720,6 @@ const BadsanierungListPage = () => {
             className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
             onClick={handleCTAClick}
           >
-            <Phone className="w-4 h-4 mr-2" />
             Beratung anfragen
           </Button>
         </div>
@@ -635,11 +730,11 @@ const BadsanierungListPage = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Badsanierung in deiner Stadt
+              Badsanierung in deiner Stadt & deinem Bundesland
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Finde geprüfte Handwerker für deine Badsanierung in ganz Deutschland. 
-              Lokale Experten mit nationalen Qualitätsstandards.
+              Lokale Experten mit nationalen Qualitätsstandards - von Großstädten bis zu ganzen Bundesländern.
             </p>
           </div>
 
@@ -657,10 +752,12 @@ const BadsanierungListPage = () => {
                       alt={`Badsanierung ${city.name}`}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm flex items-center">
-                      <MapPin className="w-3 h-3 mr-1" />
-                      {city.population}
-                    </div>
+                    {city.population && (
+                      <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm flex items-center">
+                        <MapPin className="w-3 h-3 mr-1" />
+                        {city.population}
+                      </div>
+                    )}
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">{city.name}</h3>
@@ -688,7 +785,7 @@ const BadsanierungListPage = () => {
                     className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
                   >
                     <Plus className="w-5 h-5 mr-2" />
-                    Mehr Städte anzeigen ({cities.length - visibleCities} weitere)
+                    Mehr Städte & Bundesländer anzeigen ({cities.length - visibleCities} weitere)
                   </Button>
                 ) : (
                   <Button 
@@ -707,10 +804,10 @@ const BadsanierungListPage = () => {
           {/* CTA Section */}
           <div className="mt-16 text-center bg-blue-600 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Deine Stadt ist nicht dabei?
+              Deine Stadt oder dein Bundesland ist nicht dabei?
             </h2>
             <p className="text-blue-100 mb-6 text-lg">
-              Kein Problem! Wir sind deutschlandweit tätig und finden auch in deiner Region den passenden Handwerker.
+              Kein Problem! Wir sind deutschlandweit tätig und finden auch in deiner Region den passenden Handwerker für deine Badsanierung.
             </p>
             <Button 
               size="lg" 
