@@ -3,61 +3,91 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://badhelden24.de</loc>
-    <lastmod>2024-12-15</lastmod>
+    <lastmod>2025-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://badhelden24.de/badsanierung</loc>
-    <lastmod>2024-12-15</lastmod>
+    <lastmod>2025-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://badhelden24.de/ratgeber</loc>
-    <lastmod>2024-12-15</lastmod>
+    <lastmod>2025-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://badhelden24.de/impressum</loc>
-    <lastmod>2024-12-15</lastmod>
+    <lastmod>2025-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://badhelden24.de/datenschutz</loc>
-    <lastmod>2024-12-15</lastmod>
+    <lastmod>2025-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://badhelden24.de/agb</loc>
-    <lastmod>2024-12-15</lastmod>
+    <lastmod>2025-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://badhelden24.de/badsanierung/frankfurt</loc>
-    <lastmod>2024-12-15</lastmod>
+    <lastmod>2025-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://badhelden24.de/badsanierung/donau</loc>
-    <lastmod>2024-12-15</lastmod>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://badhelden24.de/badsanierung/charlottenburg</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://badhelden24.de/badsanierung/altona</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://badhelden24.de/badsanierung/tempelhof</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://badhelden24.de/badsanierung/wandsbek</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://badhelden24.de/badsanierung/harburg</loc>
+    <lastmod>2025-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://badhelden24.de/ratgeber/badsanierung-dauer</loc>
-    <lastmod>2024-12-15</lastmod>
+    <lastmod>2025-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://badhelden24.de/ratgeber/badezimmer-trends-2024</loc>
-    <lastmod>2024-12-15</lastmod>
+    <lastmod>2025-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
