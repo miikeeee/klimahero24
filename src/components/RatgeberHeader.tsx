@@ -1,6 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
 
 interface RatgeberHeaderProps {
   onCTAClick: () => void;
@@ -21,7 +20,6 @@ const RatgeberHeader = ({ onCTAClick }: RatgeberHeaderProps) => {
           className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
           onClick={onCTAClick}
         >
-          <Phone className="w-4 h-4 mr-2" />
           Beratung anfragen
         </Button>
       </div>
