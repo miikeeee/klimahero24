@@ -633,6 +633,91 @@ const BadsanierungListPage = () => {
           slug: "thueringen",
           image: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
           description: "Badsanierung Thüringen: Grünes Herz, warme Bäder. Erfurt, Jena, Gera, Weimar - thüringische Gemütlichkeit für entspannende Badmomente."
+        },
+        // Fluss-Regionen (15 längste Flüsse Deutschlands)
+        {
+          name: "Rhein-Region",
+          slug: "rhein-region",
+          image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Rhein-Region: Premium-Badumbau entlang Deutschlands Strom Nr. 1. Von Basel bis zur Nordsee - Köln, Düsseldorf, Mainz profitieren von Europas wichtigster Wasserstraße."
+        },
+        {
+          name: "Weser-Region",
+          slug: "weser-region",
+          image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Weser-Region: Märchenhafte Badträume am deutschen Fluss. Von Hannoversch Münden bis Bremen - Kassel, Göttingen und die Märchenstraße inspirieren exklusive Badsanierungen."
+        },
+        {
+          name: "Elbe-Region",
+          slug: "elbe-region",
+          image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Elbe-Region: Kulturelle Bäder entlang des Kulturstroms. Dresden, Magdeburg, Hamburg - von Böhmen bis zur Nordsee erstklassige Badmodernisierung im Elbtal."
+        },
+        {
+          name: "Donau-Region",
+          slug: "donau-region",
+          image: "https://images.unsplash.com/photo-1543715151-6e4c999de2b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Donau-Region: Europäische Badeleganz am blauen Strom. Ulm, Regensburg, Passau - bayerische Premium-Badsanierung entlang der königlichen Donau von der Quelle bis zur Grenze."
+        },
+        {
+          name: "Main-Region",
+          slug: "main-region",
+          image: "https://images.unsplash.com/photo-1558618047-0c3a1ad4dd78?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Main-Region: Fränkische Badkunst am Weinfluss. Frankfurt, Würzburg, Bamberg - von der Quelle bis zum Rhein exklusive Badmodernisierung in Mainfranken und Hessen."
+        },
+        {
+          name: "Isar-Region",
+          slug: "isar-region",
+          image: "https://images.unsplash.com/photo-1507204506058-a6bf7c72a78c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Isar-Region: Alpine Badträume am Münchner Hausfluss. München, Landshut, Freising - von den Alpen bis zur Donau bayerische Spitzen-Badsanierung im Isartal."
+        },
+        {
+          name: "Neckar-Region",
+          slug: "neckar-region",
+          image: "https://images.unsplash.com/photo-1506739341725-de38f1d0c1a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Neckar-Region: Schwäbische Badpräzision am Stuttgarter Fluss. Stuttgart, Heidelberg, Mannheim - von der Quelle bis zum Rhein erstklassige Baden-Württembergische Badmodernisierung."
+        },
+        {
+          name: "Spree-Region",
+          slug: "spree-region",
+          image: "https://images.unsplash.com/photo-1595655931695-059d14e2447d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Spree-Region: Hauptstadt-Badkultur am Berliner Fluss. Berlin, Cottbus, Lübbenau - von der Lausitz bis zur Havel moderne Berliner Badarchitektur im Spreewald."
+        },
+        {
+          name: "Ruhr-Region",
+          slug: "ruhr-region",
+          image: "https://images.unsplash.com/photo-1546513443-3ac8ad2a5e6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Ruhr-Region: Industrielle Badrevolution im Pott. Essen, Dortmund, Bochum - von der Quelle bis zum Rhein Ruhrgebiet-Power für moderne Badezimmer mit Bergbau-Charme."
+        },
+        {
+          name: "Lahn-Region",
+          slug: "lahn-region",
+          image: "https://images.unsplash.com/photo-1440404179106-3b60c2c46b9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Lahn-Region: Romantische Bäder am Märchenfluss. Marburg, Gießen, Limburg - von der Quelle bis zum Rhein hessische Badidylle im malerischen Lahntal."
+        },
+        {
+          name: "Mosel-Region",
+          slug: "mosel-region",
+          image: "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Mosel-Region: Weinkultur trifft Badkultur. Trier, Koblenz, Bernkastel - von den Vogesen bis zum Rhein edle Badträume in der romantischen Weinregion."
+        },
+        {
+          name: "Saar-Region",
+          slug: "saar-region",
+          image: "https://images.unsplash.com/photo-1506818471134-65e11c2f5a8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Saar-Region: Französische Badeleganz im Dreiländereck. Saarbrücken, Saarlouis, Merzig - von den Vogesen bis zur Mosel grenzüberschreitende Premium-Badkultur."
+        },
+        {
+          name: "Ems-Region",
+          slug: "ems-region",
+          image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Ems-Region: Norddeutsche Badtradition im Emsland. Münster, Osnabrück, Emden - von der Senne bis zur Nordsee friesische Badgemütlichkeit und westfälische Qualität."
+        },
+        {
+          name: "Havel-Region",
+          slug: "havel-region",
+          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          description: "Badsanierung Havel-Region: Märkische Badträume in Brandenburgs Seenlandschaft. Potsdam, Brandenburg, Rathenow - von der Quelle bis zur Elbe preußische Badarchitektur mit Seen-Flair."
         }
       ];
 
@@ -730,11 +815,11 @@ const BadsanierungListPage = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Badsanierung in deiner Stadt & deinem Bundesland
+              Badsanierung in deiner Stadt, deinem Bundesland & deiner Region
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Finde geprüfte Handwerker für deine Badsanierung in ganz Deutschland. 
-              Lokale Experten mit nationalen Qualitätsstandards - von Großstädten bis zu ganzen Bundesländern.
+              Lokale Experten mit nationalen Qualitätsstandards - von Großstädten über Bundesländer bis zu Fluss-Regionen.
             </p>
           </div>
 
@@ -785,7 +870,7 @@ const BadsanierungListPage = () => {
                     className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
                   >
                     <Plus className="w-5 h-5 mr-2" />
-                    Mehr Städte & Bundesländer anzeigen ({cities.length - visibleCities} weitere)
+                    Mehr Städte, Bundesländer & Regionen anzeigen ({cities.length - visibleCities} weitere)
                   </Button>
                 ) : (
                   <Button 
@@ -804,7 +889,7 @@ const BadsanierungListPage = () => {
           {/* CTA Section */}
           <div className="mt-16 text-center bg-blue-600 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Deine Stadt oder dein Bundesland ist nicht dabei?
+              Deine Stadt, dein Bundesland oder deine Region ist nicht dabei?
             </h2>
             <p className="text-blue-100 mb-6 text-lg">
               Kein Problem! Wir sind deutschlandweit tätig und finden auch in deiner Region den passenden Handwerker für deine Badsanierung.
