@@ -1,4 +1,3 @@
-
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -10,7 +9,7 @@ const DatenschutzPage = () => {
       <header className="bg-white/95 backdrop-blur-sm shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="text-2xl font-bold text-blue-600">
-            badhelden24
+            klimahero24
           </div>
           <Link to="/">
             <Button variant="outline" className="flex items-center gap-2">
@@ -25,12 +24,11 @@ const DatenschutzPage = () => {
       <div className="container mx-auto px-4 py-16 max-w-4xl">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Datenschutzerklärung</h1>
-          
           <div className="prose prose-lg max-w-none space-y-6">
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Einleitung</h2>
               <p className="text-gray-700 mb-4">
-                Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, BDSG, TMG, TTDSG). In dieser Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Website badhelden24.de.
+                Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, BDSG, TMG, TTDSG). In dieser Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Website klimahero24.de.
               </p>
               <p className="text-gray-700 mb-4">
                 Mit dem Besuch dieser Website erklären Sie sich mit der nachfolgenden Verarbeitung Ihrer personenbezogenen Daten einverstanden.
@@ -43,8 +41,8 @@ const DatenschutzPage = () => {
                 <p className="mb-1">Mike Mildenberger</p>
                 <p className="mb-1">Rosenweg 21</p>
                 <p className="mb-1">53604 Bad Honnef</p>
-                <p className="mb-1">E-Mail: info@badhelden24.de</p>
-                <p>Website: https://www.badhelden24.de</p>
+                <p className="mb-1">E-Mail: info@klimahero24.de</p>
+                <p>Website: https://www.klimahero24.de</p>
               </div>
             </section>
 
@@ -177,7 +175,7 @@ const DatenschutzPage = () => {
                 <li>Widerruf Ihrer Einwilligung (jederzeit mit Wirkung für die Zukunft)</li>
               </ul>
               <p className="text-gray-700 mb-4">
-                Bitte senden Sie Ihre Anfrage an: info@badhelden24.de
+                Bitte senden Sie Ihre Anfrage an: info@klimahero24.de
               </p>
             </section>
 
@@ -207,8 +205,8 @@ const DatenschutzPage = () => {
                 Diese Datenschutzerklärung ist aktuell gültig (Stand: 15. Juni 2025). Wir behalten uns vor, sie bei technischen Änderungen oder rechtlichen Vorgaben anzupassen. Die jeweils aktuelle Version finden Sie stets unter:
               </p>
               <p className="text-gray-700">
-                <a href="https://www.badhelden24.de/datenschutz" className="text-blue-600 hover:underline">
-                  https://www.badhelden24.de/datenschutz
+                <a href="https://www.klimahero24.de/datenschutz" className="text-blue-600 hover:underline">
+                  https://www.klimahero24.de/datenschutz
                 </a>
               </p>
             </section>

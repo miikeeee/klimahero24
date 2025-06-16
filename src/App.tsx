@@ -1,12 +1,11 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import BadsanierungPage from "./pages/BadsanierungPage";
-import BadsanierungListPage from "./pages/BadsanierungListPage";
+import KlimaanlagePage from "./pages/BadsanierungPage";
+import KlimaanlageListPage from "./pages/BadsanierungListPage";
 import RatgeberPage from "./pages/RatgeberPage";
 import RatgeberListPage from "./pages/RatgeberListPage";
 import ImpressumPage from "./pages/ImpressumPage";
@@ -24,8 +23,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/badsanierung" element={<BadsanierungListPage />} />
-          <Route path="/badsanierung/:slug" element={<BadsanierungPage />} />
+          <Route path="/klimatisierung" element={<KlimaanlageListPage />} />
+          <Route path="/klimatisierung/:slug" element={<KlimaanlagePage />} />
           <Route path="/ratgeber" element={<RatgeberListPage />} />
           <Route path="/ratgeber/:slug" element={<RatgeberPage />} />
           <Route path="/impressum" element={<ImpressumPage />} />

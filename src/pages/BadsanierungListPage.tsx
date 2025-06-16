@@ -10,7 +10,7 @@ interface City {
   population?: string;
 }
 
-const BadsanierungListPage = () => {
+const KlimaanlageListPage = () => {
   const [cities, setCities] = useState<City[]>([]);
   const [loading, setLoading] = useState(true);
   const [visibleCities, setVisibleCities] = useState(9);
@@ -207,7 +207,7 @@ const BadsanierungListPage = () => {
             onClick={handleCTAClick}
           >
             <Phone className="w-4 h-4 mr-2" />
-            Beratung anfragen
+            Klimaanlagen-Beratung anfragen
           </Button>
         </div>
       </header>
@@ -297,7 +297,7 @@ const BadsanierungListPage = () => {
               className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105"
               onClick={handleCTAClick}
             >
-              Jetzt anfragen
+              Jetzt Klimaanlagen-Beratung anfragen
             </Button>
           </div>
         </div>
@@ -346,4 +346,4 @@ const BadsanierungListPage = () => {
   );
 };
 
-export default BadsanierungListPage;
+export default KlimaanlageListPage;

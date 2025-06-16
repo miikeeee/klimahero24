@@ -41,7 +41,7 @@ interface LandingPageData {
   structuredData?: any;
 }
 
-const BadsanierungPage = () => {
+const KlimaanlagePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const [data, setData] = useState<LandingPageData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -181,7 +181,7 @@ const BadsanierungPage = () => {
 
   const breadcrumbItems = [
     { name: 'Startseite', url: '/' },
-    { name: 'Klimatisierung', url: '/klimatisierung' },
+    { name: 'Klimaanlagen', url: '/klimatisierung' },
     { name: data.location || data.h1, url: `/klimatisierung/${data.slug}` }
   ];
 
@@ -209,7 +209,7 @@ const BadsanierungPage = () => {
                 onClick={handleCTAClick}
               >
                 <Phone className="w-4 h-4 mr-2" />
-                Beratung anfragen
+                Klimaanlagen-Beratung anfragen
               </Button>
             </div>
           </div>
@@ -225,7 +225,7 @@ const BadsanierungPage = () => {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="/klimatisierung">Klimatisierung</BreadcrumbLink>
+                  <BreadcrumbLink href="/klimatisierung">Klimaanlagen</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
@@ -242,4 +242,4 @@ const BadsanierungPage = () => {
   );
 };
 
-export default BadsanierungPage;
+export default KlimaanlagePage;
