@@ -23,70 +23,70 @@ const RatgeberListPage = () => {
           slug: "klimaanlagen-trends-2025",
           title: "Klimaanlagen Trends 2025",
           description: "Die wichtigsten Trends für moderne Klimaanlagen und smarte Lösungen für dein Zuhause.",
-          image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          image: "https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Klimaanlage/Klimaanlage%202-Klimahero24.de-5jOC1sYLOXEoXBy4hArovHuHU8woWo.png",
           readTime: "11 Min. Lesezeit"
         },
         {
           slug: "klimaanlagen-design-trends-2025",
           title: "Klimaanlagen Design Trends 2025",
           description: "Moderne Designs, neue Materialien und Smart-Home-Innovationen für Klimaanlagen.",
-          image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          image: "https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Klimaanlage/Klimaanlage%205-Klimahero24.de-62pt7rgEA7wQpfoVxfhIapI7GBt3mW.png",
           readTime: "13 Min. Lesezeit"
         },
         {
           slug: "moderne-klimaanlagen-2025",
           title: "Moderne Klimaanlagen 2025",
           description: "Technik, Trends und smarte Lösungen für moderne Klimaanlagen im Überblick.",
-          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          image: "https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Klimaanlage/Klimaanlage%205-Klimahero24.de-62pt7rgEA7wQpfoVxfhIapI7GBt3mW.png",
           readTime: "16 Min. Lesezeit"
         },
         {
           slug: "klimaanlage-kosten-2025",
           title: "Klimaanlage Kosten 2025",
           description: "Was kostet eine Klimaanlage wirklich? Preisüberblick, Spartipps und Förderungen.",
-          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          image: "https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Klimaanlage/Klimaanlage%20Inbetriebnahme-Klimahero24.de-foyKUTDQ0GI7jyil2S4GMo3jDGyZXo.png",
           readTime: "12 Min. Lesezeit"
         },
         {
           slug: "klimaanlage-nachruesten-kosten",
           title: "Klimaanlage nachrüsten Kosten",
           description: "Alle Kosten, Förderungen und Tipps für das Nachrüsten einer Klimaanlage.",
-          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          image: "https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Klimaanlage/air-conditioner-8810313_1920-jRid4xLkgS12Tpru8d5Cp7GHnb8pMg.jpg",
           readTime: "12 Min. Lesezeit"
         },
         {
           slug: "barrierefreie-klimatisierung-planen",
           title: "Barrierefreie Klimatisierung planen",
           description: "Sichere und komfortable Klimatisierung für alle Lebensphasen – inkl. Förderungen.",
-          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          image: "https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Klimaanlage/air-conditioner-9023086_1920-caPN1oMobYa8w5SizFKV8MyJ2kyhcI.jpg",
           readTime: "16 Min. Lesezeit"
         },
         {
           slug: "kleine-raeume-effizient-kuehlen",
           title: "Kleine Räume effizient kühlen",
           description: "Tipps und clevere Lösungen für die Klimatisierung kleiner Räume.",
-          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          image: "https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Klimaanlage/Klimaanlage%207-Klimahero24.de-WDSu1svsDkVEPftg8DhqYZBHHHw0He.png",
           readTime: "14 Min. Lesezeit"
         },
         {
           slug: "klimatisierung-ohne-aussengerat",
           title: "Klimatisierung ohne Außengerät",
           description: "Moderne Alternativen für Wohnungen und Denkmalschutz: Vor- und Nachteile im Überblick.",
-          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          image: "https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Klimaanlage/Klimaanlage%20Schlafzimmer%20-Klimahero24.de-fkO0pqKHstYNahSal4KwxPOSFK0DfL.jpg",
           readTime: "15 Min. Lesezeit"
         },
         {
           slug: "klimaanlage-einbau-dauer",
           title: "Klimaanlage Einbau Dauer",
           description: "Wie lange dauert die Installation? Tipps für eine reibungslose Planung und Zeitersparnis.",
-          image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          image: "https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Klimaanlage/Klimaanlage%20Monteur%20drau%C3%9Fen-Klimahero24.de-DImwjnTFcvio8SmDUIbxWDPCw0HDjj.png",
           readTime: "9 Min. Lesezeit"
         },
         {
           slug: "wasserleitung-sanieren",
           title: "Klimaanlage nachrüsten: Worauf achten?",
           description: "Ablauf, Kosten und Tipps für die Nachrüstung einer Klimaanlage im Überblick.",
-          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          image: "https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Klimaanlage/Klimaanlage%207-Klimahero24.de-WDSu1svsDkVEPftg8DhqYZBHHHw0He.png",
           readTime: "8 Min. Lesezeit"
         }
       ];
