@@ -21,7 +21,7 @@ interface RatgeberSidebarProps {
 
 const RatgeberSidebar = ({ config }: RatgeberSidebarProps) => {
   const handleCTAClick = () => {
-    window.open('https://app.badhelden24.de', '_blank');
+    window.open('https://app.klimahero24.de', '_blank');
   };
 
   return (
