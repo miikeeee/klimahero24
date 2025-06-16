@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import LandingPage from '@/components/LandingPage';
@@ -52,7 +51,7 @@ const BadsanierungPage = () => {
     const loadData = async () => {
       try {
         console.log('Loading data for slug:', slug);
-        const response = await fetch(`/data/badsanierung/${slug}.json`);
+        const response = await fetch(`/data/klimatisierung/${slug}.json`);
         
         if (!response.ok) {
           throw new Error(`Failed to load data for ${slug}`);
@@ -95,8 +94,8 @@ const BadsanierungPage = () => {
         { property: 'og:title', content: data.title },
         { property: 'og:description', content: data.metaDescription },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: `${window.location.origin}/badsanierung/${data.slug}` },
-        { property: 'og:site_name', content: 'badhelden24' },
+        { property: 'og:url', content: `${window.location.origin}/klimatisierung/${data.slug}` },
+        { property: 'og:site_name', content: 'klimahero24' },
         { property: 'og:locale', content: 'de_DE' }
       ];
 
@@ -182,12 +181,12 @@ const BadsanierungPage = () => {
 
   const breadcrumbItems = [
     { name: 'Startseite', url: '/' },
-    { name: 'Badsanierung', url: '/badsanierung' },
-    { name: data.location || data.h1, url: `/badsanierung/${data.slug}` }
+    { name: 'Klimatisierung', url: '/klimatisierung' },
+    { name: data.location || data.h1, url: `/klimatisierung/${data.slug}` }
   ];
 
   const handleCTAClick = () => {
-    window.open('https://app.badhelden24.de', '_blank');
+    window.open('https://app.klimahero24.de', '_blank');
   };
 
   return (
@@ -199,8 +198,8 @@ const BadsanierungPage = () => {
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <a href="/" className="hover:opacity-80 transition-opacity">
               <img 
-                src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500-0BoxfiLkXw4D2e41W20ELwwpufi7NW.svg"
-                alt="badhelden24 Logo"
+                src="https://klimahero24.de/favicon.svg"
+                alt="klimahero24 Logo"
                 className="h-8 sm:h-10"
               />
             </a>
@@ -226,7 +225,7 @@ const BadsanierungPage = () => {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="/badsanierung">Badsanierung</BreadcrumbLink>
+                  <BreadcrumbLink href="/klimatisierung">Klimatisierung</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>

@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { MapPin, ArrowRight, Phone, Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -24,105 +23,105 @@ const BadsanierungListPage = () => {
           name: "Berlin",
           slug: "berlin",
           image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Professionelle Badsanierung in der Hauptstadt mit geprüften Handwerkern.",
+          description: "Professionelle Klimatisierung in der Hauptstadt mit geprüften Experten.",
           population: "3.7 Mio. Einwohner"
         },
         {
           name: "Hamburg",
           slug: "hamburg",
           image: "https://images.unsplash.com/photo-1539650116574-75c0c6d14d14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Hochwertige Badsanierung in der Hansestadt mit regionalen Experten.",
+          description: "Hochwertige Klimaanlagen in der Hansestadt mit regionalen Spezialisten.",
           population: "1.9 Mio. Einwohner"
         },
         {
           name: "München",
           slug: "muenchen",
           image: "https://images.unsplash.com/photo-1595655931695-059d14e2447d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Exklusive Badsanierung in München mit bayerischen Qualitätsstandards.",
+          description: "Effiziente Klimatisierung in München mit bayerischen Qualitätsstandards.",
           population: "1.5 Mio. Einwohner"
         },
         {
           name: "Köln",
           slug: "koeln",
           image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Moderne Badsanierung in der Domstadt mit rheinischer Gemütlichkeit.",
+          description: "Moderne Klimaanlagen in der Domstadt mit rheinischer Gemütlichkeit.",
           population: "1.1 Mio. Einwohner"
         },
         {
           name: "Frankfurt",
           slug: "frankfurt",
           image: "https://images.unsplash.com/photo-1564760290292-23341e4df6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Erstklassige Badsanierung im Finanzenzentrum Deutschlands.",
+          description: "Erstklassige Klimatisierung im Finanzzentrum Deutschlands.",
           population: "760.000 Einwohner"
         },
         {
           name: "Stuttgart",
           slug: "stuttgart",
           image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Innovative Badsanierung in der Automobilstadt mit schwäbischer Präzision.",
+          description: "Innovative Klimaanlagen in der Automobilstadt mit schwäbischer Präzision.",
           population: "630.000 Einwohner"
         },
         {
           name: "Düsseldorf",
           slug: "duesseldorf",
           image: "https://images.unsplash.com/photo-1551975074-52ec8ac997ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Elegante Badsanierung in der Mode- und Kunststadt am Rhein.",
+          description: "Effiziente Klimatisierung in der Mode- und Kunststadt am Rhein.",
           population: "650.000 Einwohner"
         },
         {
           name: "Dortmund",
           slug: "dortmund",
           image: "https://images.unsplash.com/photo-1471919743851-c4df8b6eefb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Zuverlässige Badsanierung im Herzen des Ruhrgebiets.",
+          description: "Zuverlässige Klimaanlagen im Herzen des Ruhrgebiets.",
           population: "590.000 Einwohner"
         },
         {
           name: "Essen",
           slug: "essen",
           image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Qualitätsvolle Badsanierung in der Kulturhauptstadt 2010.",
+          description: "Qualitätsvolle Klimatisierung in der Kulturhauptstadt 2010.",
           population: "580.000 Einwohner"
         },
         {
           name: "Leipzig",
           slug: "leipzig",
           image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Moderne Badsanierung in der sächsischen Metropole.",
+          description: "Moderne Klimaanlagen in der sächsischen Metropole.",
           population: "600.000 Einwohner"
         },
         {
           name: "Dresden",
           slug: "dresden",
           image: "https://images.unsplash.com/photo-1564760290292-23341e4df6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Erstklassige Badsanierung in der Kulturstadt an der Elbe.",
+          description: "Erstklassige Klimatisierung in der Kulturstadt an der Elbe.",
           population: "560.000 Einwohner"
         },
         {
           name: "Hannover",
           slug: "hannover",
           image: "https://images.unsplash.com/photo-1551975074-52ec8ac997ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Professionelle Badsanierung in der niedersächsischen Landeshauptstadt.",
+          description: "Professionelle Klimaanlagen in der niedersächsischen Landeshauptstadt.",
           population: "540.000 Einwohner"
         },
         {
           name: "Nürnberg",
           slug: "nuernberg",
           image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Traditionelle Badsanierung in der fränkischen Metropole.",
+          description: "Traditionelle Klimatisierung in der fränkischen Metropole.",
           population: "520.000 Einwohner"
         },
         {
           name: "Bremen",
           slug: "bremen",
           image: "https://images.unsplash.com/photo-1539650116574-75c0c6d14d14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Maritime Badsanierung in der Hansestadt Bremen.",
+          description: "Maritime Klimaanlagen in der Hansestadt Bremen.",
           population: "570.000 Einwohner"
         },
         {
           name: "Mannheim",
           slug: "mannheim",
           image: "https://images.unsplash.com/photo-1595655931695-059d14e2447d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          description: "Innovative Badsanierung in der Quadratestadt.",
+          description: "Innovative Klimatisierung in der Quadratestadt.",
           population: "310.000 Einwohner"
         }
       ];
@@ -132,7 +131,7 @@ const BadsanierungListPage = () => {
         const citiesWithImages = await Promise.all(
           cityList.map(async (city) => {
             try {
-              const response = await fetch(`/data/badsanierung/${city.slug}.json`);
+              const response = await fetch(`/data/klimatisierung/${city.slug}.json`);
               const cityData = await response.json();
               return {
                 ...city,
@@ -157,15 +156,15 @@ const BadsanierungListPage = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "Badsanierung in deiner Stadt - badhelden24";
+    document.title = "Klimatisierung in deiner Stadt - klimahero24";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Professionelle Badsanierung in allen deutschen Großstädten. Finde geprüfte Handwerker in deiner Region.');
+      metaDescription.setAttribute('content', 'Professionelle Klimaanlagen und Klimatisierung in allen deutschen Großstädten. Finde geprüfte Experten in deiner Region.');
     }
   }, []);
 
   const handleCTAClick = () => {
-    window.open('https://app.badhelden24.de', '_blank');
+    window.open('https://app.klimahero24.de', '_blank');
   };
 
   const handleShowMore = () => {
@@ -198,8 +197,8 @@ const BadsanierungListPage = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <a href="/" className="hover:opacity-80 transition-opacity">
             <img 
-              src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500-0BoxfiLkXw4D2e41W20ELwwpufi7NW.svg"
-              alt="badhelden24 Logo"
+              src="https://klimahero24.de/favicon.svg"
+              alt="klimahero24 Logo"
               className="h-8 sm:h-10"
             />
           </a>
@@ -218,11 +217,11 @@ const BadsanierungListPage = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Badsanierung in deiner Stadt
+              Klimatisierung in deiner Stadt
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Finde geprüfte Handwerker für deine Badsanierung in ganz Deutschland. 
-              Lokale Experten mit nationalen Qualitätsstandards.
+              Finde geprüfte Experten für deine Klimaanlage in ganz Deutschland. 
+              Lokale Spezialisten mit nationalen Qualitätsstandards.
             </p>
           </div>
 
@@ -232,13 +231,13 @@ const BadsanierungListPage = () => {
               {cities.slice(0, visibleCities).map((city, index) => (
                 <a 
                   key={index} 
-                  href={`/badsanierung/${city.slug}`}
+                  href={`/klimatisierung/${city.slug}`}
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group block"
                 >
                   <div className="relative overflow-hidden">
                     <img 
                       src={city.image}
-                      alt={`Badsanierung ${city.name}`}
+                      alt={`Klimatisierung ${city.name}`}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm flex items-center">
@@ -291,7 +290,7 @@ const BadsanierungListPage = () => {
               Deine Stadt ist nicht dabei?
             </h2>
             <p className="text-blue-100 mb-6 text-lg">
-              Kein Problem! Wir sind deutschlandweit tätig und finden auch in deiner Region den passenden Handwerker.
+              Kein Problem! Wir sind deutschlandweit tätig und finden auch in deiner Region den passenden Experten.
             </p>
             <Button 
               size="lg" 
@@ -310,16 +309,16 @@ const BadsanierungListPage = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <img 
-                src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500%20%281%29-VYpwjV6yIfD1z9XEUUqmlnOVoD2NDo.svg"
-                alt="badhelden24 Logo"
+                src="https://klimahero24.de/favicon.svg"
+                alt="klimahero24 Logo"
                 className="h-8 mb-4"
               />
-              <p className="text-gray-400">Dein Partner für professionelle Badsanierung in ganz Deutschland.</p>
+              <p className="text-gray-400">Dein Partner für moderne Klimaanlagen in ganz Deutschland.</p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="/badsanierung" className="hover:text-white transition-colors">Badsanierung</a></li>
+                <li><a href="/klimatisierung" className="hover:text-white transition-colors">Klimatisierung</a></li>
                 <li><a href="/ratgeber" className="hover:text-white transition-colors">Ratgeber</a></li>
               </ul>
             </div>
@@ -334,12 +333,12 @@ const BadsanierungListPage = () => {
             <div>
               <h4 className="font-semibold mb-4">Kontakt</h4>
               <p className="text-gray-400">
-                <span className="block">✉️ info@badhelden24.de</span>
+                <span className="block">✉️ info@klimahero24.de</span>
               </p>
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 badhelden24. Alle Rechte vorbehalten.</p>
+            <p>&copy; 2024 klimahero24. Alle Rechte vorbehalten.</p>
           </div>
         </div>
       </footer>

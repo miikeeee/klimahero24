@@ -1,58 +1,57 @@
-
 {
   "slug": "wasserleitung-sanieren",
-  "title": "Wasserleitung sanieren: Worauf achten? | badhelden24",
-  "metaDescription": "Wasserleitung sanieren: Kosten, Ablauf & Tipps für die Rohrsanierung. Jetzt kostenlos beraten lassen!",
+  "title": "Klimaanlage nachrüsten: Worauf achten? | klimahero24",
+  "metaDescription": "Klimaanlage nachrüsten: Kosten, Ablauf & Tipps für die Installation. Jetzt kostenlos beraten lassen!",
   "heroImage": {
-    "src": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "alt": "Moderne Wasserleitung nach der Sanierung"
+    "src": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "alt": "Moderne Klimaanlage nach der Installation"
   },
   "publishDate": "14. Juni 2025",
   "readTime": "8 Minuten",
-  "author": "Experte bei badhelden24",
+  "author": "Experte bei klimahero24",
   "content": [
     {
       "type": "h1",
-      "text": "Wasserleitung sanieren: Worauf achten?"
+      "text": "Klimaanlage nachrüsten: Worauf achten?"
     },
     {
       "type": "text",
-      "text": "Zunächst war die Skepsis groß: Wie viel Strom kann man wirklich erzeugen? Wie lange dauert es, bis sich so eine Anlage rentiert? Und was, wenn beim Umbau alles komplizierter wird als gedacht?"
+      "text": "Eine Klimaanlage nachzurüsten ist eine der effektivsten Maßnahmen für mehr Wohnkomfort im Sommer. Doch worauf muss man achten? Welche Kosten entstehen und wie läuft die Installation ab? In diesem Ratgeber erfährst du alles Wichtige rund um das Nachrüsten einer Klimaanlage."
     },
     {
       "type": "text",
-      "text": "Leslie begleitete den Prozess mit gespannter Neugier. Als Tochter stand sie dem Projekt zunächst kritisch gegenüber – nicht, weil sie gegen grüne Energie war, sondern weil sie sich fragte, ob sich der Aufwand für ihre Eltern wirklich lohnt."
+      "text": "Ob Split-Klimaanlage, Monoblock oder mobile Lösung – die Auswahl ist groß. Wichtig ist, die richtige Anlage für deine Wohnsituation zu wählen und auf eine fachgerechte Installation zu achten."
     },
     {
       "type": "h2",
-      "text": "Von der Idee zur Umsetzung – und zu ersten Problemen"
+      "text": "Von der Planung bis zur Installation – die wichtigsten Schritte"
     },
     {
       "type": "text",
-      "text": "Die Entscheidung für eine eigene PV-Anlage entstand aus dem Wunsch, unabhängiger vom Stromanbieter zu werden – und dabei aktiv etwas für die Umwelt zu tun. Gesagt, getan: 34 Solarmodule mit 10 kWp Leistung, ein Wechselrichter von ABB und ein Batteriespeicher im Keller sollten das neue Energiesystem bilden."
+      "text": "1. Bedarf ermitteln: Wie groß ist der zu kühlende Raum? 2. Gerätetyp wählen: Split, Monoblock oder mobil? 3. Montageplatz festlegen: Außen- und Inneneinheit richtig positionieren. 4. Fachbetrieb beauftragen: Nur Profis dürfen Kältemittel anschließen."
     },
     {
       "type": "text",
-      "text": "Doch schon bei der Planung zeigten sich die ersten Herausforderungen:"
+      "text": "Typische Herausforderungen beim Nachrüsten sind: Durchbrüche für Leitungen, Stromanschluss, Kondensat-Ableitung und ggf. Genehmigungen bei Mietwohnungen."
     },
     {
       "type": "table",
       "tableHeaders": ["Problem", "Lösung", "Kosten"],
       "tableData": [
-        ["Wo soll der Batteriespeicher stehen?", "Im Keller installieren", "500€"],
-        ["Wie bekommt man die Stromleitungen vom Zähler durch mehrere Kellerräume?", "Professionelle Verlegung", "1.200€"],
-        ["Und wie verlegt man die Kabel von der Anlage auf dem Dach in den Keller?", "Fachgerechte Durchführung", "800€"]
+        ["Wanddurchbruch für Leitungen", "Fachgerechte Kernbohrung", "300€"],
+        ["Stromanschluss fehlt", "Elektriker beauftragen", "250€"],
+        ["Kondensat-Ableitung", "Anschluss an Abfluss oder Außenwand", "100€"]
       ]
     },
     {
       "type": "cta",
-      "text": "Sie benötigen professionelle Beratung für Ihre Rohrsanierung? Unsere Experten helfen Ihnen gerne weiter.",
+      "text": "Du benötigst professionelle Beratung für deine Klimaanlage? Unsere Experten helfen dir gerne weiter.",
       "buttonText": "Kostenlose Beratung anfragen"
     },
     {
       "type": "image",
-      "src": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "alt": "Moderne Wasserleitung nach der Sanierung"
+      "src": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "alt": "Moderne Klimaanlage nach der Installation"
     }
   ],
   "sidebar": {
@@ -62,22 +61,22 @@
       "button": "Kostenlos anfragen"
     },
     "infobox": {
-      "text": "Lade dir jetzt unsere kostenlose Checkliste zur Badsanierung herunter.",
+      "text": "Lade dir jetzt unsere kostenlose Checkliste zur Klimaanlagen-Installation herunter.",
       "button": "Checkliste herunterladen"
     }
   },
   "structuredData": {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Wasserleitung sanieren: Worauf achten?",
+    "headline": "Klimaanlage nachrüsten: Worauf achten?",
     "author": {
       "@type": "Organization",
-      "name": "badhelden24"
+      "name": "klimahero24"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "badhelden24"
+      "name": "klimahero24"
     },
-    "datePublished": "2024-06-14"
+    "datePublished": "2025-06-14"
   }
 }

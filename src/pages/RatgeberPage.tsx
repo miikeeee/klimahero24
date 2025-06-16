@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import {
   Breadcrumb,
@@ -54,7 +53,7 @@ const RatgeberPage = () => {
   }, [data, loading, error]);
 
   const handleCTAClick = () => {
-    window.open('https://app.neko24.de', '_blank');
+    window.open('https://app.klimahero24.de', '_blank');
   };
 
   if (loading) {

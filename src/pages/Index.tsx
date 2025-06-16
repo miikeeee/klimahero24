@@ -60,7 +60,7 @@ const Index = () => {
         const citiesWithImages = await Promise.all(
           data.cityCards.slice(0, 6).map(async (city) => {
             try {
-              const cityResponse = await fetch(`/data/badsanierung/${city.slug}.json`);
+              const cityResponse = await fetch(`/data/klimatisierung/${city.slug}.json`);
               const cityData = await cityResponse.json();
               return {
                 ...city,
@@ -84,31 +84,31 @@ const Index = () => {
   useEffect(() => {
     const loadRatgeberArticles = async () => {
       try {
-        // Load the available ratgeber articles
+        // Neue klimarelevante Ratgeber-Artikel
         const articles = [
           {
-            slug: 'badezimmer-trends-2024',
-            title: 'Badezimmer Trends 2024',
-            description: 'Entdecke die neuesten Trends für moderne Badezimmer und lass dich inspirieren.',
-            defaultImage: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+            slug: 'klimaanlagen-vergleich',
+            title: 'Klimaanlagen-Typen im Vergleich',
+            description: 'Split, Multi-Split oder mobile Klimaanlage? Finde die beste Lösung für dein Zuhause.',
+            defaultImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
           },
           {
-            slug: 'badumbau-kosten',
-            title: 'Badsanierung Kosten',
-            description: 'Was kostet eine Badsanierung wirklich? Alle Infos zu Preisen und Förderungen.',
-            defaultImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+            slug: 'klimaanlage-kosten',
+            title: 'Klimaanlage Kosten & Förderung',
+            description: 'Was kostet eine Klimaanlage? Alle Infos zu Preisen, Förderungen und Finanzierung.',
+            defaultImage: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
           },
           {
-            slug: 'badsanierung-dauer',
-            title: 'Dauer einer Badsanierung',
-            description: 'Wie lange dauert eine Badsanierung? Tipps für eine reibungslose Planung.',
-            defaultImage: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+            slug: 'klimaanlage-installation',
+            title: 'Ablauf der Installation',
+            description: 'So läuft die Installation deiner Klimaanlage ab – Schritt für Schritt erklärt.',
+            defaultImage: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
           },
           {
-            slug: 'wasserleitung-sanieren',
-            title: 'Wasserleitung sanieren',
-            description: 'Alles was Sie über die Sanierung von Wasserleitungen wissen müssen.',
-            defaultImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+            slug: 'klimaanlage-wartung',
+            title: 'Klimaanlage richtig warten',
+            description: 'Tipps zur Wartung und Reinigung für dauerhaft frische Luft und lange Lebensdauer.',
+            defaultImage: 'https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
           }
         ];
 
@@ -145,10 +145,10 @@ const Index = () => {
   }, []);
 
   const benefits = [
-    "Geprüfte Handwerker aus deiner Region",
-    "Bis zu 20% staatliche Förderung",
+    "Geprüfte Klimaanlagen-Experten aus deiner Region",
+    "Bis zu 20% staatliche Förderung für Klimaanlagen",
     "Kostenlose Beratung & Planung",
-    "5 Jahre Garantie auf alle Arbeiten"
+    "5 Jahre Garantie auf Installation und Service"
   ];
 
   const keyBenefits = [
@@ -159,8 +159,8 @@ const Index = () => {
     },
     {
       icon: Wind,
-      title: "Staubfreie Sanierung",
-      description: "Wir nutzen moderne Techniken, um Schmutz und Staub zu minimieren."
+      title: "Effiziente Klimatisierung",
+      description: "Wir setzen auf moderne, energiesparende Klimaanlagen."
     },
     {
       icon: User,
@@ -170,31 +170,31 @@ const Index = () => {
     {
       icon: Package,
       title: "Alles aus einer Hand",
-      description: "Von der Planung bis zur Umsetzung koordinieren wir alle Gewerke für Sie."
+      description: "Von der Beratung bis zur Installation – wir koordinieren alles für Sie."
     }
   ];
 
   const faqs = [
     {
-      question: "Wie lange dauert eine komplette Badsanierung?",
-      answer: "Eine komplette Badsanierung dauert in der Regel zwischen 2 und 4 Wochen, abhängig vom Umfang der Arbeiten und der Größe des Badezimmers."
+      question: "Wie lange dauert die Installation einer Klimaanlage?",
+      answer: "Die Installation dauert in der Regel 1 bis 3 Tage, abhängig vom Umfang und den baulichen Gegebenheiten."
     },
     {
-      question: "Was kostet eine Badsanierung?",
-      answer: "Die Kosten variieren stark je nach Größe, Ausstattung und Aufwand. Eine erste Kostenschätzung erhalten Sie in unserem kostenlosen Beratungsgespräch. Im Durchschnitt liegen die Kosten zwischen 15.000 € und 30.000 €."
+      question: "Was kostet eine Klimaanlage?",
+      answer: "Die Kosten variieren je nach Modell, Leistung und Einbauaufwand. Eine erste Kostenschätzung erhalten Sie in unserem kostenlosen Beratungsgespräch."
     },
     {
-      question: "Bieten Sie eine Garantie auf die Arbeiten?",
-      answer: "Ja, wir bieten eine 3-jährige Garantie auf alle von uns durchgeführten Arbeiten. Ihre Zufriedenheit und die Qualität unserer Arbeit haben für uns oberste Priorität."
+      question: "Bieten Sie eine Garantie auf die Installation?",
+      answer: "Ja, wir bieten eine 5-jährige Garantie auf die Installation und den Service. Ihre Zufriedenheit und die Qualität unserer Arbeit stehen an erster Stelle."
     },
     {
-      question: "Wie läuft die Planung für mein neues Bad ab?",
-      answer: "Nach Ihrer Anfrage führen wir eine kostenlose Erstberatung durch (auf Wunsch auch vor Ort). Anschließend erstellen unsere Experten eine detaillierte 3D-Planung und ein transparentes Angebot. Sie können alles in Ruhe prüfen, bevor es losgeht."
+      question: "Wie läuft die Planung für meine Klimaanlage ab?",
+      answer: "Nach Ihrer Anfrage führen wir eine kostenlose Erstberatung durch. Anschließend planen unsere Experten die optimale Lösung für Ihre Räume und erstellen ein transparentes Angebot."
     }
   ];
 
   const handleCTAClick = () => {
-    window.open('https://app.badhelden24.de', '_blank');
+    window.open('https://app.klimahero24.de', '_blank');
   };
 
   return (
@@ -204,8 +204,8 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <a href="/" className="hover:opacity-80 transition-opacity">
             <img 
-              src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500-0BoxfiLkXw4D2e41W20ELwwpufi7NW.svg"
-              alt="badhelden24 Logo"
+              src="https://klimahero24.de/favicon.svg"
+              alt="klimahero24 Logo"
               className="h-8 sm:h-10"
             />
           </a>
@@ -214,7 +214,7 @@ const Index = () => {
               className="sm:hidden bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-full transition-all duration-300 hover:scale-105"
               onClick={handleCTAClick}
             >
-              Badsanierung starten
+              Klimaanlage anfragen
             </Button>
             <Button 
               className="hidden sm:flex bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
@@ -234,12 +234,11 @@ const Index = () => {
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Dein <span className="text-blue-600">Traumbad</span> 
-                  <br />wird Realität
+                  Dein <span className="text-blue-600">Klima-Komfort</span> 
+                  <br />für Zuhause & Büro
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Professionelle Badsanierung von A bis Z – mit geprüften Handwerkern, 
-                  staatlicher Förderung und 5 Jahren Garantie.
+                  Moderne Klimaanlagen – individuell geplant, professionell installiert und staatlich gefördert.
                 </p>
               </div>
 
@@ -283,8 +282,8 @@ const Index = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-3xl transform rotate-6 opacity-20"></div>
               <img 
-                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Modernes Badezimmer nach Sanierung"
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Moderne Klimaanlage installiert"
                 className="relative z-10 w-full h-96 lg:h-[500px] object-cover rounded-3xl shadow-2xl transition-transform duration-500 hover:scale-105"
               />
             </div>
@@ -297,10 +296,10 @@ const Index = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              So einfach geht's zu deinem neuen Bad
+              So einfach geht's zu deinem Klima-Komfort
             </h2>
             <p className="text-xl text-gray-600">
-              In nur 3 Schritten von der Idee zum fertigen Traumbad
+              In nur 3 Schritten zur optimalen Klimatisierung
             </p>
           </div>
 
@@ -315,14 +314,14 @@ const Index = () => {
               {
                 step: "2", 
                 title: "Planung & Angebot",
-                description: "Unsere Experten planen dein Bad und prüfen Fördermöglichkeiten",
+                description: "Unsere Experten planen deine Klimaanlage und prüfen Fördermöglichkeiten",
                 icon: "📐"
               },
               {
                 step: "3",
-                title: "Umsetzung",
-                description: "Professionelle Umsetzung durch geprüfte Handwerker aus deiner Region",
-                icon: "🔨"
+                title: "Installation",
+                description: "Fachgerechte Installation durch geprüfte Experten aus deiner Region",
+                icon: "❄️"
               }
             ].map((item, index) => (
               <div key={index} className="text-center group hover:transform hover:scale-105 transition-all duration-300 scroll-reveal" style={{transitionDelay: `${index * 100}ms`}}>
@@ -345,10 +344,10 @@ const Index = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Ihre Vorteile mit badhelden24
+              Ihre Vorteile mit klimahero24
             </h2>
             <p className="text-xl text-gray-600">
-              Wir machen Ihre Badsanierung einfach, sicher und transparent.
+              Wir machen Ihre Klimatisierung einfach, sicher und transparent.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -377,10 +376,10 @@ const Index = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Ratgeber & Tipps für dein Bad
+              Ratgeber & Tipps für dein Klima
             </h2>
             <p className="text-xl text-gray-600">
-              Erfahre alles Wichtige rund um Badsanierung, Kosten und Trends
+              Erfahre alles Wichtige rund um Klimaanlagen, Kosten und Trends
             </p>
           </div>
 
@@ -433,7 +432,7 @@ const Index = () => {
               Häufig gestellte Fragen
             </h2>
             <p className="text-xl text-gray-600">
-              Antworten auf die wichtigsten Fragen rund um Ihre Badsanierung.
+              Antworten auf die wichtigsten Fragen rund um Ihre Klimatisierung.
             </p>
           </div>
           <Accordion type="single" collapsible className="w-full">
@@ -464,17 +463,17 @@ const Index = () => {
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Bereit für dein neues Traumbad?
+            Bereit für dein perfektes Raumklima?
           </h2>
           <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-            Lass dich kostenlos beraten und erfahre, wie viel Förderung du erhalten kannst.
+            Lass dich kostenlos beraten und erfahre, wie du deine Räume optimal klimatisieren kannst.
           </p>
           <Button 
             size="lg" 
             className="bg-white text-orange-600 hover:bg-gray-100 px-12 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl font-bold"
             onClick={handleCTAClick}
           >
-            Jetzt Beratung anfragen
+            Jetzt Klimaanlage anfragen
           </Button>
         </div>
       </section>
@@ -485,17 +484,17 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <img 
-                src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500%20%281%29-VYpwjV6yIfD1z9XEUUqmlnOVoD2NDo.svg"
-                alt="badhelden24 Logo"
+                src="https://klimahero24.de/favicon.svg"
+                alt="klimahero24 Logo"
                 className="h-8 mb-4"
               />
-              <p className="text-gray-400">Dein Partner für professionelle Badsanierung in ganz Deutschland.</p>
+              <p className="text-gray-400">Dein Partner für moderne Klimaanlagen in ganz Deutschland.</p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="/badsanierung" className="hover:text-white transition-colors">Badsanierung</a></li>
-                <li><a href="/badumbau" className="hover:text-white transition-colors">Badumbau</a></li>
+                <li><a href="/klimatisierung" className="hover:text-white transition-colors">Klimatisierung</a></li>
+                <li><a href="/klimaanlage" className="hover:text-white transition-colors">Klimaanlage</a></li>
                 <li><a href="/ratgeber" className="hover:text-white transition-colors">Ratgeber</a></li>
               </ul>
             </div>
@@ -511,12 +510,12 @@ const Index = () => {
               <h4 className="font-semibold mb-4">Kontakt</h4>
               <p className="text-gray-400">
                 <span className="block">📞 0800 123 456 789</span>
-                <span className="block">✉️ info@badhelden24.de</span>
+                <span className="block">✉️ info@klimahero24.de</span>
               </p>
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 badhelden24. Alle Rechte vorbehalten.</p>
+            <p>&copy; 2024 klimahero24. Alle Rechte vorbehalten.</p>
           </div>
         </div>
       </footer>

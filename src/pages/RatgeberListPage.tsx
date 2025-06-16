@@ -20,81 +20,74 @@ const RatgeberListPage = () => {
     const loadArticles = () => {
       const ratgeberArticles = [
         {
-          slug: "badezimmer-trends-2024",
-          title: "Badezimmer Trends 2024",
-          description: "Entdecke die neuesten Trends für moderne Badezimmer und lass dich inspirieren für deine nächste Badsanierung.",
-          image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          readTime: "5 Min. Lesezeit"
+          slug: "klimaanlagen-trends-2025",
+          title: "Klimaanlagen Trends 2025",
+          description: "Die wichtigsten Trends für moderne Klimaanlagen und smarte Lösungen für dein Zuhause.",
+          image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          readTime: "11 Min. Lesezeit"
         },
         {
-          slug: "badsanierung-kosten-2025",
-          title: "Badsanierung Kosten 2025",
-          description: "Was kostet eine Badsanierung wirklich? Kompletter Preisüberblick, Spartipps und Förderungen für Ihr Traumbad.",
-          image: "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          readTime: "12 Min. Lesezeit"
-        },
-        {
-          slug: "kleine-bader-optimal-gestalten",
-          title: "Kleine Bäder optimal gestalten",
-          description: "Platzsparende Lösungen und clevere Tricks für kleine Badezimmer. So holen Sie das Maximum aus jedem Quadratmeter heraus.",
-          image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          readTime: "14 Min. Lesezeit"
-        },
-        {
-          slug: "badezimmer-fliesen-trends-2025",
-          title: "Badezimmer Fliesen Trends 2025",
-          description: "Moderne Fliesendesigns, neue Materialien und angesagte Verlegemuster für Ihr Badezimmer. Alle Trends im Überblick.",
-          image: "https://images.unsplash.com/photo-1586105251261-72a756497a11?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          slug: "klimaanlagen-design-trends-2025",
+          title: "Klimaanlagen Design Trends 2025",
+          description: "Moderne Designs, neue Materialien und Smart-Home-Innovationen für Klimaanlagen.",
+          image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
           readTime: "13 Min. Lesezeit"
         },
         {
-          slug: "barrierefreies-bad-planen",
-          title: "Barrierefreies Bad planen",
-          description: "Alles über barrierefreie Bäder: DIN-Normen, Förderungen bis 6.250€, Kosten und professionelle Planungstipps.",
-          image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          slug: "moderne-klimaanlagen-2025",
+          title: "Moderne Klimaanlagen 2025",
+          description: "Technik, Trends und smarte Lösungen für moderne Klimaanlagen im Überblick.",
+          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
           readTime: "16 Min. Lesezeit"
         },
         {
-          slug: "badsanierung-ohne-fliesen",
-          title: "Badsanierung ohne Fliesen",
-          description: "Moderne Alternativen zu Fliesen: Wandpaneele, Putz, Naturstein. Alle Vor- und Nachteile im Überblick.",
-          image: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          slug: "klimaanlage-kosten-2025",
+          title: "Klimaanlage Kosten 2025",
+          description: "Was kostet eine Klimaanlage wirklich? Preisüberblick, Spartipps und Förderungen.",
+          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          readTime: "12 Min. Lesezeit"
+        },
+        {
+          slug: "klimaanlage-nachruesten-kosten",
+          title: "Klimaanlage nachrüsten Kosten",
+          description: "Alle Kosten, Förderungen und Tipps für das Nachrüsten einer Klimaanlage.",
+          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          readTime: "12 Min. Lesezeit"
+        },
+        {
+          slug: "barrierefreie-klimatisierung-planen",
+          title: "Barrierefreie Klimatisierung planen",
+          description: "Sichere und komfortable Klimatisierung für alle Lebensphasen – inkl. Förderungen.",
+          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          readTime: "16 Min. Lesezeit"
+        },
+        {
+          slug: "kleine-raeume-effizient-kuehlen",
+          title: "Kleine Räume effizient kühlen",
+          description: "Tipps und clevere Lösungen für die Klimatisierung kleiner Räume.",
+          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          readTime: "14 Min. Lesezeit"
+        },
+        {
+          slug: "klimatisierung-ohne-aussengerat",
+          title: "Klimatisierung ohne Außengerät",
+          description: "Moderne Alternativen für Wohnungen und Denkmalschutz: Vor- und Nachteile im Überblick.",
+          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
           readTime: "15 Min. Lesezeit"
         },
         {
-          slug: "badezimmer-renovieren-schritt-fuer-schritt",
-          title: "Badezimmer renovieren Schritt für Schritt",
-          description: "Komplette Renovierungsanleitung von der Planung bis zur Fertigstellung. Mit Zeitplan und Profi-Tipps.",
-          image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          readTime: "18 Min. Lesezeit"
-        },
-        {
-          slug: "moderne-badausstattung-2025",
-          title: "Moderne Badausstattung 2025",
-          description: "Neueste Trends bei Sanitärobjekten: Smart-Toiletten, berührungslose Armaturen und nachhaltige Lösungen.",
-          image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          readTime: "16 Min. Lesezeit"
-        },
-        {
-          slug: "badumbau-kosten",
-          title: "Badsanierung Kosten 2024",
-          description: "Was kostet eine Badsanierung wirklich? Alle Infos zu Preisen, Förderungen und Sparmöglichkeiten.",
-          image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          readTime: "8 Min. Lesezeit"
-        },
-        {
-          slug: "badsanierung-dauer",
-          title: "Dauer einer Badsanierung",
-          description: "Wie lange dauert eine Badsanierung? Tipps für eine reibungslose Planung und Zeitersparnis.",
-          image: "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          readTime: "6 Min. Lesezeit"
+          slug: "klimaanlage-einbau-dauer",
+          title: "Klimaanlage Einbau Dauer",
+          description: "Wie lange dauert die Installation? Tipps für eine reibungslose Planung und Zeitersparnis.",
+          image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          readTime: "9 Min. Lesezeit"
         },
         {
           slug: "wasserleitung-sanieren",
-          title: "Wasserleitungen sanieren",
-          description: "Alles über die Sanierung von Wasserleitungen: Kosten, Ablauf und wichtige Hinweise.",
-          image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-          readTime: "7 Min. Lesezeit"
+          title: "Klimaanlage nachrüsten: Worauf achten?",
+          description: "Ablauf, Kosten und Tipps für die Nachrüstung einer Klimaanlage im Überblick.",
+          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          readTime: "8 Min. Lesezeit"
         }
       ];
       setArticles(ratgeberArticles);
@@ -134,15 +127,15 @@ const RatgeberListPage = () => {
   }, [articles]);
 
   useEffect(() => {
-    document.title = "Ratgeber - badhelden24";
+    document.title = "Ratgeber - klimahero24";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Entdecke unseren umfassenden Ratgeber für Badsanierung. Tipps, Trends und wichtige Informationen für dein Traumbad.');
+      metaDescription.setAttribute('content', 'Entdecke unseren umfassenden Ratgeber für Klimaanlagen. Tipps, Trends und wichtige Informationen für dein optimales Raumklima.');
     }
   }, []);
 
   const handleCTAClick = () => {
-    window.open('https://app.badhelden24.de', '_blank');
+    window.open('https://app.klimahero24.de', '_blank');
   };
 
   if (loading) {
@@ -163,8 +156,8 @@ const RatgeberListPage = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <a href="/" className="hover:opacity-80 transition-opacity">
             <img 
-              src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500-0BoxfiLkXw4D2e41W20ELwwpufi7NW.svg"
-              alt="badhelden24 Logo"
+              src="https://klimahero24.de/favicon.svg"
+              alt="klimahero24 Logo"
               className="h-8 sm:h-10"
             />
           </a>
@@ -183,11 +176,11 @@ const RatgeberListPage = () => {
           {/* Hero Section */}
           <div className="text-center mb-16 scroll-reveal">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Ratgeber für deine Badsanierung
+              Ratgeber für deine Klimatisierung
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Erfahre alles Wichtige rund um Badsanierung, Kosten, Trends und Tipps. 
-              Unser Expertenratgeber hilft dir bei der Planung deines Traumbads.
+              Erfahre alles Wichtige rund um Klimaanlagen, Kosten, Trends und Tipps. 
+              Unser Expertenratgeber hilft dir bei der Planung deines optimalen Raumklimas.
             </p>
           </div>
 
@@ -244,13 +237,13 @@ const RatgeberListPage = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="text-2xl font-bold text-blue-400 mb-4">badhelden24</div>
-              <p className="text-gray-400">Dein Partner für professionelle Badsanierung in ganz Deutschland.</p>
+              <div className="text-2xl font-bold text-blue-400 mb-4">klimahero24</div>
+              <p className="text-gray-400">Dein Partner für moderne Klimaanlagen in ganz Deutschland.</p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="/badsanierung" className="hover:text-white transition-colors">Badsanierung</a></li>
+                <li><a href="/klimatisierung" className="hover:text-white transition-colors">Klimatisierung</a></li>
                 <li><a href="/ratgeber" className="hover:text-white transition-colors">Ratgeber</a></li>
               </ul>
             </div>
@@ -266,12 +259,12 @@ const RatgeberListPage = () => {
               <h4 className="font-semibold mb-4">Kontakt</h4>
               <p className="text-gray-400">
                 <span className="block">📞 0800 123 456 789</span>
-                <span className="block">✉️ info@badhelden24.de</span>
+                <span className="block">✉️ info@klimahero24.de</span>
               </p>
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 badhelden24. Alle Rechte vorbehalten.</p>
+            <p>&copy; 2024 klimahero24. Alle Rechte vorbehalten.</p>
           </div>
         </div>
       </footer>
