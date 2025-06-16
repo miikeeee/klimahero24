@@ -210,13 +210,13 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-primary/10">
       {/* Header */}
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <a href="/" className="hover:opacity-80 transition-opacity">
             <img 
-              src="https://klimahero24.de/favicon.svg"
+              src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Klimahero%20500x150%20mit%20rand.svg-Y1m6F1I7ZDarnjJjrTecyw5H1UnK3u.svg"
               alt="klimahero24 Logo"
               className="h-8 sm:h-10"
             />
@@ -229,7 +229,7 @@ const Index = () => {
               Klimaanlage anfragen
             </Button>
             <Button 
-              className="hidden sm:flex bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
+              className="hidden sm:flex bg-primary hover:bg-primary/80 text-primary-foreground px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
               onClick={handleCTAClick}
             >
               <Phone className="w-4 h-4 mr-2" />
@@ -246,7 +246,7 @@ const Index = () => {
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Dein <span className="text-blue-600">Klima-Komfort</span> 
+                  Dein <span className="text-primary">Klima-Komfort</span> 
                   <br />für Zuhause & Büro
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
@@ -266,7 +266,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="bg-primary hover:bg-primary/80 text-primary-foreground px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   onClick={handleCTAClick}
                 >
                   Jetzt Beratung anfragen
@@ -274,7 +274,7 @@ const Index = () => {
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
+                  className="border-2 border-primary text-primary hover:bg-primary/10 px-8 py-4 rounded-full text-lg transition-all duration-300"
                   onClick={handleCTAClick}
                 >
                   Mehr erfahren
@@ -292,7 +292,7 @@ const Index = () => {
             </div>
 
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-3xl transform rotate-6 opacity-20"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-primary rounded-3xl transform rotate-6 opacity-20"></div>
               <img 
                 src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                 alt="Moderne Klimaanlage installiert"
@@ -340,7 +340,7 @@ const Index = () => {
                 <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl group-hover:bg-blue-200 transition-colors">
                   {item.icon}
                 </div>
-                <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
+                <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
                   {item.step}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
@@ -365,7 +365,7 @@ const Index = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {keyBenefits.map((benefit, index) => (
               <div key={index} className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow duration-300 scroll-reveal" style={{transitionDelay: `${index * 100}ms`}}>
-                <div className="flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-full mx-auto mb-4">
+                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 text-primary rounded-full mx-auto mb-4">
                   <benefit.icon className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
@@ -413,7 +413,7 @@ const Index = () => {
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{article.title}</h3>
                   <p className="text-gray-600 mb-4 leading-relaxed">{article.description}</p>
-                  <div className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors">
+                  <div className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors">
                     Weiterlesen
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </div>
@@ -426,7 +426,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline"
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
+              className="border-2 border-primary text-primary hover:bg-primary/10 px-8 py-4 rounded-full text-lg transition-all duration-300"
               onClick={() => window.location.href = '/ratgeber'}
             >
               Alle Ratgeber-Artikel
@@ -496,7 +496,7 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <img 
-                src="https://klimahero24.de/favicon.svg"
+                src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Klimahero%20500x150%20mit%20rand.svg-Y1m6F1I7ZDarnjJjrTecyw5H1UnK3u.svg"
                 alt="klimahero24 Logo"
                 className="h-8 mb-4"
               />

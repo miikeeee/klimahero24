@@ -151,9 +151,9 @@ const KlimaanlagePage = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-primary/10">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
           <p className="text-gray-600">Lade Inhalte...</p>
         </div>
       </div>
@@ -162,7 +162,7 @@ const KlimaanlagePage = () => {
 
   if (error || !data) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-primary/10">
         <div className="text-center max-w-md mx-auto px-4">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Seite nicht gefunden</h1>
           <p className="text-gray-600 mb-6">
@@ -170,7 +170,7 @@ const KlimaanlagePage = () => {
           </p>
           <a 
             href="/" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/80 transition-colors"
           >
             Zur Startseite
           </a>
@@ -192,7 +192,7 @@ const KlimaanlagePage = () => {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-primary/10">
         {/* Header */}
         <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
