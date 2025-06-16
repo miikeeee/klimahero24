@@ -84,31 +84,43 @@ const Index = () => {
   useEffect(() => {
     const loadRatgeberArticles = async () => {
       try {
-        // Neue klimarelevante Ratgeber-Artikel
+        // Neue klimarelevante Ratgeber-Artikel (aus /public/data/ratgeber)
         const articles = [
           {
-            slug: 'klimaanlagen-vergleich',
-            title: 'Klimaanlagen-Typen im Vergleich',
-            description: 'Split, Multi-Split oder mobile Klimaanlage? Finde die beste Lösung für dein Zuhause.',
-            defaultImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+            slug: 'klimaanlagen-trends-2025',
+            title: 'Klimaanlagen Trends 2025: Die neuesten Ideen für Ihr Zuhause',
+            description: 'Klimaanlagen Trends 2025 ✓ Moderne Klimalösungen ✓ Aktuelle Designs & Technologien ✓ Inspiration für Ihr Zuhause ✓ Jetzt entdecken!',
+            defaultImage: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
           },
           {
-            slug: 'klimaanlage-kosten',
-            title: 'Klimaanlage Kosten & Förderung',
-            description: 'Was kostet eine Klimaanlage? Alle Infos zu Preisen, Förderungen und Finanzierung.',
-            defaultImage: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+            slug: 'klimaanlagen-design-trends-2025',
+            title: 'Klimaanlagen Design Trends 2025: Moderne Lösungen & Innovationen',
+            description: 'Klimaanlagen Design Trends 2025 ✓ Moderne Designs ✓ Neue Materialien ✓ Smart Home ✓ Farbtrends ✓ Professionelle Beratung ✓ Jetzt entdecken!',
+            defaultImage: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
           },
           {
-            slug: 'klimaanlage-installation',
-            title: 'Ablauf der Installation',
-            description: 'So läuft die Installation deiner Klimaanlage ab – Schritt für Schritt erklärt.',
-            defaultImage: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+            slug: 'moderne-klimaanlagen-2025',
+            title: 'Moderne Klimaanlagen 2025: Trends, Technik & smarte Lösungen',
+            description: 'Moderne Klimaanlagen 2025 ✓ Neue Technologien ✓ Smart-Home Integration ✓ Nachhaltigkeit ✓ Design-Trends ✓ Kosten & Tipps ✓ Jetzt entdecken!',
+            defaultImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
           },
           {
-            slug: 'klimaanlage-wartung',
-            title: 'Klimaanlage richtig warten',
-            description: 'Tipps zur Wartung und Reinigung für dauerhaft frische Luft und lange Lebensdauer.',
-            defaultImage: 'https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+            slug: 'klimaanlage-kosten-2025',
+            title: 'Klimaanlage Kosten 2025: Kompletter Preisüberblick',
+            description: 'Klimaanlage Kosten 2025 ✓ Preise für Split- & Multisplit-Anlagen ✓ Kostenrechner ✓ Spartipps ✓ Förderungen ✓ Alle Infos zu Klimaanlagen-Preisen ✓ Jetzt informieren!',
+            defaultImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+          },
+          {
+            slug: 'klimaanlage-nachruesten-kosten',
+            title: 'Klimaanlage nachrüsten Kosten 2024: Kompletter Preisüberblick',
+            description: 'Klimaanlage nachrüsten Kosten 2024 ✓ Preise für Split- & Multisplit-Anlagen ✓ Sparpotential & Förderungen ✓ Kostenlose Beratung anfragen!',
+            defaultImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+          },
+          {
+            slug: 'barrierefreie-klimatisierung-planen',
+            title: 'Barrierefreie Klimatisierung planen: Ratgeber & Förderungen 2025',
+            description: 'Barrierefreie Klimatisierung planen ✓ DIN-Normen ✓ Förderungen ✓ Kosten & Tipps ✓ Professionelle Planung ✓ Jetzt informieren!',
+            defaultImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
           }
         ];
 
