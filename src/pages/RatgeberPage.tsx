@@ -19,6 +19,10 @@ const RatgeberPage = () => {
   const { data, loading, error } = useRatgeberData();
   const observerRef = useRef<IntersectionObserver | null>(null);
   
+  // Debug-Logging für Whitescreen-Fehleranalyse
+  console.log('RatgeberPage data:', data);
+  console.log('RatgeberPage error:', error);
+
   useSEO(data);
 
   // Scroll reveal effect

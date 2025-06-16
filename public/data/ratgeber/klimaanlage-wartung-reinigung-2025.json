@@ -58,5 +58,31 @@
     { "type": "h2", "text": "Fazit: Regelmäßige Wartung zahlt sich aus!" },
     { "type": "text", "text": "Mit einer regelmäßigen Wartung und Reinigung Ihrer Klimaanlage sorgen Sie für ein gesundes Raumklima, sparen Energie und verlängern die Lebensdauer Ihres Geräts. Nutzen Sie unsere Profi-Tipps und lassen Sie sich bei Bedarf von unseren Experten beraten!" },
     { "type": "cta", "text": "Jetzt Wartungs-Angebot anfragen", "url": "https://app.klimahero24.de", "buttonText": "Kostenlos anfragen" }
-  ]
+  ],
+  "sidebar": {
+    "newsletter": {
+      "headline": "Klima-Design-Trends",
+      "text": "Bleiben Sie über die neuesten Design-Trends und Innovationen informiert",
+      "button": "Trend-Updates erhalten"
+    },
+    "infobox": {
+      "text": "Laden Sie unseren kostenlosen Klima-Design-Ratgeber mit allen wichtigen Tipps herunter.",
+      "button": "Design-Ratgeber herunterladen"
+    }
+  },
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Klimaanlagen Design Trends 2025: Die neuesten Lösungen und Materialien",
+    "author": {
+      "@type": "Organization",
+      "name": "klimahero24"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "klimahero24"
+    },
+    "datePublished": "2025-06-15",
+    "keywords": "Klimaanlagen Design, Trends 2025, Smart Home, Naturmaterial, Minimalismus"
+  }
 }
