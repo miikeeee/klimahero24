@@ -13,7 +13,7 @@ const RatgeberHeader = ({ onCTAClick }: RatgeberHeaderProps) => {
         <a href="/" className="hover:opacity-80 transition-opacity">
           <img 
             src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500-0BoxfiLkXw4D2e41W20ELwwpufi7NW.svg"
-            alt="badhelden24 Logo"
+            alt="klimahero24 Logo"
             className="h-8 sm:h-10"
           />
         </a>

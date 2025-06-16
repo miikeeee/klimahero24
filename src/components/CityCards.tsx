@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -21,17 +20,17 @@ const CityCards = ({ cities, showAllButton = false }: CityCardsProps) => {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Badsanierung in deiner Stadt
+            Klimaanlagen in deiner Stadt
           </h2>
           <p className="text-xl text-gray-600">
-            Finde professionelle Handwerker in deiner Region
+            Finde professionelle Klimaanlagen-Experten in deiner Region
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {cities.map((city, index) => (
             <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="relative overflow-hidden rounded-t-lg cursor-pointer" onClick={() => window.location.href = `/badsanierung/${city.slug}`}>
+              <div className="relative overflow-hidden rounded-t-lg cursor-pointer" onClick={() => window.location.href = `/klimatisierung/${city.slug}` }>
                 <img 
                   src={city.image}
                   alt={city.title}
@@ -48,7 +47,7 @@ const CityCards = ({ cities, showAllButton = false }: CityCardsProps) => {
                 <Button 
                   variant="outline" 
                   className="w-full group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all duration-300"
-                  onClick={() => window.location.href = `/badsanierung/${city.slug}`}
+                  onClick={() => window.location.href = `/klimatisierung/${city.slug}` }
                 >
                   Mehr erfahren
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -64,7 +63,7 @@ const CityCards = ({ cities, showAllButton = false }: CityCardsProps) => {
               size="lg" 
               variant="outline"
               className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-full text-lg transition-all duration-300"
-              onClick={() => window.location.href = '/badsanierung'}
+              onClick={() => window.location.href = '/klimatisierung'}
             >
               Alle anzeigen
               <ArrowRight className="w-4 h-4 ml-2" />

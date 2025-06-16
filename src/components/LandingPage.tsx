@@ -73,7 +73,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
   };
 
   const handleCTAClick = () => {
-    window.open('https://app.badhelden24.de', '_blank');
+    window.open('https://app.klimahero24.de', '_blank');
   };
 
   const IconComponent = ({ name, ...props }: { name: keyof typeof import("lucide-react").icons } & React.ComponentProps<typeof ArrowRight>) => {
@@ -89,8 +89,8 @@ const LandingPage = ({ data }: LandingPageProps) => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <a href="/" className="hover:opacity-80 transition-opacity">
             <img 
-              src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500-0BoxfiLkXw4D2e41W20ELwwpufi7NW.svg"
-              alt="badhelden24 Logo"
+              src="https://klimahero24.de/favicon.svg"
+              alt="klimahero24 Logo"
               className="h-8 sm:h-10"
             />
           </a>
@@ -99,7 +99,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
               className="sm:hidden bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-full transition-all duration-300 hover:scale-105"
               onClick={handleCTAClick}
             >
-              Badsanierung starten
+              Klimaanlage anfragen
             </Button>
             <Button 
               className="hidden sm:flex bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
@@ -132,7 +132,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
 
               <div className="space-y-2 sm:space-y-3">
                 {[
-                  "Geprüfte Handwerker aus deiner Region",
+                  "Geprüfte Klimaanlagen-Experten aus deiner Region",
                   "Bis zu 20% staatliche Förderung",
                   "Kostenlose Vor-Ort-Beratung",
                   "5 Jahre Garantie auf alle Arbeiten"
@@ -176,7 +176,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-3xl transform rotate-6 opacity-20"></div>
               <img 
                 src={data.heroImage || "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"}
-                alt={`Badsanierung ${data.location || ''}`}
+                alt={`Klimaanlage ${data.location || ''}`}
                 className="relative z-10 w-full h-64 sm:h-80 lg:h-96 xl:h-[500px] object-cover rounded-3xl shadow-2xl transition-transform duration-500 hover:scale-105"
               />
             </div>
@@ -273,7 +273,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
             <div className="space-y-3 sm:space-y-4">
               <Calendar className="w-10 sm:w-12 h-10 sm:h-12 mx-auto text-blue-200" />
               <h3 className="text-xl sm:text-2xl font-bold">Über 10 Jahre</h3>
-              <p className="text-blue-100 text-sm sm:text-base">Erfahrung in der Badsanierung</p>
+              <p className="text-blue-100 text-sm sm:text-base">Erfahrung mit Klimaanlagen</p>
             </div>
             <div className="space-y-3 sm:space-y-4">
               <Shield className="w-10 sm:w-12 h-10 sm:h-12 mx-auto text-blue-200" />
@@ -327,7 +327,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
               Häufig gestellte Fragen
             </h2>
             <p className="text-lg sm:text-xl text-gray-600">
-              Alles was du über deine Badsanierung wissen musst
+              Alles was du über deine Klimaanlage wissen musst
             </p>
           </div>
 
@@ -360,7 +360,7 @@ const LandingPage = ({ data }: LandingPageProps) => {
       <section className="py-12 sm:py-16 bg-gradient-to-r from-orange-500 to-orange-600 overflow-hidden">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6">
-            Bereit für dein neues Traumbad?
+            Bereit für deine neue Klimaanlage?
           </h2>
           <p className="text-lg sm:text-xl text-orange-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
             Lass dich kostenlos beraten und erfahre, wie viel Förderung du erhalten kannst.
@@ -381,17 +381,16 @@ const LandingPage = ({ data }: LandingPageProps) => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
             <div className="sm:col-span-2 lg:col-span-1">
               <img 
-                src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/FavIcon%20500%20x%20500%20%281%29-VYpwjV6yIfD1z9XEUUqmlnOVoD2NDo.svg"
-                alt="badhelden24 Logo"
+                src="https://klimahero24.de/favicon.svg"
+                alt="klimahero24 Logo"
                 className="h-8 mb-3 sm:mb-4"
               />
-              <p className="text-gray-400 text-sm sm:text-base">Dein Partner für professionelle Badsanierung in ganz Deutschland.</p>
+              <p className="text-gray-400 text-sm sm:text-base">Dein Partner für moderne Klimaanlagen in ganz Deutschland.</p>
             </div>
             <div>
               <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Services</h4>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
-                <li><a href="/badsanierung" className="hover:text-white transition-colors">Badsanierung</a></li>
-                <li><a href="/badumbau" className="hover:text-white transition-colors">Badumbau</a></li>
+                <li><a href="/klimatisierung" className="hover:text-white transition-colors">Klimatisierung</a></li>
                 <li><a href="/ratgeber" className="hover:text-white transition-colors">Ratgeber</a></li>
               </ul>
             </div>
@@ -407,12 +406,12 @@ const LandingPage = ({ data }: LandingPageProps) => {
               <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Kontakt</h4>
               <p className="text-gray-400 text-sm sm:text-base">
                 <span className="block">📞 0800 123 456 789</span>
-                <span className="block">✉️ info@badhelden24.de</span>
+                <span className="block">✉️ info@klimahero24.de</span>
               </p>
             </div>
           </div>
           <div className="border-t border-gray-800 pt-6 sm:pt-8 text-center text-gray-400 text-sm sm:text-base">
-            <p>&copy; 2024 badhelden24. Alle Rechte vorbehalten.</p>
+            <p>&copy; 2024 klimahero24. Alle Rechte vorbehalten.</p>
           </div>
         </div>
       </footer>
