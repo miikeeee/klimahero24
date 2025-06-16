@@ -496,7 +496,7 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <img 
-                src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Klimahero%20500x150%20mit%20rand.svg-Y1m6F1I7ZDarnjJjrTecyw5H1UnK3u.svg"
+                src="https://qumi1raeu1ly0ptd.public.blob.vercel-storage.com/Klimahero%20500x150%20wei%C3%9Fe%20schrift%20%283%29-e52237wmU5o7xtsip9xZGDtood5wgR.svg"
                 alt="klimahero24 Logo"
                 className="h-8 mb-4"
               />
